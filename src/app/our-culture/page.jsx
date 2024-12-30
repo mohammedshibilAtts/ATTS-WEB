@@ -12,15 +12,17 @@ import About7 from "@/assests/images/about7.jpg";
 import About8 from "@/assests/images/about8.jpg";
 import About9 from "@/assests/images/about9.jpg";
 import Culture1 from "@/assests/images/seo1.jpg";
-import Avatar1 from "@/assests/images/avatar1.jpg";
-import Avatar2 from "@/assests/images/avatar2.jpg";
-import Avatar3 from "@/assests/images/avatar3.jpg";
-import Avatar4 from "@/assests/images/avatar4.jpg";
-import Avatar5 from "@/assests/images/avatar5.jpg";
 import ATTS from "@/assests/images/ATTS.jpg";
 import TitleBox from "@/components/titleBox/titleBox";
 import WorkEnvironment from "@/assests/images/workenv.jpg";
-import { motion } from 'framer-motion'; // import motion from framer-motion
+import { motion } from "framer-motion";
+
+import Vinitha_Vijayaragavan from "@/assests/images/Vinitha_Vijayaragavan.jpg";
+import Sylesh_Shanmugam from "@/assests/images/Sylesh_Shanmugam.jpg";
+import Aravindraj_Mani from "@/assests/images/Aravindraj_Mani.jpg";
+import Prabhu_Manickam from "@/assests/images/Prabhu_Manickam.jpg";
+import Karthik_Sadhasivam from "@/assests/images/Karthik_Sadhasivam.jpg";
+
 function page() {
   // const tabData = [
   //   "Life at ATTS",
@@ -51,48 +53,44 @@ function page() {
   const testimonials = [
     {
       id: 1,
-      name: "Daniel Smith",
-      role: "Software Developer",
-      icon: Avatar1,
-      image: Avatar1,
+      name: "Aravindraj Mani",
+      role: "Senior Digital Marketing Executive",
+      icon: Aravindraj_Mani,
+      image: Aravindraj_Mani,
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ora lectus, tempor nec accumsan nec, lectus ut sem. Mauris pretium lacus eget vulputate rhoncus. Vivamus egestas, orci eu laoreetis pulvinar.",
+        "Working at ATTS Technologies feels like being part of a creative powerhouse! Over a half-decade of working as a senior digital marketing executive, I’ve seen this place grow with innovative ideas and game-changing campaigns. The energy is unmatched – a team that’s always had my back, big ideas that happen, and challenges that push you to excel. Always upbeat and collaborative, ATTS is a fun, ever-evolving journey of creativity and excitement!",
     },
     {
       id: 2,
-      name: "Sarah Johnson",
-      role: "UX Designer",
-      icon: Avatar2,
-      image: Avatar2,
-      quote:
-        "Mauris pretium lacus eget vulputate rhoncus. Vivamus egestas, orci eu laoreetis pulvinar, tempor nec accumsan nec.",
+      name: "Sylesh Shanmugam",
+      role: "Digital Marketing Executive",
+      icon: Sylesh_Shanmugam,
+      image: Sylesh_Shanmugam,
+      quote: "Arion Media Corp is more than just a workplace; it’s a family where creativity, growth, and dreams are nurtured. From day one, I’ve felt valued, supported, and inspired to bring my best. Every challenge is met together, every success is celebrated like our own. The leadership, teamwork, and shared passion make this journey deeply fulfilling. It’s a place where hard work turns into impact, and I’m incredibly proud to belong here.",
     },
     {
       id: 3,
-      name: "Michael Chen",
-      role: "Product Manager",
-      icon: Avatar3,
-      image: Avatar3,
-      quote:
-        "Aliquam ora lectus, tempor nec accumsan nec, lectus ut sem. Mauris pretium lacus eget vulputate rhoncus.",
+      name: "Prabhu Manickam",
+      role: "Senior Visualizer",
+      icon: Prabhu_Manickam,
+      image: Prabhu_Manickam,
+      quote: "With 18 years of experience, the last four and a half at ATTS have been the best part of my career. Working closely with our MD, Mr. Manoj Chandran, has really pushed me to the next level. The vibe here is all about respect, teamwork, creativity, and constant learning. Feeling lucky and excited to see what’s next and do even more for the company!",
     },
     {
       id: 4,
-      name: "Jhon Chen",
-      role: "Hr Manager",
-      icon: Avatar4,
-      image: Avatar4,
-      quote:
-        "Aliquam ora lectus, tempor nec accumsan nec, lectus ut sem. Mauris pretium lacus eget vulputate rhoncus.",
+      name: "Karthik Sadhasivam",
+      role: "Senior Graphic Designer",
+      icon: Karthik_Sadhasivam,
+      image: Karthik_Sadhasivam,
+      quote: "Hi, I'm Karthik. I started my journey as a video editor in 2019, and I've learned a lot along the way. Manoj sir trusted me a lot, which made me more responsible for my work. If the company is like CSK 💛, I’m the Jadeja.",
     },
     {
       id: 5,
-      name: "Alisson",
-      role: "CTO",
-      icon: Avatar5,
-      image: Avatar5,
-      quote:
-        "Aliquam ora lectus, tempor nec accumsan nec, lectus ut sem. Mauris pretium lacus eget vulputate rhoncus.",
+      name: "Vinitha Vijayaragavan",
+      role: "Talent Acquisition",
+      icon: Vinitha_Vijayaragavan,
+      image: Vinitha_Vijayaragavan,
+      quote: "ATTS Technologies has been a remarkable place for my professional growth, where I’ve learned and evolved tremendously in my career. I feel consistently valued, empowered, and appreciated for my contributions. The energy and innovation of brilliant young minds make this workplace truly inclusive, inspiring, and welcoming workplace.",
     },
   ];
 
@@ -120,9 +118,9 @@ function page() {
 
   const shuffleNextImage = () => {
     setAnimatingIndices(new Set([currentIndex]));
-    
+
     setTimeout(() => {
-      setImageOrder(prevOrder => {
+      setImageOrder((prevOrder) => {
         const newOrder = [...prevOrder];
         const randomIndex = Math.floor(Math.random() * 9);
         const temp = newOrder[currentIndex];
@@ -130,10 +128,9 @@ function page() {
         newOrder[randomIndex] = temp;
         return newOrder;
       });
-      
-      setCurrentIndex(prev => getNextPosition(prev));
-      
-  
+
+      setCurrentIndex((prev) => getNextPosition(prev));
+
       setTimeout(() => {
         setAnimatingIndices(new Set());
       }, 500);
@@ -141,7 +138,7 @@ function page() {
   };
 
   useEffect(() => {
-    const interval = setInterval(shuffleNextImage, 2000); 
+    const interval = setInterval(shuffleNextImage, 2000);
     return () => clearInterval(interval);
   }, [currentIndex]);
 
@@ -154,92 +151,102 @@ function page() {
     "absolute top-[30%] right-0",
     "absolute bottom-36 left-[10%]",
     "absolute bottom-36 right-[10%]",
-    "absolute bottom-12 right-[45%]"
+    "absolute bottom-12 right-[45%]",
   ];
-  const images=[About1,About2,About3,About4,About5,About6,About7,About8,About9]
+  const images = [
+    About1,
+    About2,
+    About3,
+    About4,
+    About5,
+    About6,
+    About7,
+    About8,
+    About9,
+  ];
 
   return (
     <>
-       <div className="bg-black w-full relative">
-      <div className="relative">
-        {/* Mobile View with Text Overlay */}
-        <div className="lg:hidden relative">
-          {/* Image Container */}
-          <div className="w-full h-[500px] relative">
-            <Image
-              src={ATTS}
-              alt="office space mobile"
-              className="object-cover"
-              layout="fill"
-              priority
-            />
-            {/* Gradient Overlay for better text readability */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
-            
-            {/* Content Section for Mobile */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 z-10">
-              <div className="inline-block bg-white px-4 py-1.5 rounded-full text-sm font-unbounded mb-4">
+      <div className="bg-black w-full relative">
+        <div className="relative">
+          {/* Mobile View with Text Overlay */}
+          <div className="lg:hidden relative">
+            {/* Image Container */}
+            <div className="w-full h-[500px] relative">
+              <Image
+                src={ATTS}
+                alt="office space mobile"
+                className="object-cover"
+                layout="fill"
+                priority
+              />
+              {/* Gradient Overlay for better text readability */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+
+              {/* Content Section for Mobile */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-4 z-10">
+                <div className="inline-block bg-white px-4 py-1.5 rounded-full text-sm font-unbounded mb-4">
+                  Our Culture
+                </div>
+                <h1 className="text-white text-3xl sm:text-4xl font-unbounded items-center  leading-tight text-start">
+                  Just a bunch of creative humans, enjoying every moment of what
+                  we do!
+                </h1>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Image Grid */}
+          <div className="hidden lg:block">
+            {/* Use motion.div for the parent container */}
+            <motion.div
+              className="images object-cover hidden lg:block"
+              initial={{ opacity: 0 }} // Initial state before the animation
+              animate={{ opacity: 1 }} // Final state after the animation
+              transition={{ duration: 1, ease: "easeOut" }} // Animation properties (duration and easing)
+            >
+              {positions.map((position, index) => (
+                <Image
+                  key={index}
+                  width={index === 8 ? 100 : 190}
+                  height={128}
+                  src={images[imageOrder[index]]}
+                  alt={`office space ${index + 1}`}
+                  className={`${position} rounded-lg w-48 h-32 object-cover transform transition-all duration-700 ease-in-out ${
+                    animatingIndices.has(index)
+                      ? "scale-110 brightness-125 shadow-lg"
+                      : "scale-100"
+                  } hover:scale-105 hover:shadow-xl hover:z-10`}
+                />
+              ))}
+            </motion.div>
+
+            {/* Desktop Content Section */}
+            <div className="relative z-10 text-center py-8 px-4 md:py-16 lg:py-32">
+              <div className="inline-block bg-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-unbounded">
                 Our Culture
               </div>
-              <h1 className="text-white text-3xl sm:text-4xl font-bold max-w-[90%] leading-tight text-center">
-                Just a bunch of creative humans, enjoying every moment of what we do!
+              <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-[90%] sm:max-w-2xl lg:max-w-3xl mx-auto leading-tight mt-4 sm:mt-6">
+                Just a bunch of creative humans, enjoying every moment of what
+                we do!
               </h1>
             </div>
           </div>
-        </div>
 
-        {/* Desktop Image Grid */}
-        <div className="hidden lg:block">
-  {/* Use motion.div for the parent container */}
-  <motion.div
-    className="images object-cover hidden lg:block"
-    initial={{ opacity: 0 }} // Initial state before the animation
-    animate={{ opacity: 1 }}  // Final state after the animation
-    transition={{ duration: 1, ease: 'easeOut' }} // Animation properties (duration and easing)
-  >
-    {positions.map((position, index) => (
-      <Image
-        key={index}
-        width={index === 8 ? 100 : 190}
-        height={128}
-        src={images[imageOrder[index]]}
-        alt={`office space ${index + 1}`}
-        className={`${
-          position
-        } rounded-lg w-48 h-32 object-cover transform transition-all duration-700 ease-in-out ${
-          animatingIndices.has(index)
-            ? 'scale-110 brightness-125 shadow-lg'
-            : 'scale-100'
-        } hover:scale-105 hover:shadow-xl hover:z-10`}
-      />
-    ))}
-  </motion.div>
-
-  {/* Desktop Content Section */}
-  <div className="relative z-10 text-center py-8 px-4 md:py-16 lg:py-32">
-    <div className="inline-block bg-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-unbounded">
-      Our Culture
-    </div>
-    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-[90%] sm:max-w-2xl lg:max-w-3xl mx-auto leading-tight mt-4 sm:mt-6">
-      Just a bunch of creative humans, enjoying every moment of what we do!
-    </h1>
-  </div>
-</div>
-
-        {/* Navigation Tabs */}
-        <div className="hidden lg:flex justify-center text-white mt-56 relative z-10 px-8 gap-10 md:gap-20 lg:gap-32">
-          {[].map((item, index) => (
-            <button
-              key={index}
-              // onClick={() => handleTabClick(index)}
-              className="text-sm md:text-lg lg:text-xl hover:text-blue-500 transition-colors"
-            >
-              {item}
-            </button>
-          ))}
+          {/* Navigation Tabs */}
+          <div className="hidden lg:flex justify-center text-white mt-56 relative z-10 px-8 gap-10 md:gap-20 lg:gap-32">
+            {[].map((item, index) => (
+              <button
+                key={index}
+                // onClick={() => handleTabClick(index)}
+                className="text-sm md:text-lg lg:text-xl hover:text-blue-500 transition-colors"
+              >
+                {item}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
       <div className="lg:hidden  flex-col text-black p-5   hidden justify-center mx-auto z-10 px-8 gap-6 bg-white sticky top-20 w-full">
         {[].map((item, index) => (
           <span
@@ -391,7 +398,7 @@ function page() {
             <Image
               src={testimonials[activeIndex].image}
               alt={testimonials[activeIndex].name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
 
@@ -427,7 +434,7 @@ function page() {
               <Image
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </button>
           ))}
@@ -436,8 +443,9 @@ function page() {
 
       {/* Work Environment */}
 
-      <div className="relative w-full" 
-      // ref={section4Ref}
+      <div
+        className="relative w-full"
+        // ref={section4Ref}
       >
         <div className="relative pt-9">
           <div className="image">
