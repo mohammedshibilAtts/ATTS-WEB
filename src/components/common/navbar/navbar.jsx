@@ -586,7 +586,7 @@ const Navbar = () => {
             <br />
             <span className="font-semibold text-white">AURUMM</span> - The Ultimate Software Suite
           </motion.p>
-
+          <Link href={'https://aurumm.co/products/aupay/'}>
           <motion.button
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -595,9 +595,10 @@ const Navbar = () => {
             whileTap={{ scale: 0.95 }}
             className="flex items-center space-x-2 px-4 py-2 mt-2 bg-transparent text-white border border-white rounded-full hover:bg-white hover:text-gray-900 transition-colors text-sm"
           >
-            <Link href={'https://aurumm.co/products/aupay/'}><span>Know More</span></Link>
+            <span>Know More</span>
             <ArrowRight className="w-3 h-3" />
           </motion.button>
+          </Link>
         </div>
 
         {/* Right Content - Logo */}
