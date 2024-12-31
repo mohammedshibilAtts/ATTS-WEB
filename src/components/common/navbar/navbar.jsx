@@ -3,13 +3,15 @@ import { usePathname } from "next/navigation";
 import Logo from "../../../assests/images/logo.svg";
 import About from "../../../assests/images/aboutAtts.jpg";
 import Carrer from "../../../assests/images/careerAtts.jpg";
+import Aurumm from "../../../assests/images/Aurumm.png";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import StaggeredSection from "@/components/animation/StaggeredSection";
 import AnimatedSection from "@/components/animation/animationSection";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import {
   digitalEngineering,
   digitalMarketing,
@@ -19,7 +21,11 @@ import {
 
 const navItems = [
   { label: "About us", Link: "/about", icon: <IoIosArrowDown size={15} /> },
-  { label: "Our Products", Link: "/product-photography" },
+  {
+    label: "Our Products",
+    Link: "/product-photography",
+    icon: <IoIosArrowDown size={15} />,
+  },
   { label: "Services", Link: "", icon: <IoIosArrowDown size={15} /> },
   { label: "Blogs", Link: "/blog" },
 ];
@@ -41,6 +47,8 @@ const Navbar = () => {
   const handleMenuClick = (menu) => {
     if (menu === "Services") {
       setActiveMenu("Services");
+    } else if (menu === "Our Products") {
+      setActiveMenu("Our Products");
     } else if (menu === "About us") {
       setActiveMenu("About us");
     } else {
@@ -56,7 +64,7 @@ const Navbar = () => {
       !servicesRef.current.contains(event.target)
     ) {
       setActiveMenu(false);
-      setIsMobileMenuOpen(false)
+      setIsMobileMenuOpen(false);
     }
   };
 
@@ -87,21 +95,21 @@ const Navbar = () => {
   const handleToggleDropdown = (index) => {
     setOpenDropdowns((prevState) => ({
       ...prevState,
-      [index]: !prevState[index], 
+      [index]: !prevState[index],
     }));
   };
 
   return (
     <>
       {/* Blur Overlay */}
-      {activeMenu&& (
+      {activeMenu && (
         <div
           className="fixed inset-0 bg-black/30 backdrop-blur-sm z-30"
           onClick={() => setActiveMenu(false)}
           aria-hidden="true"
         />
       )}
-         {isMobileMenuOpen&& (
+      {isMobileMenuOpen && (
         <div
           className="fixed lg:hidden inset-0 bg-black/30 backdrop-blur-sm z-30"
           onClick={() => setIsMobileMenuOpen(false)}
@@ -170,11 +178,8 @@ const Navbar = () => {
                 <li
                   key={index}
                   className={`relative group cursor-pointer px-2 py-2 rounded-2xl hover:text-black`}
-                  onClick={() =>
-                    activeMenu
-                      ? handleClickOutside(item.label)
-                      : handleMenuClick(item.label)
-                  }
+                  onClick={() => activeMenu && handleClickOutside(item.label)}
+                  onMouseEnter={() => handleMenuClick(item.label)}
                 >
                   <div
                     className={`flex items-center rounded-full group-hover:bg-[#B5D3F5] group-hover:rounded-5xl transition-all duration-200 py-3 px-6 md:px-3 flex-grow
@@ -189,7 +194,9 @@ const Navbar = () => {
                            : ""
                        }`}
                   >
-                    {item.label !== "Services" && item.label !== "About us" ? (
+                    {item.label !== "Services" &&
+                    item.label !== "About us" &&
+                    item.label !== "Our Products" ? (
                       <Link href={item.Link}>{item.label}</Link>
                     ) : (
                       <p>{item.label}</p>
@@ -215,157 +222,153 @@ const Navbar = () => {
             </p>
           </div>
         </div>
-              
+
         {/* Mobile Navbar */}
         {isMobileMenuOpen && (
-          
           <motion.div
-          ref={navbarRef}
-          id="drawer-navigation"
-          className="fixed top-0 right-0 z-40 w-64 h-screen p-4 overflow-y-auto bg-white  block lg:hidden"
-          initial={{ x: "100%" }} // Start off-screen to the right
-          animate={{ x: 0 }} // Slide in to its normal position
-          exit={{ x: "100%" }} // Slide out to the right when closed
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          tabIndex="-1"
-          aria-labelledby="drawer-navigation-label"
-        >
-          <button
-            type="button"
-            onClick={() => setIsMobileMenuOpen(false)}
-            aria-controls="drawer-navigation"
-            className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center"
+            ref={navbarRef}
+            id="drawer-navigation"
+            className="fixed top-0 right-0 z-40 w-64 h-screen p-4 overflow-y-auto bg-white  block lg:hidden"
+            initial={{ x: "100%" }} // Start off-screen to the right
+            animate={{ x: 0 }} // Slide in to its normal position
+            exit={{ x: "100%" }} // Slide out to the right when closed
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            tabIndex="-1"
+            aria-labelledby="drawer-navigation-label"
           >
-            <svg
-              aria-hidden="true"
-              className="w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-controls="drawer-navigation"
+              className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center"
             >
-              <path
-                fillRule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-            <span className="sr-only">Close menu</span>
-          </button>
-    
-          <div className="py-4 overflow-y-auto">
-            <ul className="space-y-2 font-medium">
-              {mobileNavItem.map((item, index) => (
-                <motion.li
-                  key={index}
-                  
-                >
-                  {item.subItems ? (
-                    <div className="relative">
-                      <button
-                        onClick={() => handleToggleDropdown(index)} // Toggle dropdown
-                        className="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 group"
-                      >
-                        <span>{item.label}</span>
-                        <svg
-                          className={`w-4 h-4 ml-2 transition-transform ${openDropdowns[index] ? "rotate-180" : ""}`}
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
+              <svg
+                aria-hidden="true"
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span className="sr-only">Close menu</span>
+            </button>
+
+            <div className="py-4 overflow-y-auto">
+              <ul className="space-y-2 font-medium">
+                {mobileNavItem.map((item, index) => (
+                  <motion.li key={index}>
+                    {item.subItems ? (
+                      <div className="relative">
+                        <button
+                          onClick={() => handleToggleDropdown(index)} // Toggle dropdown
+                          className="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 group"
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </button>
-                      {openDropdowns[index] && ( // Show the dropdown only if it's open
-                        <motion.ul
-                          className="space-y-2 pl-4 mt-2 transition-all duration-300 ease-in-out max-h-[500px] overflow-hidden"
-                          
-                          
-                        >
-                          {item.subItems.map((subItem, subIndex) => (
-                            <motion.li
-                              key={subIndex}
-                            
-                            >
-                              {subItem.subItems ? (
-                                <div className="relative">
-                                  <button
-                                    onClick={() => handleToggleDropdown(`${index}-${subIndex}`)} // Toggle sub-dropdown
+                          <span>{item.label}</span>
+                          <svg
+                            className={`w-4 h-4 ml-2 transition-transform ${
+                              openDropdowns[index] ? "rotate-180" : ""
+                            }`}
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </button>
+                        {openDropdowns[index] && ( // Show the dropdown only if it's open
+                          <motion.ul className="space-y-2 pl-4 mt-2 transition-all duration-300 ease-in-out max-h-[500px] overflow-hidden">
+                            {item.subItems.map((subItem, subIndex) => (
+                              <motion.li key={subIndex}>
+                                {subItem.subItems ? (
+                                  <div className="relative">
+                                    <button
+                                      onClick={() =>
+                                        handleToggleDropdown(
+                                          `${index}-${subIndex}`
+                                        )
+                                      } // Toggle sub-dropdown
+                                      className="flex items-center p-2 text-gray-900 rounded-lg group"
+                                    >
+                                      <span>{subItem.label}</span>
+                                      <svg
+                                        className={`w-4 h-4 ml-2 transition-transform ${
+                                          openDropdowns[`${index}-${subIndex}`]
+                                            ? "rotate-180"
+                                            : ""
+                                        }`}
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                      >
+                                        <path
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          strokeWidth="2"
+                                          d="M19 9l-7 7-7-7"
+                                        />
+                                      </svg>
+                                    </button>
+                                    {openDropdowns[`${index}-${subIndex}`] && (
+                                      <motion.ul className="space-y-2 pl-4 mt-2 transition-all duration-300 ease-in-out max-h-[300px] overflow-hidden">
+                                        {subItem.subItems.map(
+                                          (subSubItem, subSubIndex) => (
+                                            <motion.li key={subSubIndex}>
+                                              <Link
+                                                href={subSubItem.Link}
+                                                className="flex items-center p-2 text-gray-900 rounded-lg group"
+                                                onClick={() =>
+                                                  setIsMobileMenuOpen(false)
+                                                }
+                                              >
+                                                <span>{subSubItem.label}</span>
+                                              </Link>
+                                            </motion.li>
+                                          )
+                                        )}
+                                      </motion.ul>
+                                    )}
+                                  </div>
+                                ) : (
+                                  <Link
+                                    href={subItem.Link}
                                     className="flex items-center p-2 text-gray-900 rounded-lg group"
+                                    onClick={() => setIsMobileMenuOpen(false)}
                                   >
                                     <span>{subItem.label}</span>
-                                    <svg
-                                      className={`w-4 h-4 ml-2 transition-transform ${openDropdowns[`${index}-${subIndex}`] ? "rotate-180" : ""}`}
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      fill="none"
-                                      viewBox="0 0 24 24"
-                                      stroke="currentColor"
-                                    >
-                                      <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M19 9l-7 7-7-7"
-                                      />
-                                    </svg>
-                                  </button>
-                                  {openDropdowns[`${index}-${subIndex}`] && (
-                                    <motion.ul
-                                      className="space-y-2 pl-4 mt-2 transition-all duration-300 ease-in-out max-h-[300px] overflow-hidden"
-                              
-                                    >
-                                      {subItem.subItems.map((subSubItem, subSubIndex) => (
-                                        <motion.li
-                                          key={subSubIndex}
-                                          
-                                        >
-                                          <Link
-                                            href={subSubItem.Link}
-                                            className="flex items-center p-2 text-gray-900 rounded-lg group"
-                                            onClick={() => setIsMobileMenuOpen(false)}
-                                          >
-                                            <span>{subSubItem.label}</span>
-                                          </Link>
-                                        </motion.li>
-                                      ))}
-                                    </motion.ul>
-                                  )}
-                                </div>
-                              ) : (
-                                <Link
-                                  href={subItem.Link}
-                                  className="flex items-center p-2 text-gray-900 rounded-lg group"
-                                  onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                  <span>{subItem.label}</span>
-                                </Link>
-                              )}
-                            </motion.li>
-                          ))}
-                        </motion.ul>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.Link}
-                      className="flex items-center p-2 text-gray-900 rounded-lg group"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <span>{item.label}</span>
-                      {item.icon && <span className="ms-2">{item.icon}</span>}
-                    </Link>
-                  )}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        </motion.div>
-
+                                  </Link>
+                                )}
+                              </motion.li>
+                            ))}
+                          </motion.ul>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        href={item.Link}
+                        className="flex items-center p-2 text-gray-900 rounded-lg group"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <span>{item.label}</span>
+                        {item.icon && <span className="ms-2">{item.icon}</span>}
+                      </Link>
+                    )}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
         )}
 
         {/* Services Dropdown */}
@@ -458,7 +461,7 @@ const Navbar = () => {
         {activeMenu === "About us" && (
           <div
             ref={servicesRef}
-            className="absolute z-40  left-0 overflow-visible"
+            className="absolute z-40  left-0 overflow-visible hidden md:block"
             onClick={() => setActiveMenu(false)}
           >
             <StaggeredSection>
@@ -545,6 +548,78 @@ const Navbar = () => {
             </StaggeredSection>
           </div>
         )}
+
+{activeMenu == "Our Products" && (
+  <div
+  ref={servicesRef}
+  className="absolute z-40 left-40 overflow-visible hidden md:block"
+  onClick={() => setActiveMenu(false)}
+>
+  <div className="px-4 py-7"> {/* Reduced vertical padding */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="relative bg-[#2E2E30] rounded-3xl overflow-hidden max-w-2xl" // Reduced max-width
+    >
+      <div className="flex flex-col md:flex-row items-center justify-between p-7"> {/* Reduced overall padding */}
+        {/* Left Content */}
+        <div className="w-full md:w-3/5 space-y-2"> {/* Reduced spacing between elements */}
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-2xl md:text-3xl font-unbounded text-white"
+          >
+            <span className="text-[#A1BBD9]">360° Software Solutions</span> for
+            <br />
+            Your JEWELLERY Store
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-sm text-gray-300"
+          >
+            Take Your Jewellery Store to the Next Level with
+            <br />
+            <span className="font-semibold text-white">AURUMM</span> - The Ultimate Software Suite
+          </motion.p>
+
+          <motion.button
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center space-x-2 px-4 py-2 mt-2 bg-transparent text-white border border-white rounded-full hover:bg-white hover:text-gray-900 transition-colors text-sm"
+          >
+            <Link href={'https://aurumm.co/products/aupay/'}><span>Know More</span></Link>
+            <ArrowRight className="w-3 h-3" />
+          </motion.button>
+        </div>
+
+        {/* Right Content - Logo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+          className="w-full md:w-2/6 mt-4 md:mt-0 md:pl-4" // Added left padding for spacing from text
+        >
+          <div className="p-2"> {/* Reduced padding */}
+            <Image
+              src={Aurumm}
+              alt="Aurumm Logo"
+              className="h-auto object-fit w-full"
+            />
+          </div>
+        </motion.div>
+      </div>
+    </motion.div>
+  </div>
+</div>
+)}
       </nav>
     </>
   );

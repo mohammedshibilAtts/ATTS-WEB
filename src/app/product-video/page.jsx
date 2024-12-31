@@ -110,7 +110,7 @@ function page() {
           </div>
         </div>
         <div className="  w-full z-10">
-          <div className="px-8">
+          <div className="px-8 hidden lg:block">
             {/* First Grid */}
             <div className=" h-[400px]  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2">
               {videoCard1.map((item, index) => (
@@ -146,7 +146,7 @@ function page() {
                       <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="absolute inset-0 bg-black/60 flex flex-col justify-center items-start p-6 transition-all duration-200"
+                        className="absolute inset-0 bg-black/60 flex flex-col justify-center items-start p-6 transition-all duration-200 rounded-lg"
                       >
                         <motion.div
                           initial={{ y: 20, opacity: 0 }}
@@ -204,7 +204,7 @@ function page() {
                       <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="absolute inset-0 bg-black/60 flex flex-col justify-center items-start p-6 transition-all duration-200"
+                        className="absolute inset-0 bg-black/60 flex flex-col justify-center items-start p-6 transition-all duration-200 rounded-lg"
                       >
                         <motion.div
                           initial={{ y: 20, opacity: 0 }}
@@ -225,6 +225,19 @@ function page() {
                   </div>
                 </motion.div>
               ))}
+            </div>
+          </div>
+          <div className="px-8 lg:hidden">
+            <div className="grid grid-cols-1">
+              <AliceCarousel
+                items={carouselItems}
+                autoPlay
+                autoPlayInterval={3000}
+                infinite
+                disableDotsControls
+                disableButtonsControls
+                mouseTracking
+              />
             </div>
           </div>
         </div>

@@ -66,7 +66,7 @@ export const mobileNavItem = [
     Link: "#",
     icon: null,
     subItems: [
-      { label: "About Us", Link: "/about-us" },
+      { label: "About Us", Link: "/about" },
       { label: "Our Culture", Link: "/our-culture" },
       { label: "Career", Link: "/career" },
     ],
