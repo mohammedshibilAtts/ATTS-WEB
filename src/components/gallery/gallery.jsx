@@ -58,14 +58,14 @@ const GalleryGrid = () => {
             <Image
               src={About1}
               alt="Office staircase"
-              className="w-full h-full object-cover bg-red-50 object-right"
+              className="w-full h-full object-cover  object-right"
             />
           </motion.div>
           <motion.div variants={imageVariants} className="rounded-r-2xl overflow-hidden h-96">
             <Image
               src={About2}
               alt="Office workspace side view"
-              className="w-full h-full object-cover bg-red-50 object-right"
+              className="w-full h-full object-cover  object-right"
             />
           </motion.div>
         </div>
@@ -76,14 +76,14 @@ const GalleryGrid = () => {
             <Image
               src={About3}
               alt="Reception desk with wooden wall"
-              className="w-full h-full object-cover bg-red-50"
+              className="w-full h-full object-cover "
             />
           </motion.div>
           <motion.div variants={imageVariants} className="rounded-2xl overflow-hidden h-80">
             <Image
               src={About4}
               alt="Meeting room centered view"
-              className="w-full h-full object-cover bg-red-50"
+              className="w-full h-full object-cover "
             />
           </motion.div>
         </div>
@@ -101,7 +101,7 @@ const GalleryGrid = () => {
             <Image
               src={About6}
               alt="Main workspace area"
-              className="w-full h-full object-cover bg-red-50"
+              className="w-full h-full object-cover "
             />
           </motion.div>
         </div>
@@ -112,14 +112,14 @@ const GalleryGrid = () => {
             <Image
               src={About7}
               alt="Conference room table"
-              className="w-full h-full object-cover bg-red-50"
+              className="w-full h-full object-cover "
             />
           </motion.div>
           <motion.div variants={imageVariants} className="rounded-2xl overflow-hidden h-80">
             <Image
               src={About8}
               alt="Main workspace area"
-              className="w-full h-full object-cover bg-red-50"
+              className="w-full h-full object-cover "
             />
           </motion.div>
         </div>
@@ -130,14 +130,14 @@ const GalleryGrid = () => {
             <Image
               src={About9}
               alt="Office interior with wall art"
-              className="w-full h-full object-cover bg-red-50"
+              className="w-full h-full object-cover "
             />
           </motion.div>
           <motion.div variants={imageVariants} className="rounded-l-2xl overflow-hidden h-96">
             <Image
               src={About10}
               alt="Office detail view"
-              className="w-full h-full object-cover bg-red-50"
+              className="w-full h-full object-cover "
             />
           </motion.div>
         </div>

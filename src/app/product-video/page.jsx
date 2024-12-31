@@ -10,13 +10,15 @@ import StaggeredSection from "@/components/animation/StaggeredSection";
 import Button from "@/components/button/button";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import VideoCarousel from "@/components/gallery/videoGallery";
 function page() {
   const [activCard1, setCard1] = useState(0);
   const [activCard2, setCard2] = useState(1);
   const videos = [
     {
       id: 1,
-      src: "https://atts-img-video.s3.eu-north-1.amazonaws.com/CRI+i+Smart+Panel.mp4",
+      src: "https://atts-img-video.s3.eu-north-1.amazonaws.com/Sudha+Arjun+Ad.mp4",
+      
       type: "video/mp4",
       title: "Sample Video 1",
     },
@@ -28,7 +30,7 @@ function page() {
     },
     {
       id: 3,
-      src: "https://atts-img-video.s3.eu-north-1.amazonaws.com/EYE+Foundation.mp4",
+      src: "https://atts-img-video.s3.eu-north-1.amazonaws.com/CRI+i+Smart+Panel.mp4",
       type: "video/mp4",
       title: "Sample Video 3",
     },
@@ -83,15 +85,10 @@ function page() {
   return (
     <>
       <div className="w-full">
-        <AliceCarousel
-          items={carouselItems}
-          autoPlay
-          autoPlayInterval={3000}
-          infinite
-          disableDotsControls
-          disableButtonsControls
-          mouseTracking
-        />
+      
+      <VideoCarousel videos={videos}/>
+
+
 
         <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-4">
           <div className="flex flex-col justify-center items-center">
@@ -139,7 +136,7 @@ function page() {
                     </motion.video>
 
                     {/* Black shade overlay */}
-                    <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
+                    <div className="absolute inset-0 bg-black opacity-5 rounded-lg"></div>
 
                     {/* Show description when active */}
                     {activCard1 === index && (
@@ -197,7 +194,7 @@ function page() {
                     </motion.video>
 
                     {/* Black shade overlay */}
-                    <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
+                    <div className="absolute inset-0 bg-black  opacity-5 rounded-lg"></div>
 
                     {/* Show description when active */}
                     {activCard2 === index && (

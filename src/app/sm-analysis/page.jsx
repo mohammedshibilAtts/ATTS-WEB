@@ -139,42 +139,29 @@ function Page() {
           </div>
         </StaggeredSection>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-2 xl:grid-cols-5 gap-4 mt-16">
-          {socialMediaServiceCard.map((item, index) => (
-            <motion.div
-              key={index}
-              className="rounded-xl bg-[#0000000D] p-6 text-center shadow-xl mt-3"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                opacity: { duration: 0.5 },
-                scale: { duration: 0.3 },
-                ease: "easeInOut",
-              }}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.15)",
-                transition: { duration: 0.3, ease: "easeInOut" },
-              }}
-            >
-              <div className="mx-auto flex h-16 w-16 bg-[#003067] -translate-y-12 transform items-center justify-center rounded-full shadow-lg transition-all duration-300">
-                <Image
-                  src={item.icon}
-                  alt="Rocket Icon"
-                  width={40}
-                  height={40}
-                  className="object-cover transition-transform"
-                />
-              </div>
-              <h1 className="text-darken mb-3 text-xl font-medium text-center transition-colors duration-300 ">
-                {item.title}
-              </h1>
-              <p className="px-4 text-gray-500 transition-colors duration-300 text-center">
-                {item.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-16">
+         {socialMediaServiceCard.map((item, index) => (
+           <div key={index} className="flex justify-center rounded-full">
+             <div className="w-[170px] bg-[#0000000D] rounded-full p-4 ">
+               <div className="flex justify-center items-center bg-[#003067] p-3 rounded-full w-[70px] h-[70px] mx-auto">
+                 <Image
+                   src={item.icon}
+                   alt="Rocket Icon"
+                   width={40}
+                   height={40}
+                   className="object-cover transition-transform"
+                 />
+               </div>
+               <div className="title flex justify-center text-center mt-4 text-black">
+                 <h1 className="text-[#003067] font-unbounded">{item.title}</h1>
+               </div>
+               <div className="description  text-center mt-2">
+                 <h2>{item.description}</h2>
+               </div>
+             </div>
+           </div>
+         ))}
+       </div>
       </div>
 
       {/* Contact us */}

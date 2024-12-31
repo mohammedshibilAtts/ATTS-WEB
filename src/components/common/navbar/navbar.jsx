@@ -27,7 +27,7 @@ const navItems = [
     icon: <IoIosArrowDown size={15} />,
   },
   { label: "Services", Link: "", icon: <IoIosArrowDown size={15} /> },
-  { label: "Blogs", Link: "/blog" },
+  // { label: "Blogs", Link: "/blog" },
 ];
 
 const Navbar = () => {
@@ -67,7 +67,19 @@ const Navbar = () => {
       setIsMobileMenuOpen(false);
     }
   };
+  useEffect(() => {
+    // Disable scrolling on the body when active menu is "Services"
+    if (activeMenu === "Services"||activeMenu === "Our Products"||activeMenu === "About us") {
+      document.body.style.overflow = 'hidden';  // Disable body scroll
+    } else {
+      document.body.style.overflow = 'auto';  // Enable body scroll when not active
+    }
 
+    // Cleanup function to reset when component unmounts
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [activeMenu]);
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -106,6 +118,7 @@ const Navbar = () => {
         <div
           className="fixed inset-0 bg-black/30 backdrop-blur-sm z-30"
           onClick={() => setActiveMenu(false)}
+          
           aria-hidden="true"
         />
       )}
@@ -118,6 +131,7 @@ const Navbar = () => {
       )}
 
       <nav
+      onMouseLeave={()=>handleClickOutside('')}
         ref={navbarRef}
         className={`bg-[#010202] py-4 shadow-2xl backdrop-blur-sm sticky top-0 z-40 transition-all duration-300 ease-in-out
     ${scrolling ? "mx-4 md:mx-5 xl:mx-32 rounded-full top-2" : ""}
@@ -217,7 +231,11 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex ml-auto cursor-pointer group">
-            <p className="font-unbounded text-1xl sm:text-lg text-white hover:text-black hover:bg-[#B5D3F5] hover:rounded-3xl transition-all duration-200 py-2 sm:py-3 px-4 sm:px-1">
+            <p
+              className={`font-unbounded text-1xl sm:text-lg text-white hover:underline hover:rounded-3xl transition-all duration-200 py-2 sm:py-3 px-4 sm:px-1 ${
+                currentPath == "/lets-talk" ? "underline" : ""
+              }`}
+            >
               <Link href={"lets-talk"}>Let's Talk</Link>
             </p>
           </div>
@@ -372,91 +390,93 @@ const Navbar = () => {
         )}
 
         {/* Services Dropdown */}
-        {activeMenu == "Services" && (
+        {  activeMenu == "Services" && (
+      <div
+        ref={servicesRef}
+        className="absolute z-40 left-0 overflow-visible hidden md:block"
+        onClick={() => setActiveMenu(false)}
+      >
+        <StaggeredSection>
           <div
-            ref={servicesRef}
-            className="absolute z-40  left-0 overflow-visible hidden md:block"
-            onClick={() => setActiveMenu(false)}
+            className="bg-[#2E2E30] text-white px-4 sm:px-6 lg:px-8 mx-20 mt-8 rounded-xl"
+            style={{ maxHeight: '80vh', overflowY: 'auto' }}  // Add scrolling inside the component
           >
-            <StaggeredSection>
-              <div className="bg-[#2E2E30] text-white px-4 sm:px-6 lg:px-8 mx-20 mt-8 rounded-xl ">
-                <div className="max-w-7xl mx-auto">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:grid-cols-2 xl:grid-cols-3 custom:grid-cols-2">
-                    {/* Digital Engineering Section */}
-                    <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
-                      <h2 className="text-2xl font-semibold mb-4">
-                        Digital Engineering
-                      </h2>
-                      <p className="mb-4 text-gray-400">
-                        Where creativity meets technology in digital
-                        engineering.
-                      </p>
-                      <hr className="my-4 border-gray-600" />
-                      <div className="items mt-2 space-y-4 flex-grow">
-                        {digitalEngineering.map((item, index) => (
-                          <div key={index} className="text-left">
-                            <Link href={item.link} onClick={handleClickOutside}>
-                              <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
-                                {item.title}
-                              </h3>
-                            </Link>
-                            <p className="text-gray-400">{item.description}</p>
-                          </div>
-                        ))}
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:grid-cols-2 xl:grid-cols-3 custom:grid-cols-2">
+                {/* Digital Engineering Section */}
+                <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
+                  <h2 className="text-2xl font-semibold mb-4">
+                    Digital Engineering
+                  </h2>
+                  <p className="mb-4 text-gray-400">
+                    Where creativity meets technology in digital
+                    engineering.
+                  </p>
+                  <hr className="my-4 border-gray-600" />
+                  <div className="items mt-2 space-y-4 flex-grow">
+                    {digitalEngineering.map((item, index) => (
+                      <div key={index} className="text-left">
+                        <Link href={item.link} onClick={handleClickOutside}>
+                          <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
+                            {item.title}
+                          </h3>
+                        </Link>
+                        <p className="text-gray-400">{item.description}</p>
                       </div>
-                    </div>
+                    ))}
+                  </div>
+                </div>
 
-                    {/* Digital Marketing Section */}
-                    <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
-                      <h2 className="text-2xl font-semibold mb-4">
-                        Digital Marketing
-                      </h2>
-                      <p className="mb-4 text-gray-400">
-                        Where creativity meets technology in digital marketing.
-                      </p>
-                      <hr className="my-4 border-gray-600" />
-                      <div className="items mt-2 space-y-4 flex-grow">
-                        {digitalMarketing.map((item, index) => (
-                          <div key={index} className="text-left">
-                            <Link href={item.link} onClick={handleClickOutside}>
-                              <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
-                                {item.title}
-                              </h3>
-                            </Link>
-                            <p className="text-gray-400">{item.description}</p>
-                          </div>
-                        ))}
+                {/* Digital Marketing Section */}
+                <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
+                  <h2 className="text-2xl font-semibold mb-4">
+                    Digital Marketing
+                  </h2>
+                  <p className="mb-4 text-gray-400">
+                    Where creativity meets technology in digital marketing.
+                  </p>
+                  <hr className="my-4 border-gray-600" />
+                  <div className="items mt-2 space-y-4 flex-grow">
+                    {digitalMarketing.map((item, index) => (
+                      <div key={index} className="text-left">
+                        <Link href={item.link} onClick={handleClickOutside}>
+                          <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
+                            {item.title}
+                          </h3>
+                        </Link>
+                        <p className="text-gray-400">{item.description}</p>
                       </div>
-                    </div>
+                    ))}
+                  </div>
+                </div>
 
-                    {/* Digital Media Section */}
-                    <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
-                      <h2 className="text-2xl font-semibold mb-4">
-                        Digital Media
-                      </h2>
-                      <p className="mb-4 text-gray-400">
-                        Where creativity meets technology in digital media.
-                      </p>
-                      <hr className="my-4 border-gray-600" />
-                      <div className="items mt-2 space-y-4 flex-grow">
-                        {digitalMedia.map((item, index) => (
-                          <div key={index} className="text-left">
-                            <Link href={item.link} onClick={handleClickOutside}>
-                              <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
-                                {item.title}
-                              </h3>
-                            </Link>
-                            <p className="text-gray-400">{item.description}</p>
-                          </div>
-                        ))}
+                {/* Digital Media Section */}
+                <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
+                  <h2 className="text-2xl font-semibold mb-4">
+                    Digital Media
+                  </h2>
+                  <p className="mb-4 text-gray-400">
+                    Where creativity meets technology in digital media.
+                  </p>
+                  <hr className="my-4 border-gray-600" />
+                  <div className="items mt-2 space-y-4 flex-grow">
+                    {digitalMedia.map((item, index) => (
+                      <div key={index} className="text-left">
+                        <Link href={item.link} onClick={handleClickOutside}>
+                          <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
+                            {item.title}
+                          </h3>
+                        </Link>
+                        <p className="text-gray-400">{item.description}</p>
                       </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            </StaggeredSection>
+            </div>
           </div>
-        )}
+        </StaggeredSection>
+      </div>)}
 
         {activeMenu === "About us" && (
           <div
@@ -549,78 +569,88 @@ const Navbar = () => {
           </div>
         )}
 
-{activeMenu == "Our Products" && (
-  <div
-  ref={servicesRef}
-  className="absolute z-40 left-40 overflow-visible hidden md:block"
-  onClick={() => setActiveMenu(false)}
->
-  <div className="px-4 py-7"> {/* Reduced vertical padding */}
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="relative bg-[#2E2E30] rounded-3xl overflow-hidden max-w-2xl" // Reduced max-width
-    >
-      <div className="flex flex-col md:flex-row items-center justify-between p-7"> {/* Reduced overall padding */}
-        {/* Left Content */}
-        <div className="w-full md:w-3/5 space-y-2"> {/* Reduced spacing between elements */}
-          <motion.p
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-2xl md:text-3xl font-unbounded text-white"
+        {activeMenu == "Our Products" && (
+          <div
+            ref={servicesRef}
+            className="absolute z-40 left-40 overflow-visible hidden md:block"
+            onClick={() => setActiveMenu(false)}
           >
-            <span className="text-[#A1BBD9]">360° Software Solutions</span> for
-            <br />
-            Your JEWELLERY Store
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-sm text-gray-300"
-          >
-            Take Your Jewellery Store to the Next Level with
-            <br />
-            <span className="font-semibold text-white">AURUMM</span> - The Ultimate Software Suite
-          </motion.p>
-          <Link href={'https://aurumm.co/products/aupay/'}>
-          <motion.button
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center space-x-2 px-4 py-2 mt-2 bg-transparent text-white border border-white rounded-full hover:bg-white hover:text-gray-900 transition-colors text-sm"
-          >
-            <span>Know More</span>
-            <ArrowRight className="w-3 h-3" />
-          </motion.button>
-          </Link>
-        </div>
-
-        {/* Right Content - Logo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5 }}
-          className="w-full md:w-2/6 mt-4 md:mt-0 md:pl-4" // Added left padding for spacing from text
-        >
-          <div className="p-2"> {/* Reduced padding */}
-            <Image
-              src={Aurumm}
-              alt="Aurumm Logo"
-              className="h-auto object-fit w-full"
-            />
+            <div className="px-7 py-7">
+              {" "}
+              {/* Reduced vertical padding */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="relative bg-[#2E2E30] rounded-3xl overflow-hidden max-w-2xl p-3" // Reduced max-width
+              >
+                <div className="flex flex-col md:flex-row items-center justify-between p-7">
+                  {" "}
+                  {/* Reduced overall padding */}
+                  {/* Left Content */}
+                  <div className="w-full md:w-3/5 space-y-2">
+                    {" "}
+                    {/* Reduced spacing between elements */}
+                    <motion.p
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.2 }}
+                      className="text-2xl md:text-3xl font-unbounded text-white"
+                    >
+                      <span className="text-[#A1BBD9]">
+                        360° Software Solutions
+                      </span>{" "}
+                      for
+                      <br />
+                      Your JEWELLERY Store
+                    </motion.p>
+                    <motion.p
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.3 }}
+                      className="text-sm text-gray-300 pt-4 "
+                    >
+                      Take Your Jewellery Store to the Next Level with
+                      <br />
+                      <span className="font-semibold text-white">AURUMM</span> -
+                      The Ultimate Software Suite
+                    </motion.p>
+                    <Link href={"https://aurumm.co/products/aupay/"}>
+                      <motion.button
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex items-center space-x-2 px-4 py-2 mt-2 bg-transparent text-white border border-white rounded-full hover:bg-white hover:text-gray-900 transition-colors text-sm"
+                      >
+                        <span>Know More</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </motion.button>
+                    </Link>
+                  </div>
+                  {/* Right Content - Logo */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.5 }}
+                    className="w-full md:w-2/6 mt-4 md:mt-0 " // Added left padding for spacing from text
+                  >
+                    <div className="p-2">
+                      {" "}
+                      {/* Reduced padding */}
+                      <Image
+                        src={Aurumm}
+                        alt="Aurumm Logo"
+                        className="h-auto object-fit w-full"
+                      />
+                    </div>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </div>
           </div>
-        </motion.div>
-      </div>
-    </motion.div>
-  </div>
-</div>
-)}
+        )}
       </nav>
     </>
   );

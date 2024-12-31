@@ -73,13 +73,13 @@ export const mobileNavItem = [
   },
   {
     label: "Product",
-    Link: "#", // This is the placeholder for the dropdown
+    Link: "#", 
     icon: null,
     subItems: [{ label: "Aurumm", Link: "https://aurumm.co/" }],
   },
   {
     label: "Services",
-    Link: "#", // This is the placeholder for the dropdown
+    Link: "#", 
     icon: null,
     subItems: [
       {
@@ -116,11 +116,11 @@ export const mobileNavItem = [
       },
     ],
   },
-  {
-    label: "Blogs",
-    Link: "/blog",
-    icon: null,
-  },
+  // {
+  //   label: "Blogs",
+  //   Link: "/blog",
+  //   icon: null,
+  // },
 ];
 
 //// serviceData on Home page                     //////////////Home section
