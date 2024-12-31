@@ -114,12 +114,12 @@ export const mobileNavItem = [
           },
         ],
       },
-      {
-        label: "Blogs",
-        Link: "/blog",
-        icon: null,
-      },
     ],
+  },
+  {
+    label: "Blogs",
+    Link: "/blog",
+    icon: null,
   },
 ];
 
