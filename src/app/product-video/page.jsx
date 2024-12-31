@@ -96,17 +96,17 @@ function page() {
               <TitleBox title={"Our Services"} />
             </div>
 
-            <div className="description">
-              <h1 className="font-unbounded text-2xl md:text-3xl text-black">
-                A Website Designed to Match{" "}
-                <span className="font-unbounded text-2xl md:text-3xl  text-start md:text-center text-[#003067] md:block">
-                  Your Perfect Vision.
+            <div className="description flex justify-center text-center">
+              <h1 className="font-unbounded text-2xl sm:text-3xl md:text-4xl text-black">
+              Ads that shine, videos that work—let’s{" "}
+                <span className="  text-start md:text-center text-[#003067]">
+                get your brand noticed!
                 </span>
               </h1>
             </div>
           </div>
         </div>
-        <div className="  w-full z-10">
+        <div className="  w-full z-10 pt-10">
           <div className="px-8 hidden lg:block">
             {/* First Grid */}
             <div className=" h-[400px]  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2">
@@ -155,7 +155,7 @@ function page() {
                             {item.title}
                           </h1>
                           <hr className="w-1/5 font-bold mb-4 mt-3" />
-                          <p className="text-start w-3/5 font-unbounded">
+                          <p className="text-start w-3/5 ">
                             {item.content}
                           </p>
                         </motion.div>
@@ -213,7 +213,7 @@ function page() {
                             {item.title}
                           </h1>
                           <hr className="w-1/5 font-bold mb-4 mt-3" />
-                          <p className="text-start w-3/5 font-unbounded">
+                          <p className="text-start w-3/5 ">
                             {item.content}
                           </p>
                         </motion.div>
@@ -265,42 +265,29 @@ function page() {
             </div>
           </StaggeredSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-16">
-            {videoServiceCard.map((item, index) => (
-              <motion.div
-                key={index}
-                className="rounded-xl bg-[#0000000D] p-6 text-center shadow-xl mt-3"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  opacity: { duration: 0.5 },
-                  scale: { duration: 0.3 },
-                  ease: "easeInOut",
-                }}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.15)",
-                  transition: { duration: 0.3, ease: "easeInOut" },
-                }}
-              >
-                <div className="mx-auto flex h-16 w-16 bg-[#003067] -translate-y-12 transform items-center justify-center rounded-full shadow-lg transition-all duration-300">
-                  <Image
-                    src={item.icon}
-                    alt="Rocket Icon"
-                    width={40}
-                    height={40}
-                    className="object-cover transition-transform"
-                  />
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-16">
+                  {videoServiceCard.map((item, index) => (
+                    <div key={index} className="flex justify-center rounded-full">
+                      <div className="w-[170px] bg-[#0000000D] rounded-full p-4 ">
+                        <div className="flex justify-center items-center bg-[#003067] p-3 rounded-full w-[70px] h-[70px] mx-auto">
+                          <Image
+                            src={item.icon}
+                            alt="Rocket Icon"
+                            width={40}
+                            height={40}
+                            className="object-cover transition-transform"
+                          />
+                        </div>
+                        <div className="title flex justify-center text-center mt-4 text-black">
+                          <h1 className="text-[#003067] font-unbounded">{item.title}</h1>
+                        </div>
+                        <div className="description pb-4 text-center mt-2">
+                          <h2>{item.description}</h2>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <h1 className="text-darken mb-3 text-xl font-medium lg:px-14 transition-colors duration-300 ">
-                  {item.title}
-                </h1>
-                <p className="px-4 text-gray-500 transition-colors duration-300 ">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </div>
 
         <div className="  px-8  md:px-32 ">
