@@ -11,6 +11,7 @@ import Button from "@/components/button/button";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import VideoCarousel from "@/components/gallery/videoGallery";
+import ScrollMotion from "@/components/animation/scrollMotion";
 function page() {
   const [activCard1, setCard1] = useState(0);
   const [activCard2, setCard2] = useState(1);
@@ -80,6 +81,20 @@ function page() {
         {video.title}
       </div>
     </div>
+  ))
+const cardVideos = [...videoCard1,videoCard2].map((video) => (
+  <div key={video.id} className="relative">
+    <video
+      src={video.src}
+      type={video.type}
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="w-full h-auto object-cover"
+    />
+  
+  </div>
   ));
 
   return (
@@ -93,9 +108,9 @@ function page() {
               <TitleBox title={"Our Services"} />
             </div>
             <div className="text-start md:text-center sm:text-left  flex-1">
-              <h1 className="font-unbounded text-2xl sm:text-3xl md:text-4xl text-black">
+              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
                 Ads that shine, videos that work—let’s{" "}
-                <span className="text-[#003067]">get your brand noticed!</span>
+                <span className="text-[#003067] md:block">get your brand noticed!</span>
               </h1>
             </div>
           </div>
@@ -214,12 +229,12 @@ function page() {
               ))}
             </div>
           </div>
-          <div className="px-8 lg:hidden">
+          <div className=" lg:hidden">
             <div className="grid grid-cols-1">
               <AliceCarousel
-                items={carouselItems}
+                items={cardVideos}
                 autoPlay
-                autoPlayInterval={3000}
+                autoPlayInterval={9000}
                 infinite
                 disableDotsControls
                 disableButtonsControls
@@ -238,7 +253,7 @@ function page() {
           <StaggeredSection>
             <div className="title flex flex-col sm:flex-row justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6">
               <div className="text-start sm:text-left  flex-1">
-                <h1 className="font-unbounded text-2xl sm:text-3xl md:text-4xl text-black">
+                <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
                   Performance marketing pros committed{" "}
                   <span className="text-[#003067]">
                     to elevating your brand to a broader audience.
@@ -255,11 +270,25 @@ function page() {
             </div>
           </StaggeredSection>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-16">
-            {videoServiceCard.map((item, index) => (
-              <div key={index} className="flex justify-center rounded-full">
-                <div className="w-[170px] bg-[#0000000D] rounded-full p-4 ">
-                  <div className="flex justify-center items-center bg-[#003067] p-3 rounded-full w-[70px] h-[70px] mx-auto">
+          <ScrollMotion>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-16">
+              {videoServiceCard.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="rounded-xl bg-[#e2d4d41a] border hover:scale-105 p-6 text-center cursor-pointer  mt-3"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    opacity: { duration: 0.5 },
+                    scale: { duration: 0.3 },
+                    ease: "easeInOut",
+                  }}
+                  whileHover={{
+                    scale: 1.05,
+                    transition: { duration: 0.3, ease: "easeInOut" },
+                  }}
+                >
+                  <div className="mx-auto flex h-16 w-16 bg-[#003067] -translate-y-6 transform items-center justify-center rounded-full  transition-all duration-300">
                     <Image
                       src={item.icon}
                       alt="Rocket Icon"
@@ -268,18 +297,16 @@ function page() {
                       className="object-cover transition-transform"
                     />
                   </div>
-                  <div className="title flex justify-center text-center mt-4 text-black">
-                    <h1 className="text-[#003067] font-unbounded">
-                      {item.title}
-                    </h1>
-                  </div>
-                  <div className="description pb-4 text-center mt-2">
-                    <h2>{item.description}</h2>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                  <h1 className="text-darken font-unbounded  mb-3 text-xl  transition-colors duration-300 text-[#003067] ">
+                    {item.title}
+                  </h1>
+                  <p className="px-4 text-gray-500 transition-colors duration-300 ">
+                    {item.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </ScrollMotion>
         </div>
 
         <div className="  px-8  md:px-32 ">

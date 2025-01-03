@@ -2,16 +2,16 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import Contactus from "@/components/contactUs/contactus";
-import About1 from "@/assests/images/about1.jpg";
+import About1 from "@/assests/images/Office1.jpg";
 import About2 from "@/assests/images/about2.jpg";
-import About3 from "@/assests/images/about3.jpg";
-import About4 from "@/assests/images/about4.jpg";
-import About5 from "@/assests/images/about5.png";
-import About6 from "@/assests/images/about6.jpg";
+import About3 from "@/assests/images/Office7.jpg";
+import About4 from "@/assests/images/Office3.jpg";
+import About5 from "@/assests/images/Office6.jpg";
+import About6 from "@/assests/images/Office8.jpg";
 import About7 from "@/assests/images/about7.jpg";
-import About8 from "@/assests/images/about8.jpg";
-import About9 from "@/assests/images/about9.jpg";
-import Culture1 from "@/assests/images/seo1.jpg";
+import About8 from "@/assests/images/Office4.jpg";
+import About9 from "@/assests/images/Office5.jpg";
+import OfficePng from "@/assests/images/Office10.jpg";
 import ATTS from "@/assests/images/ATTS.jpg";
 import TitleBox from "@/components/titleBox/titleBox";
 import WorkEnvironment from "@/assests/images/workenv.jpg";
@@ -147,8 +147,8 @@ function page() {
     "absolute top-10 right-[10%]",
     "absolute -top-6 left-[30%]",
     "absolute -top-6 right-[30%]",
-    "absolute top-[30%] left-0",
-    "absolute top-[30%] right-0",
+    "absolute top-[30%] left-8",
+    "absolute top-[30%] right-8",
     "absolute bottom-36 left-[10%]",
     "absolute bottom-36 right-[10%]",
     "absolute bottom-12 right-[45%]",
@@ -188,7 +188,7 @@ function page() {
                 <div className="inline-block bg-white px-4 py-1.5 rounded-full text-sm font-unbounded mb-4">
                   Our Culture
                 </div>
-                <h1 className="text-white text-3xl sm:text-4xl font-unbounded items-center  leading-tight text-start">
+                <h1 className="text-white text-xl md:text-3xl font-bold  font-unbounded items-center  leading-tight text-start">
                   Just a bunch of creative humans, enjoying every moment of what
                   we do!
                 </h1>
@@ -226,7 +226,7 @@ function page() {
               <div className="inline-block bg-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-unbounded">
                 Our Culture
               </div>
-              <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-[90%] sm:max-w-2xl lg:max-w-3xl mx-auto leading-tight mt-4 sm:mt-6">
+              <h1 className="text-white text-xl md:text-3xl font-bold  font-unbounded max-w-[90%] sm:max-w-2xl lg:max-w-3xl mx-auto leading-tight mt-4 sm:mt-6">
                 Just a bunch of creative humans, enjoying every moment of what
                 we do!
               </h1>
@@ -269,7 +269,7 @@ function page() {
             <div className="title-box flex justify-center md:justify-start">
               <TitleBox title={"Life at ATTS"} />
             </div>
-            <h1 className="font-unbounded text-2xl lg:text-3xl text-black mt-6">
+            <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black mt-6">
               Learn, explore, and totally be yourself - it’s like home,
               <span className="text-[#003067]"> but way more exciting!</span>
             </h1>
@@ -303,9 +303,9 @@ function page() {
           </div>
 
           <div className="description ">
-            <h1 className="font-unbounded text-2xl md:text-3xl text-black">
+            <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
               Building a Work Environment That{" "}
-              <span className="font-unbounded text-2xl md:text-3xl  text-start md:text-center text-[#003067] ">
+              <span className="text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] ">
                 Inspires
               </span>
             </h1>
@@ -327,7 +327,7 @@ function page() {
           <div className="md:col-span-3 h-[400px]">
             <div className="rounded-lg overflow-hidden shadow-md h-full">
               <Image
-                src={Culture1}
+                src={OfficePng}
                 alt="Business analytics presentation"
                 className="w-full h-full object-cover "
               />
@@ -335,18 +335,18 @@ function page() {
           </div>
 
           {/* Center column - Team meeting */}
-          <div className="md:col-span-6 h-[400px]">
-            <div className="rounded-lg overflow-hidden shadow-md bg-white h-full">
+          <div className="md:col-span-6 h-[250px]  md:h-[400px] ">
+            <div className="rounded-lg overflow-hidden shadow-md  h-full">
               <div className="h-full">
                 <video
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-fill "
                   autoPlay
                   muted
                   loop
                   playsInline
                   preload="auto"
                 >
-                  <source src="/video/test.mp4" type="video/mp4" />
+                  <source src="https://atts-img-video.s3.eu-north-1.amazonaws.com/ATTS+Ofz+Video.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -363,9 +363,9 @@ function page() {
             </div>
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
-                src={About2}
+                src={About5}
                 alt="Conference room"
-                className="w-full h-full object-cover bg-blue-200"
+                className="w-full h-full object-cover object-right bg-blue-200"
               />
             </div>
           </div>
@@ -373,7 +373,7 @@ function page() {
       </div>
 
       <div
-        className="bg-white  px-4 sm:px-8 md:px-16 lg:px-32  mt-5"
+        className="bg-white   sm:px-8 md:px-16 lg:px-32  mt-5"
         // ref={section3Ref}
       >
         <div className="flex flex-col justify-center items-center">
@@ -382,9 +382,9 @@ function page() {
           </div>
 
           <div className="description px-4 sm:px-8 md:px-16 lg:px-32">
-            <h1 className="font-unbounded text-2xl md:text-3xl text-black">
+            <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
               Don’t just take our word for it
-              <span className="font-unbounded text-2xl md:text-3xl  text-start md:text-center text-[#003067] md:block ">
+              <span className="text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] md:block ">
                 – hear it directly from them!
               </span>
             </h1>
@@ -471,13 +471,13 @@ function page() {
 
             {/* Headings */}
             <div className="sm:px-4 sm:py-3">
-              <h1 className="font-unbounded text-2xl lg:text-3xl mb-2">
+              <h1 className="text-xl md:text-3xl font-bold  font-unbounded mb-2">
                 Innovating Ideas..!
               </h1>
-              <h1 className="font-unbounded text-2xl lg:text-3xl mb-2">
+              <h1 className="text-xl md:text-3xl font-bold  font-unbounded mb-2">
                 Crafting Designs..!
               </h1>
-              <h1 className="font-unbounded text-2xl lg:text-3xl mb-2">
+              <h1 className="text-xl md:text-3xl font-bold  font-unbounded mb-2">
                 Building Brands..!
               </h1>
 

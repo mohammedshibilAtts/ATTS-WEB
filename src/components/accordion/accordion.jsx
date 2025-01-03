@@ -10,7 +10,7 @@ function Accordion({accordionData}) {
   return (
     <div>
       {accordionData.map((item, index) => (
-        <div key={index} className="border-b border-slate-200 bg-[#0000001A] mt-2  rounded-3xl px-8">
+        <div key={index} className="border border-slate-200 bg-[#e2d4d41a] mt-2  rounded-3xl px-8">
           <button
             onClick={() => toggleAccordion(index)}
             className="w-full flex justify-between items-center py-3 text-black "

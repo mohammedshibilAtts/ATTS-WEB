@@ -15,6 +15,7 @@ import OpenCards from "@/components/extendedCard/extendedCard";
 import AnimatedSection from "@/components/animation/animationSection";
 import { Card, Carousel } from "@/components/ui/imageSlider";
 import ScrollMotion from "@/components/animation/scrollMotion";
+import {motion} from 'framer-motion'
 
 const card = [
   {
@@ -60,7 +61,7 @@ function Page() {
       <ScrollMotion>
         <div className="bg-white px-0  sm:px-8 md:px-16 lg:px-32 pt-9 mt-5">
           <div className="flex flex-col lg:flex-row">
-            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 px-9">
+            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 px-9 flex items-center">
               <h1 className="text-xl md:text-3xl font-bold font-unbounded text-black ">
                 <span className="text-[#003067]">
                   Turn Your Business into a Global Brand{" "}
@@ -70,14 +71,20 @@ function Page() {
             </div>
 
             <div className="flex-1 sm:ml-4 p-4 text-sm sm:text-base">
-              <p className="text-start lg:text-left ps-6">
+            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-6 lg:text-2xl ">
+              At ATTS Technologies Pvt. Ltd.
+            </h3>
+              <p className="text-start lg:text-left mt-4 ps-6">
                 We create strategies that make your brand pop! Every brand has a
                 story, and we make sure yours is unforgettable. From bold
                 designs to catchy messages, we craft a brand that stands out and
                 sticks with your audience. From crafting striking logos to
                 developing compelling messaging, we ensure your brand captures
-                attention and builds a strong connection with your audience. 
-                Whether you're starting from scratch as a start-up or a business
+                attention and builds a strong connection with your audience. {' '} <br className="mt-3"/> 
+        
+              </p>
+              <p className="text-start lg:text-left mt-2 ps-6">
+              Whether you're starting from scratch as a start-up or a business
                 looking to refresh your identity or promote to the global
                 standard, we’ve got the tools to take your brand to the next
                 level, making it memorable, impactful, and unforgettable.  Let’s
@@ -146,29 +153,41 @@ function Page() {
         </ScrollMotion>
 
             <ScrollMotion>
-             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-16">
-         {brandServicesCard.map((item, index) => (
-           <div key={index} className="flex justify-center rounded-full">
-             <div className="w-[170px] bg-[#0000000D] rounded-full p-4 ">
-               <div className="flex justify-center items-center bg-[#003067] p-3 rounded-full w-[70px] h-[70px] mx-auto">
-                 <Image
-                   src={item.icon}
-                   alt="Rocket Icon"
-                   width={40}
-                   height={40}
-                   className="object-cover transition-transform"
-                 />
-               </div>
-               <div className="title flex justify-center text-center mt-4 text-black">
-                 <h1 className="text-[#003067] font-unbounded">{item.title}</h1>
-               </div>
-               <div className="description pb-3 text-center ms-1 mt-2">
-                 <h2>{item.description}</h2>
-               </div>
-             </div>
-           </div>
-         ))}
-       </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-16">
+            {brandServicesCard.map((item, index) => (
+              <motion.div
+                key={index}
+                className="rounded-xl bg-[#e2d4d41a] border hover:scale-105 p-6 text-center cursor-pointer  mt-3"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  opacity: { duration: 0.5 },
+                  scale: { duration: 0.3 },
+                  ease: "easeInOut",
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  transition: { duration: 0.3, ease: "easeInOut" },
+                }}
+              >
+                <div className="mx-auto flex h-16 w-16 bg-[#003067] -translate-y-6 transform items-center justify-center rounded-full  transition-all duration-300">
+                  <Image
+                    src={item.icon}
+                    alt="Rocket Icon"
+                    width={40}
+                    height={40}
+                    className="object-cover transition-transform"
+                  />
+                </div>
+                <h1 className="text-darken font-unbounded  mb-3 text-xl  transition-colors duration-300 text-[#003067] ">
+                  {item.title}
+                </h1>
+                <p className="px-4 text-gray-500 transition-colors duration-300 ">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </ScrollMotion>
       </div>
 

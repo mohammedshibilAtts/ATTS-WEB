@@ -1,7 +1,8 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Logo from "../../../assests/images/logo.svg";
-import About from "../../../assests/images/aboutAtts.jpg";
+import About from "../../../assests/images/Menu_About.jpg";
+import culture from "../../../assests/images/Menu_culture.jpg";
 import Carrer from "../../../assests/images/careerAtts.jpg";
 import Aurumm from "../../../assests/images/Aurumm.png";
 import { IoIosArrowDown } from "react-icons/io";
@@ -198,16 +199,17 @@ const Navbar = () => {
                 >
                   <div
                     className={`flex items-center rounded-full group-hover:bg-[#B5D3F5] group-hover:rounded-5xl transition-all duration-200 py-3 px-6 md:px-3 flex-grow
-                       ${
-                         currentPath == item.Link
-                           ? "bg-[#B5D3F5] text-black transition-all duration-500 ease-in"
-                           : ""
-                       } 
-                       ${
-                         activeMenu == item.label && item.label
-                           ? "bg-[#B5D3F5] text-black"
-                           : ""
-                       }`}
+                      //  ${
+                      //    currentPath == item.Link
+                      //      ? "bg-[#B5D3F5] text-black transition-all duration-500 ease-in"
+                      //      : ""
+                      //  } 
+                      //  ${
+                      //    activeMenu == item.label && item.label
+                      //      ? "bg-[#B5D3F5] text-black"
+                      //      : ""
+                       ``}
+                       `}
                   >
                     {item.label !== "Services" &&
                     item.label !== "About us" &&
@@ -491,7 +493,7 @@ const Navbar = () => {
                   <div className="grid grid-cols-3 gap-8">
                     {/* Left Card */}
                     <div className="flex flex-col">
-                      <div className="relative h-48 rounded-lg overflow-hidden bg-gray-900">
+                      <div className="relative h-68 rounded-lg overflow-hidden bg-gray-900">
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30" />
                         <Image
                           src={About}
@@ -516,10 +518,10 @@ const Navbar = () => {
 
                     {/* Center Card */}
                     <div className="flex flex-col">
-                      <div className="relative h-48 rounded-lg overflow-hidden bg-gray-900">
+                      <div className="relative h-68rounded-lg overflow-hidden bg-gray-900">
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30" />
                         <Image
-                          src={About}
+                          src={culture}
                           alt="Our Culture"
                           className="w-full h-full object-cover"
                         />
@@ -541,7 +543,7 @@ const Navbar = () => {
 
                     {/* Right Card */}
                     <div className="flex flex-col">
-                      <div className="relative h-48 rounded-lg overflow-hidden bg-gray-900">
+                      <div className="relative h-68 rounded-lg overflow-hidden bg-gray-900">
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30" />
                         <Image
                           src={Carrer}

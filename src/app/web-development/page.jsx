@@ -16,7 +16,7 @@ function Page() {
 
       <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-30 pt-9 mt-5">
         <div className="flex flex-col lg:flex-row">
-          <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 px-4 ">
+          <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 px-4 flex items-center ">
             <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
               We’re the website developers in Coimbatore,
               <span className="text-[#003067]">
@@ -27,16 +27,20 @@ function Page() {
           </div>
 
           <div className="flex-1 sm:ml-4 p-4 text-sm sm:text-base">
-            <p className="text-start lg:text-left ps-0 md:ps-6">
+            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-0 md:ps-6 lg:text-2xl ">
+              At ATTS Technologies Pvt. Ltd.
+            </h3>
+            <p className="text-start lg:text-left ps-0 md:ps-6 mt-3">
               We offer you the best website, designed and crafted to your
               brand’s voice by a team backed by years of industry experience and
               a proven track record. From UI/UX design to wireframing, research,
               and development, we develop with a keen eye in every aspect of
               design. Whether you’re a start-up or an established business, we
-              tailor solutions to meet your brand’s needs. We work with you to
-              craft a brand-reflecting website that engages your audience,
-              ensures smooth functionality, and delivers results. Let’s elevate
-              your online presence and make your website shine!
+              tailor solutions to meet your brand’s needs.   
+              <br /> We work with you to craft a brand-reflecting website that
+              engages your audience, ensures smooth functionality, and delivers
+              results. Let’s elevate your online presence and make your website
+              shine!
             </p>
           </div>
         </div>
@@ -60,7 +64,7 @@ function Page() {
         </div>
 
         {/* Static Web Section */}
-        <StaggeredSection >
+        <StaggeredSection>
           <div className="image flex justify-center items-center mt-12">
             <Image
               src={WebDevPng}
@@ -77,15 +81,17 @@ function Page() {
             </h1>
           </div>
 
-          <div className="description">
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
-              Why Choose Dynamic Websites? Imagine if your website could provide
-              a unique and interactive user experience for every visitor. Feels
-              amazing, doesn’t it? With real-time content updates, personalized
-              features, and seamless integration with databases, dynamic sites
-              offer a rich, engaging experience for visitors. If you’re looking
-              to craft a website for e-commerce, blogs, or customer portals,
-              then a dynamic website would be your brand speaker.
+          <div className="description md:px-10">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed  text-center">
+              Why Choose Static Websites? Imagine a user visits your website and
+              loves it for the way it responds fast and provides an
+              extraordinarily smooth user experience on all devices. That’s what
+              a static website can do to your brand. With clean designs and
+              on-the-spot navigation, they deliver both performance and
+              reliability. Whether on desktop or mobile, a static site furnishes
+              a seamless experience that enhances user engagement.   <br />Take your
+              web presence to the next level with a custom static solution.
+              Contact us today! 
             </p>
           </div>
         </div>
@@ -111,15 +117,16 @@ function Page() {
               Dynamic Website
             </h1>
           </div>
-          <div className="description">
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
+          <div className="description md:px-10">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed text-center">
               Why Choose Dynamic Websites? Imagine if your website could provide
               a unique and interactive user experience for every visitor. Feels
               amazing, doesn’t it? With real-time content updates, personalized
               features, and seamless integration with databases, dynamic sites
               offer a rich, engaging experience for visitors. If you’re looking
               to craft a website for e-commerce, blogs, or customer portals,
-              then a dynamic website would be your brand speaker. Drive growth
+              then a dynamic website would be your brand speaker. <br />
+               Drive growth
               and engagement with a dynamic website tailored to your business
               objectives. Get in touch to see how our solutions can make a
               difference. 
@@ -155,7 +162,7 @@ function Page() {
         <div className="grid grid-cols-1 px-4  sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-9">
           {webDevelopmentService.map((item, index) => (
             <div
-              className="bg-[#0000000D] shadow-md p-6 transition-transform transform hover:scale-105 hover:shadow-xl rounded-lg cursor-pointer"
+              className="bg-[#e2d4d41a] border hover:scale-105 p-6  transition-transform transform  rounded-lg cursor-pointer"
               key={index}
             >
               <div className="flex items-center mb-4">

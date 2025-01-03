@@ -23,7 +23,7 @@ const VideoCarousel = ({ videos }) => {
 
   return (
     <div id="indicators-carousel" className="relative w-full">
-      <div className="relative md:h-[700px] h-[350px] overflow-hidden bg-slate-50"> {/* Set a fixed height */}
+      <div className="relative md:h-[770px] h-[250px] overflow-hidden bg-slate-50"> {/* Set a fixed height */}
         
         {/* Black Shade Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div> {/* Black semi-transparent shade */}
@@ -43,7 +43,7 @@ const VideoCarousel = ({ videos }) => {
               muted
               playsInline
               style={{
-                objectFit: 'cover', // Ensures the video maintains its aspect ratio and doesn't stretch
+                objectFit: 'fill', // Ensures the video maintains its aspect ratio and doesn't stretch
                 width: '100%',
                 height: '100%',
               }}

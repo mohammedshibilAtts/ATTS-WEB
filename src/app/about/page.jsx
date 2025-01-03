@@ -62,9 +62,9 @@ function page() {
         <TitleBox title={"About Us"} />
         <div className="mt-5 flex justify-center md:justify-start">
           <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
-            Discover Your Potential with ATTS{" "}
+          We Craft Software Excellence to{" "}
             <span className="font-unbounded text-2xl md:text-3xl md:block text-center md:text-start text-[#003067]">
-              Perform Like Never Before!
+            Thrive Your Business!
             </span>
           </h1>
         </div>
@@ -85,9 +85,9 @@ function page() {
             </div>
             <div className="mt-10 ">
               <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
-                Let’s work together and make{" "}
+              Let’s work together & turn ideas {" "}
                 <span className=" text-xl md:text-3xl font-bold  font-unbounded  md:text-start md:block  text-[#003067]">
-                  something amazing happen!
+                into something extraordinary!
                 </span>
               </h1>
             </div>
@@ -98,7 +98,7 @@ function page() {
           </div>
         </div>
 
-        <div className="founder flex flex-col h-[900px] lg:h-[400px] lg:flex-row mt-20 mb-8">
+        <div className="founder  flex-col h-[900px] lg:h-[400px] lg:flex-row mt-20 mb-8 hidden">
           <div className="image flex-1 flex items-center justify-center">
             <FadeMotion duration={2}>
               <Image
@@ -116,7 +116,7 @@ function page() {
           <div className="content-scroll flex-1  px-4 md:px-9 items-center justify-center mb-4">
             {aboutCompany.map((data) => (
               <div key={data.title} className="mt-5">
-                <h1 className="font-unbounded text-xl md:text-3xl text-[#003067]">
+                <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-[#003067]">
                   {data.title}
                 </h1>
                 <p className="mt-5 text-lg break-words">{data.content}</p>
@@ -134,7 +134,7 @@ function page() {
             Brand Collaborations
           </div>
           <h2 className="text-white  text-xl md:text-3xl font-bold  font-unbounded">
-            Brands that <span className="text-blue-400">trust us</span>
+            Brands that <span className="text-blue-900">trust us</span>
           </h2>
         </div>
 
@@ -184,7 +184,7 @@ function page() {
           
         </div>
         <div className="text-center mt-4">
-        <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-blue-900">
+        <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-[#0c192d]">
           Snapshots of Our Agency!
         </h1>
       </div>

@@ -386,15 +386,15 @@ const Technical = require("../assests/images/Technical.svg");
 
 export const aboutUsCardData = [
   {
-    title: "Seamless Integration",
+    title: "Seamless Scalable Integration ",
     description:
-      "We develop products that fit your operations and easy to use as ABC. We ensure you get a cohesive and the best user experience. By eliminating the disruptions we promise to deliver error-free and easy-to-use products. Whether you’re a start-up or an MNC, our robust software is ready to adapt to your needs.",
+    "We develop products that fit your operations and easy to use as ABC. We ensure you get a cohesive and the best user experience. By eliminating the disruptions we promise to deliver error-free and easy-to-use products. Whether you’re a start-up or an MNC, our robust software is ready to adapt to your needs.",
     icon: Seamless,
   },
   {
-    title: "Customer-Centric",
+    title: "Customer-Centric Approach",
     description:
-      "We drive on the motto “client comes first!” We design products standing in your shoes, keeping YOU in mind. We don’t just create an app, it will be YOUR app, designed to fit your brand like an extension, rather than an addition. ",
+    "We drive on the motto “client comes first!” We design products standing in your shoes, keeping YOU in mind. We don’t just create an app, it will be YOUR app, designed to fit your brand like an extension, rather than an addition. ",
     icon: CustomerSVG,
   },
   {
@@ -406,13 +406,13 @@ export const aboutUsCardData = [
   {
     title: "Exceptional Performance",
     description:
-      "Make sure you meet the deadlines and avoid delays with your weekly claims.",
+      "We always make sure you receive the best and the rest stand behind. By prioritizing excellence in everything we do, we ensure your business growth with the best performance.",
     icon: Superior,
   },
   {
     title: "Accelerated Growth",
     description:
-      "Proficient technological assistant acts as a game changer, driving faster progress and superior results through smooth operations.",
+    "Proficient technological assistant acts as a game changer, driving faster progress and superior results through smooth operations.",
     icon: Accelerated,
   },
   {
@@ -538,25 +538,25 @@ export const performanceMarketing = [
     title: "Multi-Channel Expertise",
     icon: MultiChannelExpertise,
     description:
-      "Boost brand visibility, ensuring it stands out & connects with your customers.",
+      "Leverage SEO, PPC, social media, and more for greater reach. ",
   },
   {
     title: "Audience Building",
     icon: AudienceBuilding,
     description:
-      "Boost brand visibility, ensuring it stands out & connects with your customers.",
+      "Reach the right audience with tailored campaigns, building trust & boosting engagement. ",
   },
   {
     title: "Demo Downloads",
     icon: DemoDownloads,
     description:
-      "Boost brand visibility, ensuring it stands out & connects with your customers.",
+      "Drive high-quality leads to download your demos, increasing user interaction & conversions. ",
   },
   {
     title: "Improved Sales Figures",
     icon: ImprovedSalesFigures,
     description:
-      "Boost brand visibility, ensuring it stands out & connects with your customers.",
+      "Optimize your sales pipeline with tailored strategies, driving growth & stronger results.",
   },
 ];
 
@@ -678,35 +678,40 @@ export const socialMediaServiceCard=[
   }
 ]
 
+const High_Quality = require("@/assests/images/High-Quality.svg");
+const Creative_Composition = require("@/assests/images/Creative-Composition.svg");
+const Brand_Consistency = require("@/assests/images/Brand-Consistency.svg");
+const Versatility = require("@/assests/images/Versatility.svg");
+const Post_Processing = require("@/assests/images/Post-Processing.svg");
 
 export const photographyServiceCard=[
   {
     title: "High-Quality Imagery",
-    icon: ImprovedSalesFigures,
+    icon: High_Quality,
     description:
       "Crisp and clear photos that enhance your brand’s visual appeal.",
   },
   {
     title: "Creative Composition ",
-    icon: ImprovedSalesFigures,
+    icon: Creative_Composition,
     description:
       "Expertly framed images that tell your brand’s story.",
   },
   {
     title: "Brand Consistency ",
-    icon: ImprovedSalesFigures,
+    icon: Brand_Consistency,
     description:
       "Maintaining a unified style across all photos to reflect your brand’s identity.",
   },
   {
     title: "Versatility ",
-    icon: ImprovedSalesFigures,
+    icon: Versatility,
     description:
       " Photos suitable for use across various platforms, from social media to print.",
   },
   {
     title: "Post-Processing Expertise ",
-    icon: ImprovedSalesFigures,
+    icon: Post_Processing,
     description:
       "Professional editing to ensure polished, high-quality images.",
   },
@@ -758,21 +763,115 @@ export const videoServiceCard=[
 
 export const carrerData = [
   {
-    title: "MERN Full Stack Developer",
-    location: "Chennai",
+    title: "Sales and Marketing Specialist",
+    location: "Chennai, Coimbatore",
     date: Date.now(),
-    vacancy: 5,
+    vacancy: 2,
+    experience:2,
+    jd:"ATTS Technologies Private Limited in Coimbatore is a dynamic team of technical and marketing professionals who bring a unique blend of energy, creativity, and fun to every project. We let the quality of our service speak for itself, bringing a touch of glam to the tech and marketing world. This is a full-time on-site role for a Sales and Marketing Specialist at ATTS Technologies Private Limited in Coimbatore. The Sales and Marketing Specialist will be responsible for communication, customer service, sales, training, and sales management on a day-to-day basis.",
+    Requirements:[
+      "Communication and Customer Service skills",
+      "Sales and Sales Management skills",
+      'Training expertise',
+      'Strong interpersonal and relationship-building skills',
+      'Experience in marketing and sales strategies',
+      'Ability to work in a fast-paced environment',
+      "Bachelor's degree in Marketing, Business, or related field"
+    ],
+    Key_Responsibilities:[]
   },
   {
-    title: "MEAN Full Stack Developer",
+    title: "SEO Analyst",
     location: "Coimbatore",
     date: Date.now(),
-    vacancy: 4,
+    vacancy: 2,
+    experience:2,
+    jd:"We are looking for a Dynamic SEO Analyst with 1-2 years of experience to help optimize website content and improve search engine rankings. The role involves keyword research, on-page and off-page SEO, technical SEO, and reporting on performance metrics.",
+    Key_Responsibilities:[
+      "Conduct keyword research and identify SEO opportunities.",
+      "Optimize website content, meta tags, and URLs for better rankings.",
+      "Assist with link-building and off-page SEO efforts.",
+      "Perform technical SEO audits and resolve issues affecting performance.",
+      "Track and report on SEO metrics using tools like Google Analytics and SEMrush.",
+      "Collaborate with the content team to optimize all content for search engines."
+    ],
+    Requirements:[
+      "1-2 years of SEO experience (on-page, off-page, technical).",
+      "Proficiency with SEO tools (Google Analytics, SEMrush, Ahrefs).",
+      "Basic knowledge of HTML, CSS, and CMS platforms (e.g., WordPress).",
+      "Strong analytical skills and attention to detail.",
+      "Excellent communication and teamwork abilities.",
+      "Bachelor’s degree in Marketing, Business, Communications, or a related field."
+    ]
   },
   {
-    title: "Flutter Developer",
+    title: "Digital Marketing Trainee",
     location: "Coimbatore",
     date: Date.now(),
-    vacancy: 3,
+    vacancy: 2,
+    experience:"Fresher",
+    jd:"As a Digital Marketing Trainee, you’ll gain hands-on experience in digital marketing, including campaign execution, social media management, content creation, SEO, and performance tracking. Working closely with senior team members, you’ll contribute to real-world strategies and develop essential skills to grow in the field of digital marketing.",
+    Key_Responsibilities:[
+    "Content Creation: Assist in creating engaging content for social media and blogs.",
+    "Campaign Support: Help execute email, social media, and ad campaigns.",
+    "Social Media Management: Support social media activities.",
+    "Research: Track industry trends, competitors, and audience preferences.",
+    "SEO Support: Assist with keyword research and website content optimization.",
+    "Performance Tracking: Monitor and report on campaign and social media performance.",
+    "General Support: Help with day-to-day marketing tasks and maintain content calendars."
+    ],
+    Requirements:[
+      "Basic understanding of digital marketing concepts.",
+      "Familiar with social media platforms and Google Analytics.",
+      "Strong communication and writing skills.",
+      "Eagerness to learn and adapt.",
+      "Any Bachelor's degree."
+    ]
+  },
+  {
+    title: "Graphic Designer & Video Editor",
+    location: "Coimbatore",
+    date: Date.now(),
+    vacancy: 2,
+    experience:1,
+    jd:"ATTS is hiring for Graphic Designer Cum Video Editor with minimum 1 year of experience.Proficiency in graphic design software such as Adobe Photoshop, Illustrator, and InDesign, Adobe.Understanding of design principles like composition, typography, color theory, and visual hierarchy. Ability to create various types of designs including logos, posters, brochures, banners, and social media graphics. Knowledge of print production processes and specifications.",
+    Key_Responsibilities:[
+      "Collaborating with clients or stakeholders to understand their needs and objectives.",
+      "Creating visual concepts, either from scratch or based on existing brand guidelines.",
+      "Train the Students as per the Curriculum",
+      "Developing and refining designs or video concepts based on feedback.",
+      "Managing multiple projects simultaneously and meeting deadlines.",
+      "Ensuring consistency in branding and messaging across all design and video assets.",
+      "Keeping up-to-date with industry trends, software updates, and best practices.",
+      "Occasionally, you might need to work closely with other team members such as copywriters, illustrators, or animators to complete projects.",
+    ],
+    Requirements:[]
+  },
+  {
+    title: "Business Development Executive",
+    location: "Madurai",
+    date: Date.now(),
+    vacancy: 2,
+    experience:1,
+    jd:"We're seeking a driven and empathetic Business Development Executive to drive software sales and support our company's growth. You'll create and execute bidding strategies, build strong client relationships, and help grow our software solutions in the market. If you're passionate about sales and long-term success, we'd love to hear from you!",
+    Key_Responsibilities:[
+      "Build relationships with prospective clients",
+      "Maintain consistent contact with existing clients",
+      "Manage sales pipeline",
+      "Analyze market and establish competitive advantages",
+      "Track metrics to ensure targets are hit Qualifications",
+      "Bachelor's degree 3+ years in sales industry",
+      "Experience in full sales cycle including deal closing Demonstrated sales success",
+      "Strong negotiation skills",
+      "Strong communication and presentation skills",
+      "CRM experience is preferred.",
+    ],
+    Requirements:[
+      "Mastery of video editing software like Adobe Premiere Pro, Final Cut Pro.",
+      "Familiarity with video formats, codecs, and compression techniques.",
+      "Ability to edit and manipulate video footage, including cutting, trimming, adding transitions, and applying effects.",
+      "Understanding of audio editing, including mixing, syncing, and adding sound effects.",
+      "Knowledge of motion graphics and animation tools like Adobe After Effect",
+    ]
   },
 ];

@@ -16,30 +16,30 @@ function Page() {
 
       <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-30 pt-9 mt-5">
         <div className="flex flex-col lg:flex-row">
-          <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 px-4 ">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-[#003067]">
-              Craft the perfect app for your brand,
-              <span className="text-black">
-                {" "}
-                with Coimbatore's  finest mobile app developers. 
+          <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 px-4 flex items-center ">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
+              <span className="text-[#003067]">
+                Craft the perfect app for your brand, with Coimbatore's 
               </span>
+              finest mobile app developers. 
             </h1>
           </div>
 
           <div className="flex-1 sm:ml-4 p-4 text-sm sm:text-base">
-            <h3 className=" text-xl md:text-3xl font-bold  font-unbounded ps-0 md:ps-6 lg:text-2xl ">
+            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-0 md:ps-6 lg:text-2xl ">
               At ATTS Technologies Pvt. Ltd.
             </h3>
-            <p className="text-start lg:text-left ps-0 md:ps-6">
+            <p className="text-start lg:text-left ps-0 md:ps-6 mt-3">
               We have a team of techies who intend to craft solutions to develop
               your business. With intellectually equipped experience, our team
               develops applications - YOUR application! We ensure your mobile
               application reflects your brand and provides an extraordinary user
-              experience.   Our tech team is here to collaborate and develop a
-              mobile application. Whether it can be iOS or Android we deliver
-              you the best to elevate your online presence and credibility in
-              the industry. Connect with us, we develop solutions to develop
-              your brand.
+              experience.  
+              <br /> Our tech team is here to collaborate and develop a mobile
+              application. Whether it can be iOS or Android we deliver you the
+              best to elevate your online presence and credibility in the
+              industry. Connect with us, we develop solutions to develop your
+              brand.
             </p>
           </div>
         </div>
@@ -75,13 +75,13 @@ function Page() {
 
         <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-2">
           <div className="title mb-4">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-center  text-[#003067]">
-              Crafting Excellence for Android & iOS Devices
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-center ">
+              Crafting Excellence for <span className=" text-[#003067]">Android & iOS Devices</span>
             </h1>
           </div>
 
           <div className="description">
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed text-center">
               As a preeminent app development company in Coimbatore, ATTS
               Technologies specializes in high-performance mobile apps for
               Android and iOS. Our expert team creates seamless, intuitive, and
@@ -115,7 +115,7 @@ function Page() {
             </h1>
           </div>
           <div className="description">
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed text-center">
               Being the finest app development company in Coimbatore, our core
               of mobile app development is a user-centric approach. We ensure
               every application is designed to deliver an exceptional user
@@ -138,10 +138,8 @@ function Page() {
         <div className="title  flex flex-col sm:flex-row  justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6">
           <div className=" md:w-3/4 sm:py-3 px-4">
             <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black ">
-            A dynamic team of mobile app experts committed to building an app that {" "}
-              <span className="text-[#003067]">
-              stands above the rest
-              </span>
+              A dynamic team of mobile app experts committed to building an app
+              that <span className="text-[#003067]">stands above the rest</span>
             </h1>
           </div>
           <div className="text-center sm:text-left  group   flex-1 flex justify-center md:justify-end h-full ">
@@ -156,7 +154,7 @@ function Page() {
         <div className="grid grid-cols-1 px-4  sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-9">
           {AppDevelopmentService.map((item, index) => (
             <div
-              className="bg-[#0000000D] shadow-md p-6 transition-transform transform hover:scale-105 hover:shadow-xl rounded-lg cursor-pointer"
+              className="bg-[#e2d4d41a] border hover:scale-105 p-6 transition-transform transform  rounded-lg cursor-pointer"
               key={index}
             >
               <div className="flex items-center mb-4">

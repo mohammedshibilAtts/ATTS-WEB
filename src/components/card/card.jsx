@@ -11,11 +11,11 @@ const Card = ({ title, description, icon }) => {
         </div>
       )}
       <div className="flex items-center justify-between mb-2 mt-3">
-        <div className="flex items-Start">
-          <div className="text-2xl text-white font-unbounded text-Start">{title}</div>
+        <div className="flex items-center">
+          <div className="text-2xl text-white font-unbounded text-center">{title}</div>
         </div>
       </div>
-      <p className="text-sm sm:text-base mb-4 break-words">{description}</p>
+      <p className="text-sm sm:text-base mb-4 break-words text-center">{description}</p>
     </div>
   );
 };

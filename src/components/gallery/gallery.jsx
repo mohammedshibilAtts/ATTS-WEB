@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
-import About1 from '@/assests/images/about1.jpg';
-import About2 from '@/assests/images/about2.jpg';
-import About3 from '@/assests/images/about3.jpg';
-import About4 from '@/assests/images/about4.jpg';
-import About5 from '@/assests/images/about5.png';
-import About6 from '@/assests/images/about6.jpg';
-import About7 from '@/assests/images/about7.jpg';
-import About8 from '@/assests/images/about8.jpg';
+import About1 from '@/assests/images/Office8.jpg';
+import About2 from '@/assests/images/Office7.jpg';
+import About3 from '@/assests/images/Office3.jpg';
+import About4 from '@/assests/images/Office1.jpg';
+import About5 from '@/assests/images/Office4.jpg';
+import About6 from '@/assests/images/Office2.jpg';
+import About7 from '@/assests/images/Office10.jpg';
+import About8 from '@/assests/images/Office8.jpg';
 import About9 from '@/assests/images/about9.jpg';
 import About10 from '@/assests/images/about10.jpg';
 
