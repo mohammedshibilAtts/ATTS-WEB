@@ -95,7 +95,7 @@ export const mobileNavItem = [
         Link: "#", // Placeholder for the Digital Marketing dropdown
         subItems: [
           { label: "Search Engine Optimization", Link: "/seo-analysis" },
-          { label: "Brand Analytics", Link: "/brand-analytics" },
+          { label: "Branding", Link: "/brand-analytics" },
           { label: "Social Media Strategy", Link: "/sm-analytics" },
           { label: "Performance Marketing", Link: "/performance-marketing" },
         ],
@@ -105,7 +105,7 @@ export const mobileNavItem = [
         Link: "#",
         subItems: [
           {
-            label: "Video Creation & Ads Promotion",
+            label: "Ad Films & Multimedia Advertising",
             Link: "/product-video",
           },
           {

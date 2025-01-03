@@ -8,12 +8,13 @@ import StaggeredSection from "@/components/animation/StaggeredSection";
 import Button from "@/components/button/button";
 import { AppDevelopmentService } from "@/constants/constant";
 import Contactus from "@/components/contactUs/contactus";
+import ScrollMotion from "@/components/animation/scrollMotion";
 
 function Page() {
   return (
     <>
       {/* Header */}
-
+    <ScrollMotion>
       <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-30 pt-9 mt-5">
         <div className="flex flex-col lg:flex-row">
           <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 px-4 flex items-center ">
@@ -44,9 +45,12 @@ function Page() {
           </div>
         </div>
       </div>
+      </ScrollMotion>
 
+      
       {/* Our Service */}
       <div className="bg-white  px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-4">
+      <ScrollMotion>
         <div className="flex flex-col justify-center items-center">
           <div className="title-box mb-6 sm:mb-8">
             <TitleBox title={"Our Services"} />
@@ -61,9 +65,9 @@ function Page() {
             </h1>
           </div>
         </div>
-
+        </ScrollMotion>
         {/* Static Web Section */}
-        <StaggeredSection>
+        <ScrollMotion>
           <div className="image flex justify-center items-center">
             <Image
               src={MobileImage1}
@@ -71,7 +75,7 @@ function Page() {
               alt="Web Development"
             />
           </div>
-        </StaggeredSection>
+        
 
         <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-2">
           <div className="title mb-4">
@@ -92,12 +96,12 @@ function Page() {
             </p>
           </div>
         </div>
-
+        </ScrollMotion>
         {/* dynamic web section */}
 
-        <StaggeredSection
-          staggerAmount={1.2}
-          children={
+        <ScrollMotion>
+          
+         
             <div className="image flex justify-center items-center mt-12">
               <Image
                 src={MobileImage2}
@@ -105,8 +109,7 @@ function Page() {
                 alt="Web Development"
               />
             </div>
-          }
-        ></StaggeredSection>
+     
 
         <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-2">
           <div className="title mb-4">
@@ -127,10 +130,11 @@ function Page() {
             </p>
           </div>
         </div>
+        </ScrollMotion>
       </div>
 
       {/* What we can help you with */}
-
+      <ScrollMotion>
       <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-5">
         <div className="titleBox flex justify-center md:justify-start">
           <TitleBox title={"What we can help you with"} className={"w-72"} />
@@ -150,7 +154,7 @@ function Page() {
             />
           </div>
         </div>
-
+        <ScrollMotion>
         <div className="grid grid-cols-1 px-4  sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-9">
           {AppDevelopmentService.map((item, index) => (
             <div
@@ -175,8 +179,9 @@ function Page() {
             </div>
           ))}
         </div>
+        </ScrollMotion>
       </div>
-
+      </ScrollMotion>
       {/* Contact us */}
 
       <div className="bg-white  px-8  md:px-32 mt-6  lg:mt16">

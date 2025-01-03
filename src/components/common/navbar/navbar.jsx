@@ -135,7 +135,7 @@ const Navbar = () => {
       <nav
       onMouseLeave={()=>handleClickOutside('')}
         ref={navbarRef}
-        className={`bg-[#010202] py-2 shadow-2xl backdrop-blur-sm sticky top-0 z-40 transition-all duration-300 ease-in-out
+        className={`bg-[#010202] py-4 md:py-2 shadow-2xl backdrop-blur-sm sticky top-0 z-40 transition-all duration-300 ease-in-out
     ${scrolling &isMobileMenuOpen==false ? "mx-4 md:mx-5 xl:mx-32 rounded-full top-2 " : ""}
     `}
       >

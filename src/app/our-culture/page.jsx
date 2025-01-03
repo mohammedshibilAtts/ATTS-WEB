@@ -501,7 +501,7 @@ function page() {
         </div>
       </div>
 
-      <div className="bg-white  px-8  md:px-32 ">
+      <div className="bg-white  flex justify-center  md:px-32 mt-6  lg:mt16">
         <Contactus />
       </div>
     </>

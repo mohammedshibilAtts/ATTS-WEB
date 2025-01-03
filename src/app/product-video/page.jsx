@@ -309,9 +309,9 @@ const cardVideos = [...videoCard1,videoCard2].map((video) => (
           </ScrollMotion>
         </div>
 
-        <div className="  px-8  md:px-32 ">
-          <Contactus />
-        </div>
+        <div className="bg-white  flex justify-center  md:px-32 mt-6  lg:mt16">
+        <Contactus />
+      </div>
       </div>
     </>
   );
