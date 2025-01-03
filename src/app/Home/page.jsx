@@ -505,7 +505,7 @@ function page() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 mb-3 mt-4">
                   {blogData.map((data, index) => (
-                    <Link href={`/blog/${index+1}`} key={index}>
+                    // <Link href={`/blog/${index+1}`} key={index}>
                     <div
                       
                       className="relative overflow-hidden rounded-lg shadow-lg"
@@ -530,7 +530,7 @@ function page() {
 
                       </div>
                     </div>
-                    </Link>
+                    // </Link>
                   ))}
                 </div>
               </div>
