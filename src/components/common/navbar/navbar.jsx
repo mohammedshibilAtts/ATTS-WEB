@@ -44,6 +44,7 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  
   const handleMenuClick = (menu) => {
     if (menu === "Services") {
       setActiveMenu("Services");
@@ -133,8 +134,8 @@ const Navbar = () => {
       <nav
       onMouseLeave={()=>handleClickOutside('')}
         ref={navbarRef}
-        className={`bg-[#010202] py-4 shadow-2xl backdrop-blur-sm sticky top-0 z-40 transition-all duration-300 ease-in-out
-    ${scrolling ? "mx-4 md:mx-5 xl:mx-32 rounded-full top-2" : ""}
+        className={`bg-[#010202] py-2 shadow-2xl backdrop-blur-sm sticky top-0 z-40 transition-all duration-300 ease-in-out
+    ${scrolling &isMobileMenuOpen==false ? "mx-4 md:mx-5 xl:mx-32 rounded-full top-2 " : ""}
     `}
       >
         <div className="main flex items-center px-4 sm:px-6 justify-between">
@@ -232,8 +233,8 @@ const Navbar = () => {
 
           <div className="hidden lg:flex ml-auto cursor-pointer group">
             <p
-              className={`font-unbounded text-1xl sm:text-lg text-white hover:underline hover:rounded-3xl transition-all duration-200 py-2 sm:py-3 px-4 sm:px-1 ${
-                currentPath == "/lets-talk" ? "underline" : ""
+              className={`font-unbounded text-1xl sm:text-lg text-white hover:underline hover:decoration-[#B5D3F5] hover:underline-offset-8 hover:rounded-3xl transition-all duration-200 py-2 sm:py-3 px-4 sm:px-1 ${
+                currentPath == "/lets-talk" ? "underline decoration-[#9bc5f5] underline-offset-8" : ""
               }`}
             >
               <Link href={"lets-talk"}>Let's Talk</Link>
@@ -246,7 +247,7 @@ const Navbar = () => {
           <motion.div
             ref={navbarRef}
             id="drawer-navigation"
-            className="fixed top-0 right-0 z-40 w-64 h-screen p-4 overflow-y-auto bg-white  block lg:hidden"
+            className="fixed top-0 right-0 z-40 w-80 h-screen p-4 overflow-y-auto bg-white  block lg:hidden"
             initial={{ x: "100%" }} // Start off-screen to the right
             animate={{ x: 0 }} // Slide in to its normal position
             exit={{ x: "100%" }} // Slide out to the right when closed
@@ -615,7 +616,7 @@ const Navbar = () => {
                       <span className="font-semibold text-white">AURUMM</span> -
                       The Ultimate Software Suite
                     </motion.p>
-                    <Link href={"https://aurumm.co/products/aupay/"}>
+                    <Link href={"https://aurumm.co/products/"}>
                       <motion.button
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}

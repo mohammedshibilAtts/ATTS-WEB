@@ -93,7 +93,7 @@ const OpenCards = ({ cards }) => {
                         initial="initial"
                         animate="visible"
                         exit="exit"
-                        className='mt-2 text-sm text-white'
+                        className='mt-2 text-sm text-white ms-4'
                       >
                        <hr  className='mr-auto mb-2'/>
                         {card.description || 'No description available'}

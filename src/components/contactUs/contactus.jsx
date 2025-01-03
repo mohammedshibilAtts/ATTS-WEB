@@ -82,7 +82,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16 max-w-6xl">
+    <div className="flex flex-col lg:flex-row items-center justify-between mx-auto p-8 lg:p-16 max-w-6xl">
       <div className="mb-8 lg:mb-0 lg:mr-16">
         <h1 className="text-5xl lg:text-8xl font-unbounded tracking-tight">
           Let's

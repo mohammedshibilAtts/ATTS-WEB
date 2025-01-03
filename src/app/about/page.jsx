@@ -31,25 +31,27 @@ function page() {
           </div>
 
           <div className="absolute top-4 sm:top-16 left-1/2 transform -translate-x-1/2 text-center">
-            <h1 className="font-unbounded text-[#B5D3F5] text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-              Business software is our Craft
-            </h1>
+            <h2 className="text-[#B5D3F5] text-xl md:text-3xl font-bold  font-unbounded">
+            We craft software solutions for business challenges
+            </h2>
 
             <div className="flex flex-row justify-center items-center gap-4 mt-6 text-white font-gilroy uppercase">
               <div className="flex items-center gap-2">
                 <div className="ourBrand bg-[#BC5EFF] w-4 h-4 rounded-3xl" />
-                <h1 className="text-xs sm:text-sm">Our Brands</h1>
+                <h1 className="text-xs sm:text-sm">DESIGN</h1>
               </div>
 
               <div className="flex items-center gap-2">
                 <div className="ourCustomer bg-[#F1A70B] w-4 h-4 rounded-3xl" />
-                <h1 className="text-xs sm:text-sm">Our Customer</h1>
+                <h1 className="text-xs sm:text-sm">DEVELOP</h1>
               </div>
 
               <div className="flex items-center gap-2">
                 <div className="ourPresence bg-[#54BD95] w-4 h-4 rounded-3xl" />
-                <h1 className="text-xs sm:text-sm">Global Presence</h1>
-              </div>
+                <h1 className="text-xs sm:text-sm">DOMINATE</h1>
+              </div> 
+
+              {/* font chnage  */}
             </div>
           </div>
         </div>
@@ -59,7 +61,7 @@ function page() {
       <div className="bg-white px-8 pt-9 md:px-32">
         <TitleBox title={"About Us"} />
         <div className="mt-5 flex justify-center md:justify-start">
-          <h1 className="font-unbounded text-2xl text- md:text-3xl text-black">
+          <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
             Discover Your Potential with ATTS{" "}
             <span className="font-unbounded text-2xl md:text-3xl md:block text-center md:text-start text-[#003067]">
               Perform Like Never Before!
@@ -82,9 +84,9 @@ function page() {
               </p>
             </div>
             <div className="mt-10 ">
-              <h1 className="font-unbounded text-2xl  md:text-start md:text-3xl text-black">
+              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
                 Let’s work together and make{" "}
-                <span className="font-unbounded text-2xl md:text-3xl  md:text-start md:block  text-[#003067]">
+                <span className=" text-xl md:text-3xl font-bold  font-unbounded  md:text-start md:block  text-[#003067]">
                   something amazing happen!
                 </span>
               </h1>
@@ -131,7 +133,7 @@ function page() {
           <div className="bg-white text-[#0c192d] inline-block px-4 py-2 rounded-full font-unbounded text-sm mb-4">
             Brand Collaborations
           </div>
-          <h2 className="text-white text-3xl md:text-5xl font-bold">
+          <h2 className="text-white  text-xl md:text-3xl font-bold  font-unbounded">
             Brands that <span className="text-blue-400">trust us</span>
           </h2>
         </div>
@@ -145,13 +147,13 @@ function page() {
         </div>
 
         <div className="flex flex-wrap justify-between items-start px-4 md:px-40 mb-16 relative mt-6">
-          <div className="bg-white text-[#0c192d] flex px-4 py-2 text-center rounded-full font-unbounded text-sm mb-4">
+          <div className="bg-white text-[#0c192d] flex px-4 py-2 text-center rounded-full font-unbounded text-md mb-4">
             We're Special. Here’s Why?
           </div>
           <div className="w-full text-center md:text-left mb-0 md:mb-0 mt-3">
-            <h1 className="font-unbounded text-2xl text- md:text-3xl text-white">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-white">
             Result-Driven Operations for{" "}
-              <span className="font-unbounded text-2xl md:text-3xl  text-start lg:block text-[#B5D3F5]">
+              <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-start lg:block text-[#B5D3F5]">
               Rock-Steady Success! 
               </span>
             </h1>
@@ -182,7 +184,7 @@ function page() {
           
         </div>
         <div className="text-center mt-4">
-        <h1 className="text-3xl font-bold text-blue-900">
+        <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-blue-900">
           Snapshots of Our Agency!
         </h1>
       </div>

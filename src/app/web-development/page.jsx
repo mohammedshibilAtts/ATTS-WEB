@@ -17,7 +17,7 @@ function Page() {
       <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-30 pt-9 mt-5">
         <div className="flex flex-col lg:flex-row">
           <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 px-4 ">
-            <h1 className="font-unbounded text-2xl lg:text-3xl text-black">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
               We’re the website developers in Coimbatore,
               <span className="text-[#003067]">
                 {" "}
@@ -50,9 +50,9 @@ function Page() {
           </div>
 
           <div className="description px-4 sm:px-8 md:px-16 lg:px-32">
-            <h1 className="font-unbounded text-2xl md:text-3xl text-black">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
               A Website Designed to Match{" "}
-              <span className="font-unbounded text-2xl md:text-3xl  text-start md:text-center text-[#003067] md:block">
+              <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] md:block">
                 Your Perfect Vision.
               </span>
             </h1>
@@ -72,7 +72,7 @@ function Page() {
 
         <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-2">
           <div className="title mb-4">
-            <h1 className="font-unbounded text-2xl md:text-3xl text-center  text-[#003067]">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-center  text-[#003067]">
               Static Website
             </h1>
           </div>
@@ -107,7 +107,7 @@ function Page() {
 
         <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-2">
           <div className="title mb-4">
-            <h1 className="font-unbounded  text-center text-2xl md:text-3xl  text-[#003067]">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-center  text-[#003067]">
               Dynamic Website
             </h1>
           </div>
@@ -136,7 +136,7 @@ function Page() {
         </div>
         <div className="title  flex flex-col sm:flex-row  justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6">
           <div className=" md:w-3/4 sm:py-3 px-4">
-            <h1 className="font-unbounded text-2xl sm:text-3xl md:text-4xl text-black ">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black ">
               We’re a team of Webbies, ready to create a website{" "}
               <span className="text-[#003067]">
                 you’ll be proud to show off.

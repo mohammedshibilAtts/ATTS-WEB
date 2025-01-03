@@ -2,10 +2,10 @@
 import TitleBox from "@/components/titleBox/titleBox";
 import Image from "next/image";
 import React from "react";
-import TailoredStrategy from "@/assests/images/seo1.jpg";
-import ABTesting from "@/assests/images/seo2.jpg";
-import SeoMarketing from "@/assests/images/seo3.jpg";
-import AnalyticsMarketing from "@/assests/images/seo4.jpg";
+import TailoredStrategy from "@/assests/images/seo1.jpeg";
+import ABTesting from "@/assests/images/seo2.jpeg";
+import SeoMarketing from "@/assests/images/seo3.jpeg";
+import AnalyticsMarketing from "@/assests/images/seo4.jpeg";
 import StaggeredSection from "@/components/animation/StaggeredSection";
 import { motion } from "framer-motion";
 import Button from "@/components/button/button";
@@ -14,12 +14,13 @@ import Contactus from "@/components/contactUs/contactus";
 import OpenCards from "@/components/extendedCard/extendedCard";
 import AnimatedSection from "@/components/animation/animationSection";
 import { Card, Carousel } from "@/components/ui/imageSlider";
+import ScrollMotion from "@/components/animation/scrollMotion";
 
 const card = [
   {
     title: "Keyword Research & Competitive Analysis",
     description:
-    "As the best SEO company in Coimbatore, we dig deep to find the perfect keywords and analyze your competitors. We make sure you’re always one step ahead, driving more traffic and getting noticed online! ",
+      "As the best SEO company in Coimbatore, we dig deep to find the perfect keywords and analyze your competitors. We make sure you’re always one step ahead, driving more traffic and getting noticed online! ",
     img: TailoredStrategy,
   },
   {
@@ -31,13 +32,13 @@ const card = [
   {
     title: "Relevant Link Building",
     description:
-    "As a leading SEO agency in Coimbatore, we’re all about getting you those high-quality backlinks that make Google take notice. With our smart link-building strategies, your site’s authority soars, driving more traffic and putting you ahead of the competition! ",
+      "As a leading SEO agency in Coimbatore, we’re all about getting you those high-quality backlinks that make Google take notice. With our smart link-building strategies, your site’s authority soars, driving more traffic and putting you ahead of the competition! ",
     img: SeoMarketing,
   },
   {
     title: "Content Marketing & Blogs ",
     description:
-    "Being the pioneer SEO agency in Coimbatore, we craft killer content that not only boosts your rankings but also keeps your audience coming back for more! From engaging blog posts to share-worthy content, we help tell your brand’s story in a way that clicks. ",
+      "Being the pioneer SEO agency in Coimbatore, we craft killer content that not only boosts your rankings but also keeps your audience coming back for more! From engaging blog posts to share-worthy content, we help tell your brand’s story in a way that clicks. ",
     img: AnalyticsMarketing,
   },
 ];
@@ -50,11 +51,11 @@ function Page() {
   return (
     <>
       {/* Header */}
-      <StaggeredSection>
+      <ScrollMotion>
         <div className="bg-white px-0  sm:px-8 md:px-16 lg:px-32 pt-9 mt-5">
           <div className="flex flex-col lg:flex-row">
             <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 px-9">
-              <h1 className="font-unbounded text-2xl md:text-3xl text-black ">
+              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black ">
                 <span className="text-[#003067]">
                   Dominate search rankings{" "}
                 </span>
@@ -63,7 +64,6 @@ function Page() {
             </div>
 
             <div className="flex-1 sm:ml-4 p-4 text-sm sm:text-base">
-
               <p className="text-start lg:text-left ps-6">
                 Do you want to see your business ranking top? SEO is your best
                 buddy when you want to uplift your brand naturally. Boost your
@@ -73,57 +73,59 @@ function Page() {
                 use advanced analytics to track your search rankings for better
                 results. Let us help you optimize your digital presence and
                 attract valuable traffic through actionable insights and
-                targeted SEO strategies.   We are delighted to say you’ve
-                reached the correct place. We’ll make you experience resulting
-                in the top position.
+                targeted SEO strategies.  We are delighted to say you’ve reached
+                the correct place. We’ll make you experience resulting in the
+                top position.
               </p>
             </div>
           </div>
         </div>
-      </StaggeredSection>
+        </ScrollMotion>
 
       {/* Our Service */}
       <div className="bg-white w-full mt-4">
-        <StaggeredSection>
+      <ScrollMotion>
           <div className="flex flex-col justify-center items-center">
             <div className="title-box mb-6 sm:mb-8">
               <TitleBox title={"Our Services"} />
             </div>
 
             <div className="description">
-              <h1 className="font-unbounded text-2xl text-start  md:text-center px-9 md:text-3xl text-black">
-                Perfect SEO Strategies That Get {" "}
-                <span className="font-unbounded text-2xl md:text-3xl  text-center text-[#003067] md:block">
-                Results & Keep You Winning! 
+              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-start  md:text-center px-9  text-black">
+                Perfect SEO Strategies That Get{" "}
+                <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-center text-[#003067] md:block">
+                  Results & Keep You Winning! 
                 </span>
               </h1>
             </div>
           </div>
-        </StaggeredSection>
+          </ScrollMotion>
 
-        <AnimatedSection>
+      
+          <ScrollMotion>
           <div className="hidden md:block">
             <OpenCards cards={card} />
           </div>
           <div className="block md:hidden mt-5">
             <Carousel items={data} />
           </div>
-        </AnimatedSection>
+          </ScrollMotion>
+          
       </div>
 
       {/* What we can help you with */}
 
+        <ScrollMotion>
       <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-5 ">
         <div className="titleBox flex justify-center flex-row md:justify-start">
           <TitleBox title={"What we can help you with"} className={"w-72"} />
         </div>
-        <StaggeredSection>
           <div className="title flex flex-col lg:flex-row justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6 ">
             <div className=" sm:text-left  flex-1">
-              <h1 className="font-unbounded text-2xl px-5 sm:text-3xl md:text-4xl text-black ">
-              Your Trusted SEO Experts, {" "}
+              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded px-5  text-black ">
+                Your Trusted SEO Experts, {" "}
                 <span className="text-[#003067]">
-                Delivering Results That Last!
+                  Delivering Results That Last!
                 </span>
               </h1>
             </div>
@@ -135,43 +137,42 @@ function Page() {
               />
             </div>
           </div>
-        </StaggeredSection>
+       
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-16">
-  {SeoServicesCard.map((item, index) => (
-    <div key={index} className="flex justify-center rounded-full">
-      <div className="w-[170px] bg-[#0000000D] rounded-full p-4 ">
-        <div className="flex justify-center items-center bg-[#003067] p-3 rounded-full w-[70px] h-[70px] mx-auto">
-          <Image
-            src={item.icon}
-            alt="Rocket Icon"
-            width={40}
-            height={40}
-            className="object-cover transition-transform"
-          />
-        </div>
-        <div className="title flex justify-center text-center mt-4 text-black">
-          <h1 className="text-[#003067] font-unbounded">{item.title}</h1>
-        </div>
-        <div className="description pb-4 text-center mt-2">
-          <h2>{item.description}</h2>
+          {SeoServicesCard.map((item, index) => (
+            <div key={index} className="flex justify-center rounded-full">
+              <div className="w-[170px] bg-[#0000000D] rounded-full p-4 ">
+                <div className="flex justify-center items-center bg-[#003067] p-3 rounded-full w-[70px] h-[70px] mx-auto">
+                  <Image
+                    src={item.icon}
+                    alt="Rocket Icon"
+                    width={40}
+                    height={40}
+                    className="object-cover transition-transform"
+                  />
+                </div>
+                <div className="title flex justify-center text-center mt-4 text-black">
+                  <h1 className="text-[#003067] font-unbounded">
+                    {item.title}
+                  </h1>
+                </div>
+                <div className="description pb-4 text-center mt-2">
+                  <h2>{item.description}</h2>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
-  ))}
-</div>
-
-
-
-    
-      
-       </div>
-
+       </ScrollMotion>
       {/* Contact us */}
 
+      <ScrollMotion>
       <div className="  px-8  md:px-32  ">
         <Contactus />
       </div>
+      </ScrollMotion>
     </>
   );
 }

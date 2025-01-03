@@ -26,8 +26,8 @@ export const digitalMarketing = [
     link: "seo-analysis",
   },
   {
-    title: "Brand Analytics",
-    description: "Tracking brand performance for continuous growth.",
+    title: "Branding",
+    description: "Branding services for strategic identity and lasting recognition.",
     link: "brand-analytics",
   },
   {
@@ -44,7 +44,7 @@ export const digitalMarketing = [
 
 export const digitalMedia = [
   {
-    title: "Video Creation & ads Promotion",
+    title: "Ad Films & Multimedia Advertising",
     description: "Bringing your story to life through video.",
     link: "product-video",
   },
@@ -151,7 +151,7 @@ export const serviceData = [
     icon: <MdSendToMobile size={36} className="text-white  rounded-lg" />,
   },
   {
-    title: "Video Creation & ads Promotion",
+    title: "Ad Films & Multimedia Advertising",
     content:
       "We specialize in the art of storytelling; we tell your brand’s story to the world through captivating videos and ads reflecting your brand’s vision. From showcasing product TV ads to engagement boost reels, and sales-increasing social media videos, we’ve got your back.",
     linkText: "LEARN MORE",
@@ -209,31 +209,72 @@ export const ClientBrandImages = [
 
 // Statics about the our company
 export const Homestatics = [
-  { title: "Clients", count: 150 },
-  { title: "Projects", count: 150 },
-  { title: "Experience", count: 20 },
+  { title: "Brands Created", count: 150 },
+  { title: "Projects Handled", count: 300 },
+  { title: "Experience", count: 10 },
   { title: "Awards", count: 15 },
 ];
 
 //   TestimonialsInfo
 
-const Person1 = require("../assests/images/person1.jpeg");
-const Person2 = require("../assests/images/person2.webp");
+
+const Tale_of_Two = require("../assests/images/TaleofTwo.webp");
+const Swamy_Jewellery = require("../assests/images/SwamyJewellery.webp");
+const Metroflex_Mattress = require("../assests/images/MetroflexMattress.webp");
+const Kavitha_Jewellery = require("../assests/images/KavithaJewellery.webp");
+const SVJ = require("../assests/images/ShreeVenkatachalapathy.webp");
+const Sree_Daksha = require("../assests/images/KavithaJewellery.webp");
+const SriRajeswari = require("../assests/images/SriRajeswari.webp");
 
 export const reviews = [
   {
     id: 1,
-    image: Person1,
-    name: "Daniel Smith",
-    role: "Software Developer",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci lacus, tempor nec accumsan ac, luctus ut sem. Mauris pretium lacus eget vulputate rhoncus.",
+    image: Tale_of_Two,
+    name: "Tale of Two",
+    role: "Client",
+    text: "The team did an excellent job creating a beautiful and easy-to-navigate website for our wedding planning business. The website is elegant, user-friendly, and perfectly reflects the essence of our services. We're happy with the outcome, thanks to ATTS.",
   },
   {
     id: 2,
-    image: Person2,
-    name: "Jane Doe",
-    role: "Product Manager",
-    text: "Vivamus egestas, orci eu lobortis pulvinar, metus magna venenatis justo, at fringilla orci neque non erat. Pellentesque habitant morbi tristique. luctus ut sem. Mauris pretium lacus eget ",
+    image: Swamy_Jewellery,
+    name: "Swamy Jewellery",
+    role: "Client",
+    text: "Since we started using AUPAY for our chit fund management, we've noticed a huge improvement in how our customers interact with us. The app is easy for them to use, and they appreciate being able to manage their subscriptions quickly and without any hassle. It has definitely made their experience more seamless and convenient.",
+  },
+  {
+    id: 3,
+    image: Metroflex_Mattress,
+    name: "Metroflex Mattress",
+    role: "Client",
+    text: "ATTS is comfortable to work with and has truly transformed our online presence. The Shopify e-commerce website they developed is visually appealing and easy to navigate, improving the customer shopping experience. Their digital marketing services have expanded our reach and boosted sales. We’re extremely happy with the results!",
+  },
+  {
+    id: 4,
+    image: Kavitha_Jewellery,
+    name: "Kavitha Jewellery",
+    role: "Client",
+    text: "AUPAY and AUSALES have really changed the way our customers interact with us. With AUPAY, they can easily manage their chit funds from their phones, whether it's on Android or iOS. They find the app very user-friendly, and it’s become a go-to tool for them. AUSALES has also made the billing process smoother, which means quicker transactions and happier customers.",
+  },
+  {
+    id: 5,
+    image: SVJ,
+    name: "Shree Venkatachalapathy Jewellery",
+    role: "Client",
+    text: "With AUPAY and AUSALES, our customers have had a much better experience. AUPAY, as a mobile app for both Android and iOS, allows them to manage their chit funds quickly and easily. It’s made the whole process more convenient for them, and they love the simplicity of it. AUSALES has also improved our billing system, making the checkout faster, which our customers really appreciate.",
+  },
+  {
+    id: 6,
+    image: Sree_Daksha,
+    name: "Sree Daksha Land Shapers",
+    role: "Client",
+    text: "The website developed by ATTS perfectly showcases our real estate services. It’s clean, professional, and easy for potential clients to navigate. We’ve received positive feedback from visitors, and the team delivered more than we expected.",
+  },
+  {
+    id: 7,
+    image: SriRajeswari,
+    name: "Sri Rajeswari Jewels",
+    role: "Client",
+    text: "AUPAY has made a big difference for our customers. They can use the mobile app on both Android and iOS to manage their chit funds with ease. It’s user-friendly, and they no longer have to wait around or deal with complicated paperwork. The whole experience is faster and more efficient, which our customers love.",
   },
 ];
 
@@ -265,28 +306,26 @@ export const TestimonialsInfo = [
 ];
 
 //   blog data
-const Blog1 = require("../assests/images/blog1.jpeg");
-const Blog2 = require("../assests/images/blog2.jpeg");
-const Blog3 = require("../assests/images/blog3.jpeg");
+const Blog1 = require("../assests/images/blog1.png");
+const Blog2 = require("../assests/images/blog2.jpg");
+const Blog3 = require("../assests/images/blog3.jpg");
 
 export const blogData = [
   {
     img: Blog1,
-    date: " Feb 7, 2024",
     content:
-      " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci lac",
+      "How Many Backlinks Needed Per Month to Your Website?",
   },
   {
     img: Blog2,
-    date: " Feb 7, 2024",
+    
     content:
-      " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci lac",
+      " How Many Backlinks Needed Per Month to Your Website?",
   },
   {
     img: Blog3,
-    date: " Feb 7, 2024",
     content:
-      " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci lac",
+      " Voice Search Optimization in Digital Marketing: Unlocking the Future ",
   },
 ];
 
@@ -521,101 +560,119 @@ export const performanceMarketing = [
   },
 ];
 
+const Website_Performance = require("@/assests/images/Website_Performance.svg");
+const Keyword_Effectiveness = require("@/assests/images/Keyword_Effectiveness.svg");
+const Reputation_Management = require("@/assests/images/Reputation_Management.svg");
+const Backlink_Analysis = require("@/assests/images/Backlink_Analysis.svg");
+const Local_SEO = require("@/assests/images/Local_SEO.svg");
+
 export const SeoServicesCard=[
   {
     title: "Website Performance",
-    icon: ImprovedSalesFigures,
+    icon: Website_Performance,
     description:
       "Assessing speed, mobile responsiveness, and user experience to improve rankings.",
   },
   {
     title: "Keyword Effectiveness",
-    icon: ImprovedSalesFigures,
+    icon: Keyword_Effectiveness,
     description:
       "Boosting your rankings by high-impact keywords and driving targeted traffic.",
   },
   {
     title: "Reputation Management ",
-    icon: ImprovedSalesFigures,
+    icon: Reputation_Management,
     description:
       "Managing reviews, monitoring presence, and building trust.",
   },
   {
     title: "Backlink Analysis",
-    icon: ImprovedSalesFigures,
+    icon: Backlink_Analysis,
     description:
       "Evaluating backlinks to boost domain authority and visibility.",
   },
   {
     title: "Local SEO Ranking ",
-    icon: ImprovedSalesFigures,
+    icon: Local_SEO,
     description:
       "Boosting your local SEO with location-specific keywords and improved visibility.",
   },
 ]
 
+const Branding1 = require("@/assests/images/Brand_Visibility.svg");
+const Branding2 = require("@/assests/images/Brand_Presence.svg");
+const Branding3 = require("@/assests/images/Brand_Affinity.svg");
+const Branding4 = require("@/assests/images/Higher_Sales.svg");
+const Branding5 = require("@/assests/images/Higher_Sales.svg");
+
+
 export const brandServicesCard=[
   {
     title: "Brand Visibility ",
-    icon: ImprovedSalesFigures,
+    icon: Branding1,
     description:
       "Building recognition and trust for your brand across audiences.",
   },
   {
-    title: "Brand Presence",
-    icon: ImprovedSalesFigures,
+    title: "Brand Presence ",
+    icon: Branding2,
     description:
       "Creating lasting impressions and making your brand easily identifiable.",
   },
   {
     title: "Brand Affinity ",
-    icon: ImprovedSalesFigures,
+    icon: Branding3,
     description:
-      "Building trust and keeping customers coming back for more.",
+      "Building trust and keeping customers coming back for more. ",
   },
   {
     title: "Higher Sales Growth ",
-    icon: ImprovedSalesFigures,
+    icon: Branding4,
     description:
       "Boosting sales by strengthening your brand and customer relationships. ",
   },
   {
     title: "Enhanced Credibility ",
-    icon: ImprovedSalesFigures,
+    icon: Branding5,
     description:
       "Building trust and authority with a strong, consistent brand presence.",
   },
 ]
 
+const Custom_Strategies = require("@/assests/images/Custom_Strategies.svg");
+const Engaging_Content = require("@/assests/images/Engaging_Content.svg");
+const Targeted_Ads = require("@/assests/images/Targeted_Ads.svg");
+const Active_Engagement = require("@/assests/images/Active_Engagement.svg");
+const Driven_Insights = require("@/assests/images/Driven_Insights.svg");
 
 export const socialMediaServiceCard=[
   {
     title: "Custom Strategies ",
-    icon: ImprovedSalesFigures,
+    icon: Custom_Strategies,
     description:
       "Tailored plans crafted to accelerate your brand’s growth and reach.",
   },
   {
     title: "Engaging Content ",
-    icon: ImprovedSalesFigures,
+    icon: Engaging_Content,
     description:
       "Creative posts and visuals that grab attention and boost engagement.",
   },
   {
     title: "Targeted Ads",
-    icon: ImprovedSalesFigures,
+    icon: Targeted_Ads,
     description:
       "Ads designed to reach your ideal audience for maximum impact.",
   },
   {
     title: "Active Engagement",
-    icon: ImprovedSalesFigures,
+    icon: Active_Engagement,
     description:
       "Building and nurturing a vibrant online community for lasting connections.",
   },
   {
     title: "Data-Driven Insights ",
-    icon: ImprovedSalesFigures,
+    icon: Driven_Insights,
     description:
       "Track performance and refining strategies for progressive improvement and growth.",
   }

@@ -168,9 +168,6 @@ const htmlContentTOUser = `
       },
     });
   } catch (error) {
-    console.error('Error sending email:', error);
-    
-
     return new Response(
       JSON.stringify({ success: false, error: 'Failed to send email' }),
       {

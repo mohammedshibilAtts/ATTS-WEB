@@ -17,7 +17,7 @@ function Page() {
       <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-30 pt-9 mt-5">
         <div className="flex flex-col lg:flex-row">
           <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 px-4 ">
-            <h1 className="font-unbounded text-2xl lg:text-3xl text-[#003067]">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-[#003067]">
               Craft the perfect app for your brand,
               <span className="text-black">
                 {" "}
@@ -27,7 +27,7 @@ function Page() {
           </div>
 
           <div className="flex-1 sm:ml-4 p-4 text-sm sm:text-base">
-            <h3 className="font-unbounded text-xl ps-0 md:ps-6 lg:text-2xl ">
+            <h3 className=" text-xl md:text-3xl font-bold  font-unbounded ps-0 md:ps-6 lg:text-2xl ">
               At ATTS Technologies Pvt. Ltd.
             </h3>
             <p className="text-start lg:text-left ps-0 md:ps-6">
@@ -53,9 +53,9 @@ function Page() {
           </div>
 
           <div className="description px-4 sm:px-8 md:px-16 lg:px-32">
-            <h1 className="font-unbounded text-2xl md:text-3xl text-black">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
               The Perfect Mobile App, Designed with{" "}
-              <span className="font-unbounded text-2xl md:text-3xl  text-start md:text-center text-[#003067] md:block">
+              <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] xl:block">
                 Your Vision in Mind.
               </span>
             </h1>
@@ -75,7 +75,7 @@ function Page() {
 
         <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-2">
           <div className="title mb-4">
-            <h1 className="font-unbounded text-2xl md:text-3xl text-center  text-[#003067]">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-center  text-[#003067]">
               Crafting Excellence for Android & iOS Devices
             </h1>
           </div>
@@ -110,7 +110,7 @@ function Page() {
 
         <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-2">
           <div className="title mb-4">
-            <h1 className="font-unbounded  text-center text-2xl md:text-3xl  text-[#003067]">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded  text-center   text-[#003067]">
               User experience design
             </h1>
           </div>
@@ -137,7 +137,7 @@ function Page() {
         </div>
         <div className="title  flex flex-col sm:flex-row  justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6">
           <div className=" md:w-3/4 sm:py-3 px-4">
-            <h1 className="font-unbounded text-2xl sm:text-3xl md:text-4xl text-black ">
+            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black ">
             A dynamic team of mobile app experts committed to building an app that {" "}
               <span className="text-[#003067]">
               stands above the rest

@@ -5,6 +5,8 @@ import React from "react";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Contactus from "@/components/contactUs/contactus";
 import Link from "next/link";
+import { FaCircleArrowRight } from "react-icons/fa6";
+
 
 function page() {
   return (
@@ -12,25 +14,38 @@ function page() {
       {/* Hero Section */}
       <FadeMotion>
         <div className="bg-white sm:px-8 md:px-16 lg:px-30 mt-8">
-          <div className="max-w-6xl mx-auto px-4 py-16">
+          <div className="max-w-7xl mx-auto  py-16">
             {/* Innovation Section */}
-            <div className="flex flex-col sm:flex-row justify-between items-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-bold max-w-xs text-center sm:text-left">
+            <div className="flex flex-col sm:flex-row justify-between items-center mb-20 mx-44">
+              <h2 className="text-2xl md:text-3xl font-bold font-unbounded text-center sm:text-left">
                 READY TO
                 <br />
                 INNOVATE?
               </h2>
-              <div className="bg-black w-32 h-48 rounded-lg flex items-center justify-center mt-8 sm:mt-0">
-                <span className="text-white text-2xl font-bold">AOS</span>
+              <div className="center relative rounded-xl">
+              <FaCircleArrowRight size={50} className="absolute -left-20 -top-7 hidden lg:block hover:rotate-90 transition-all duration-500 hover:cursor-pointer"/>
               </div>
-            </div>
-
+              <div className=" w-32 h-full rounded-xl flex items-center justify-center mt-8 sm:mt-0 ">
+              <video
+                className="w-full h-full object-cover rounded-xl"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+              
+              >
+                <source src="https://atts-img-video.s3.eu-north-1.amazonaws.com/Atts+Logo+Video.mp4" type="video/mp4"className="rounded-lg" />
+              </video>
+              </div>
+            </div>  
+          
             {/* Contact Us Section */}
             <div className="text-center mb-12">
               <div className="flex justify-center">
                 <TitleBox title={"Contact Us"} />
               </div>
-              <h3 className="text-2xl md:text-3xl font-unbounded mt-5">
+              <h3 className="text-xl md:text-3xl font-bold  font-unbounded mt-5">
                 Ready to Bring Your Ideas to Life?{" "}
                 <span className="text-[#003067] md:block">
                   Contact Us Today!
@@ -41,7 +56,7 @@ function page() {
             {/* Contact Details Card */}
             <div className="bg-black text-white rounded-3xl p-4 sm:p-6 md:p-8">
               {/* Top Grid - Contact Info */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+              <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                 {/* Phone Numbers */}
                 <div className="bg-[#FFFFFF33] rounded-2xl p-4 sm:p-5">
                   <h4 className="font-bold mb-3 sm:mb-4">Phone:</h4>

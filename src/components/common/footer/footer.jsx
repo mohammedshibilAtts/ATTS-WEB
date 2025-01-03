@@ -15,8 +15,8 @@ const Footer = () => {
           {/* Left Half - Company Description */}
           <div className="lg:w-1/2">
             <Image src={Logo} alt="ATTS Logo" className="mb-4 max-w-[200px] sm:max-w-none" />
-            <p className="text-sm leading-relaxed mb-6 pr-0 lg:pr-8 max-w-2xl">
-              We make your brand speak for you! ATTS Technologies is a creatively driven company offering digital solutions for your business growth. As a trailblazing software company and a leading digital marketing agency, we deliver what your brand needs to thrive. From ideation to execution, we have your back. Relax and watch your brand grow as dollars flow into your account!
+            <p className=" leading-relaxed mb-6 pr-0 lg:pr-8 max-w-2xl">
+              We make your brand speak for you! <br /> ATTS Technologies is a creatively driven company offering digital solutions for your business growth. As a trailblazing software company and a leading digital marketing agency, we deliver what your brand needs to thrive. From ideation to execution, we have your back. Relax and watch your brand grow as dollars flow into your account!
             </p>
           </div>
 
@@ -73,15 +73,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 lg:mt-12">
           <div className="flex items-center gap-3 bg-[#1c2a41] p-3 sm:p-4 rounded-lg hover:bg-[#243451] transition-colors">
             <MdOutlineMail className="text-xl sm:text-2xl flex-shrink-0" />
-            <span className="text-sm sm:text-base">Support@atts.in</span>
+            <span className="text-sm sm:text-base"><a href="mailto:Support@atts.in">Support@atts.in</a></span>
           </div>
           <div className="flex items-center gap-3 bg-[#1c2a41] p-3 sm:p-4 rounded-lg hover:bg-[#243451] transition-colors">
             <FaPhone className="text-xl sm:text-2xl flex-shrink-0" />
-            <span className="text-sm sm:text-base">+91 9874563210</span>
+            <span className="text-sm sm:text-base"><a href="tel:+919874563210">+91 9874563210</a></span>
           </div>
           <div className="flex items-center gap-3 bg-[#1c2a41] p-3 sm:p-4 rounded-lg hover:bg-[#243451] transition-colors col-span-1 sm:col-span-2 lg:col-span-1">
             <CiLocationOn className="text-xl sm:text-2xl flex-shrink-0" />
-            <span className="text-sm sm:text-base">Mullai Nagar, Coimbatore, Tamilnadu 641041</span>
+            <span className="text-sm sm:text-base"><a href="https://maps.app.goo.gl/UbxWGNKe5sXsCEbc8">Mullai Nagar, Coimbatore, Tamilnadu 641041</a></span>
           </div>
         </div>
 
