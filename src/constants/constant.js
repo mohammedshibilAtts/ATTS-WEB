@@ -96,7 +96,7 @@ export const mobileNavItem = [
         subItems: [
           { label: "Search Engine Optimization", Link: "/seo-analysis" },
           { label: "Branding", Link: "/brand-analytics" },
-          { label: "Social Media Strategy", Link: "/sm-analytics" },
+          { label: "Social Media Strategy", Link: "/sm-analysis" },
           { label: "Performance Marketing", Link: "/performance-marketing" },
         ],
       },
