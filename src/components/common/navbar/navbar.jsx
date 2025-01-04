@@ -45,7 +45,6 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  
   const handleMenuClick = (menu) => {
     if (menu === "Services") {
       setActiveMenu("Services");
@@ -71,15 +70,19 @@ const Navbar = () => {
   };
   useEffect(() => {
     // Disable scrolling on the body when active menu is "Services"
-    if (activeMenu === "Services"||activeMenu === "Our Products"||activeMenu === "About us") {
-      document.body.style.overflow = 'hidden';  // Disable body scroll
+    if (
+      activeMenu === "Services" ||
+      activeMenu === "Our Products" ||
+      activeMenu === "About us"
+    ) {
+      document.body.style.overflow = "hidden"; // Disable body scroll
     } else {
-      document.body.style.overflow = 'auto';  // Enable body scroll when not active
+      document.body.style.overflow = "auto"; // Enable body scroll when not active
     }
 
     // Cleanup function to reset when component unmounts
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
   }, [activeMenu]);
   useEffect(() => {
@@ -120,7 +123,6 @@ const Navbar = () => {
         <div
           className="fixed inset-0 bg-black/30 backdrop-blur-sm z-30"
           onClick={() => setActiveMenu(false)}
-          
           aria-hidden="true"
         />
       )}
@@ -133,18 +135,20 @@ const Navbar = () => {
       )}
 
       <nav
-      onMouseLeave={()=>handleClickOutside('')}
+        onMouseLeave={() => handleClickOutside("")}
         ref={navbarRef}
         className={`bg-[#010202] py-4 md:py-2 shadow-2xl backdrop-blur-sm sticky top-0 z-40 transition-all duration-300 ease-in-out
-    ${scrolling &isMobileMenuOpen==false ? "mx-4 md:mx-5 xl:mx-32 rounded-full top-2 " : ""}
+    ${
+      scrolling & (isMobileMenuOpen == false)
+        ? "mx-4 md:mx-5 xl:mx-32 rounded-full top-2 "
+        : ""
+    }
     `}
       >
         <div className="main flex items-center px-4 sm:px-6 justify-between">
           <div className="mx-3 image w-20 sm:w-24 md:w-32 lg:w-40 transform transition-transform">
             <Link href={"/"}>
-              <AnimatedSection direction="right">
-                <Image src={Logo} alt="ATTS" className="w-full" />
-              </AnimatedSection>
+              <Image src={Logo} alt="ATTS" className="w-full" />
             </Link>
           </div>
 
@@ -200,15 +204,16 @@ const Navbar = () => {
                   <div
                     className={`flex items-center rounded-full group-hover:bg-[#B5D3F5] group-hover:rounded-5xl transition-all duration-200 py-3 px-6 md:px-3 flex-grow
                       //  ${
-                      //    currentPath == item.Link
-                      //      ? "bg-[#B5D3F5] text-black transition-all duration-500 ease-in"
-                      //      : ""
-                      //  } 
-                      //  ${
-                      //    activeMenu == item.label && item.label
-                      //      ? "bg-[#B5D3F5] text-black"
-                      //      : ""
-                       ``}
+                        //    currentPath == item.Link
+                        //      ? "bg-[#B5D3F5] text-black transition-all duration-500 ease-in"
+                        //      : ""
+                        //  }
+                        //  ${
+                        //    activeMenu == item.label && item.label
+                        //      ? "bg-[#B5D3F5] text-black"
+                        //      : ""
+                        ``
+                      }
                        `}
                   >
                     {item.label !== "Services" &&
@@ -236,7 +241,9 @@ const Navbar = () => {
           <div className="hidden lg:flex ml-auto cursor-pointer group">
             <p
               className={`font-unbounded text-1xl sm:text-lg text-white hover:underline hover:decoration-[#B5D3F5] hover:underline-offset-8 hover:rounded-3xl transition-all duration-200 py-2 sm:py-3 px-4 sm:px-1 ${
-                currentPath == "/lets-talk" ? "underline decoration-[#9bc5f5] underline-offset-8" : ""
+                currentPath == "/lets-talk"
+                  ? "underline decoration-[#9bc5f5] underline-offset-8"
+                  : ""
               }`}
             >
               <Link href={"lets-talk"}>Let's Talk</Link>
@@ -393,93 +400,94 @@ const Navbar = () => {
         )}
 
         {/* Services Dropdown */}
-        {  activeMenu == "Services" && (
-      <div
-        ref={servicesRef}
-        className="absolute z-40 left-0 overflow-visible hidden md:block"
-        onClick={() => setActiveMenu(false)}
-      >
-        <StaggeredSection>
+        {activeMenu == "Services" && (
           <div
-            className="bg-[#2E2E30] text-white px-4 sm:px-6 lg:px-8 mx-20 mt-8 rounded-xl"
-            style={{ maxHeight: '80vh', overflowY: 'auto' }}  // Add scrolling inside the component
+            ref={servicesRef}
+            className="absolute z-40 left-0 overflow-visible hidden md:block"
+            onClick={() => setActiveMenu(false)}
           >
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:grid-cols-2 xl:grid-cols-3 custom:grid-cols-2">
-                {/* Digital Engineering Section */}
-                <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
-                  <h2 className="text-2xl font-semibold mb-4">
-                    Digital Engineering
-                  </h2>
-                  <p className="mb-4 text-gray-400">
-                    Where creativity meets technology in digital
-                    engineering.
-                  </p>
-                  <hr className="my-4 border-gray-600" />
-                  <div className="items mt-2 space-y-4 flex-grow">
-                    {digitalEngineering.map((item, index) => (
-                      <div key={index} className="text-left">
-                        <Link href={item.link} onClick={handleClickOutside}>
-                          <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
-                            {item.title}
-                          </h3>
-                        </Link>
-                        <p className="text-gray-400">{item.description}</p>
+            <StaggeredSection>
+              <div
+                className="bg-[#2E2E30] text-white px-4 sm:px-6 lg:px-8 mx-20 mt-8 rounded-xl"
+                style={{ maxHeight: "80vh", overflowY: "auto" }} // Add scrolling inside the component
+              >
+                <div className="max-w-7xl mx-auto">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:grid-cols-2 xl:grid-cols-3 custom:grid-cols-2">
+                    {/* Digital Engineering Section */}
+                    <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
+                      <h2 className="text-2xl font-semibold mb-4">
+                        Digital Engineering
+                      </h2>
+                      <p className="mb-4 text-gray-400">
+                        Where creativity meets technology in digital
+                        engineering.
+                      </p>
+                      <hr className="my-4 border-gray-600" />
+                      <div className="items mt-2 space-y-4 flex-grow">
+                        {digitalEngineering.map((item, index) => (
+                          <div key={index} className="text-left">
+                            <Link href={item.link} onClick={handleClickOutside}>
+                              <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
+                                {item.title}
+                              </h3>
+                            </Link>
+                            <p className="text-gray-400">{item.description}</p>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </div>
+                    </div>
 
-                {/* Digital Marketing Section */}
-                <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
-                  <h2 className="text-2xl font-semibold mb-4">
-                    Digital Marketing
-                  </h2>
-                  <p className="mb-4 text-gray-400">
-                    Where creativity meets technology in digital marketing.
-                  </p>
-                  <hr className="my-4 border-gray-600" />
-                  <div className="items mt-2 space-y-4 flex-grow">
-                    {digitalMarketing.map((item, index) => (
-                      <div key={index} className="text-left">
-                        <Link href={item.link} onClick={handleClickOutside}>
-                          <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
-                            {item.title}
-                          </h3>
-                        </Link>
-                        <p className="text-gray-400">{item.description}</p>
+                    {/* Digital Marketing Section */}
+                    <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
+                      <h2 className="text-2xl font-semibold mb-4">
+                        Digital Marketing
+                      </h2>
+                      <p className="mb-4 text-gray-400">
+                        Where creativity meets technology in digital marketing.
+                      </p>
+                      <hr className="my-4 border-gray-600" />
+                      <div className="items mt-2 space-y-4 flex-grow">
+                        {digitalMarketing.map((item, index) => (
+                          <div key={index} className="text-left">
+                            <Link href={item.link} onClick={handleClickOutside}>
+                              <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
+                                {item.title}
+                              </h3>
+                            </Link>
+                            <p className="text-gray-400">{item.description}</p>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </div>
+                    </div>
 
-                {/* Digital Media Section */}
-                <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
-                  <h2 className="text-2xl font-semibold mb-4">
-                    Digital Media
-                  </h2>
-                  <p className="mb-4 text-gray-400">
-                    Where creativity meets technology in digital media.
-                  </p>
-                  <hr className="my-4 border-gray-600" />
-                  <div className="items mt-2 space-y-4 flex-grow">
-                    {digitalMedia.map((item, index) => (
-                      <div key={index} className="text-left">
-                        <Link href={item.link} onClick={handleClickOutside}>
-                          <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
-                            {item.title}
-                          </h3>
-                        </Link>
-                        <p className="text-gray-400">{item.description}</p>
+                    {/* Digital Media Section */}
+                    <div className="main text-center p-6 rounded-lg h-full flex flex-col justify-between">
+                      <h2 className="text-2xl font-semibold mb-4">
+                        Digital Media
+                      </h2>
+                      <p className="mb-4 text-gray-400">
+                        Where creativity meets technology in digital media.
+                      </p>
+                      <hr className="my-4 border-gray-600" />
+                      <div className="items mt-2 space-y-4 flex-grow">
+                        {digitalMedia.map((item, index) => (
+                          <div key={index} className="text-left">
+                            <Link href={item.link} onClick={handleClickOutside}>
+                              <h3 className="text-xl font-medium hover:cursor-pointer hover:text-[#B5D3F5] transition-colors duration-300">
+                                {item.title}
+                              </h3>
+                            </Link>
+                            <p className="text-gray-400">{item.description}</p>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </StaggeredSection>
           </div>
-        </StaggeredSection>
-      </div>)}
+        )}
 
         {activeMenu === "About us" && (
           <div

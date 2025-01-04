@@ -100,7 +100,7 @@ function page() {
       {/* Hero */}
       <div className="w-full">
         <StaggeredSection>
-          <div className="main lg:px-28 ">
+          <div className="main xl:px-28 ">
             <div className="title flex flex-col lg:flex-row items-center px-1 sm:px-8 pt-16 pb-3 text-black">
               <div className="left w-full lg:w-2/3 text-center lg:text-left lg:mb-0">
                 <h2 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
@@ -129,13 +129,11 @@ function page() {
                   {/* Responsive padding-bottom technique */}
                   <div className="relative h-0 pb-[56.25%] sm:pb-[75%] md:pb-[66.66%] lg:pb-[56.25%]">
                     <AnimatePresence mode="wait">
-                    
-
                       <motion.div
                         key="video"
                         className="absolute inset-0 w-full h-full bg-white"
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1  }}
+                        animate={{ opacity: 1 }}
                         transition={{ duration: 0.5 }}
                       >
                         <video
@@ -145,7 +143,7 @@ function page() {
                           loop
                           playsInline
                           preload="auto"
-                          style={{ opacity :1 }}
+                          style={{ opacity: 1 }}
                         >
                           <source
                             src="https://atts-img-video.s3.eu-north-1.amazonaws.com/ATTS+Website+Video+(2).mp4"
@@ -165,21 +163,21 @@ function page() {
 
         <ScrollMotion
           children={
-            <div className=" bg-white px-8 pt-9 md:px-32">
+            <div className=" bg-white px-8 pt-9 xl:px-32">
               <div className="title-card flex justify-center md:justify-start">
                 <TitleBox title={"About Us"} />
               </div>
               <div className="mt-5 ">
                 <h2 className="text-xl md:text-3xl font-bold mb-2 font-unbounded  ">
                   Trusted by Brands Across Industries Since 2013 -{" "}
-                  <span className="text-xl md:text-3xl  font-bold mb-4  text-[#003067] font-unbounded md:block">
+                  <span className="text-xl md:text-3xl  font-bold mb-4  text-[#003067] font-unbounded lg:block">
                     Transforming Healthcare, Jewellery, and Beyond.
                   </span>
                 </h2>
               </div>
               <div className=" grid grid-cols-1 custom:grid-cols-2 ">
                 <div className=" relative image flex items-center pe-9  ">
-                  <div className=" w-full  aspect-[4/3] md:aspect-[4/1] rounded-4xl overflow-hidden ms-9">
+                  <div className=" w-full  aspect-[4/3] lg:aspect-[4/1] rounded-4xl overflow-hidden ms-9">
                     {/* Main large image */}
                     <div className="absolute left-0 right-1  top-0 bottom-0">
                       <Image
@@ -229,7 +227,7 @@ function page() {
 
         <ScrollMotion
           children={
-            <div className=" bg-white  px-8  md:px-32 mt-16">
+            <div className=" bg-white  px-8  xl:px-32 mt-16">
               <div className="title-card flex justify-center md:justify-start">
                 <TitleBox title={"Our services"} />
               </div>
@@ -316,7 +314,7 @@ function page() {
                         Reach
                       </span>
                     </h1>
-                    <div className="grid grid-cols-2 mt-6 md:px-16 md:mt-20 1xl:ms-50">
+                    <div className="grid grid-cols-2 mt-6 xl:px-16 md:mt-20 1xl:ms-50">
                       {Homestatics.map((stat) => (
                         <div
                           key={stat.title}
@@ -361,7 +359,7 @@ function page() {
         {/* Testimonials */}
 
         <ScrollMotion>
-          <div className="main px-8 mt-9 md:px-32">
+          <div className="main px-8 mt-9 xl:px-32">
             <TitleBox title={"Testimonials"} />
             <div className="mt-9 ">
               <h2 className="text-xl md:text-3xl font-bold  font-unbounded mb-2">
@@ -372,7 +370,7 @@ function page() {
               </h2>
             </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 p-4 md:p-8 ">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 p-4 lg:p-8 ">
               <div className="w-1/2 md:w-1/4 mb-6 md:mb-0">
                 <Image
                   src={image}
@@ -381,7 +379,7 @@ function page() {
                 />
               </div>
 
-              <div className="w-full md:w-2/4">
+              <div className="w-full lg:w-2/4">
                 <div className="text-5xl md:text-7xl text-gray-800 mb-4  text-center md:text-left">
                   “
                 </div>
@@ -395,7 +393,7 @@ function page() {
               </div>
 
               <div className="flex flex-col gap-4 md:gap-6 items-center">
-                <div className="md:hidden flex flex-row gap-4">
+                <div className="lg:hidden flex flex-row gap-4">
                   <button onClick={handlePrev} className="text-[#17171966]">
                     <CiCircleChevLeft size={40} />
                   </button>
@@ -404,7 +402,7 @@ function page() {
                   </button>
                 </div>
 
-                <div className="hidden md:flex flex-col gap-4 items-center">
+                <div className="hidden lg:flex flex-col gap-4 items-center">
                   <button onClick={handlePrev} className="p-2">
                     <IoChevronUpCircleOutline
                       size={40}
@@ -430,7 +428,7 @@ function page() {
                 {!showVideo ? (
                   <motion.img
                     key="thumbnail"
-                    src="/video/thumb.png"
+                    // src="/video/thumb.png"
                     className="w-full h-full object-cover"
                     initial={{ opacity: 1 }}
                     alt="Video thumbnail"
@@ -438,7 +436,7 @@ function page() {
                 ) : (
                   <motion.video
                     key="video"
-                    src="/video/test.mp4"
+                    // src="/video/test.mp4"
                     className="w-full h-full object-cover"
                     autoPlay
                     muted
@@ -485,7 +483,7 @@ function page() {
 
         <ScrollMotion
           children={
-            <div className="bg-white  px-2 pt-8 md:px-32  ">
+            <div className="bg-white  px-2 pt-8 xl:px-32  md:px-5">
               <div className="title-card flex justify-center md:justify-start">
                 <TitleBox title={"Blogs"} />
               </div>
@@ -506,10 +504,7 @@ function page() {
                 <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 mb-3 mt-4">
                   {blogData.map((data, index) => (
                     // <Link href={`/blog/${index+1}`} key={index}>
-                    <div
-                      
-                      className="relative overflow-hidden rounded-lg shadow-lg"
-                    >
+                    <div className="relative overflow-hidden rounded-lg shadow-lg" key={index}>
                       <Image
                         src={data.img}
                         alt="Card Image"
@@ -517,17 +512,12 @@ function page() {
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4">
                         <div className="flex items-center text-sm text-white space-x-4 mb-2">
-                          <div className="flex items-center">
-                            
-                          </div>
-                          <div className="flex items-center">
-                            
-                          </div>
+                          <div className="flex items-center"></div>
+                          <div className="flex items-center"></div>
                         </div>
                         <h3 className="font-unbounded text-white text-1xl hover:underline transition-all duration-300 ease-in-out transform ">
-  {data.content}
-</h3>
-
+                          {data.content}
+                        </h3>
                       </div>
                     </div>
                     // </Link>
@@ -543,7 +533,7 @@ function page() {
         {/* Contact us */}
 
         <ScrollMotion>
-          <div className=" px-8  md:px-32  align-middle ">
+          <div className=" px-8  xl:px-32  align-middle ">
             <Contactus />
           </div>
         </ScrollMotion>

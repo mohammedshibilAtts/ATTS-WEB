@@ -388,25 +388,25 @@ export const aboutUsCardData = [
   {
     title: "Seamless Scalable Integration ",
     description:
-    "We develop products that fit your operations and easy to use as ABC. We ensure you get a cohesive and the best user experience. By eliminating the disruptions we promise to deliver error-free and easy-to-use products. Whether you’re a start-up or an MNC, our robust software is ready to adapt to your needs.",
+    "We craft products that fit your operations and are as easy to use as ABC. With a seamless, error-free experience, our software adapts to your needs, whether you're a start-up or an MNC.",
     icon: Seamless,
   },
   {
     title: "Customer-Centric Approach",
     description:
-    "We drive on the motto “client comes first!” We design products standing in your shoes, keeping YOU in mind. We don’t just create an app, it will be YOUR app, designed to fit your brand like an extension, rather than an addition. ",
+    "We drive on the motto “client comes first!” We design products with you in mind, creating apps that feel like an extension of your brand, not just an addition.",
     icon: CustomerSVG,
   },
   {
     title: "Rapid and Reliable",
     description:
-      "We deliver the best on time. We work on a tried-and-true approach that always results in the best solution at the right time. It’s not only on all the time, we say always! ",
+    "We deliver the best on time. We work on a tried-and-true approach that always results in the best solution at the right time. It’s not only on all the time, we say always! ",
     icon: Rapid,
   },
   {
     title: "Exceptional Performance",
     description:
-      "We always make sure you receive the best and the rest stand behind. By prioritizing excellence in everything we do, we ensure your business growth with the best performance.",
+    "We always make sure you receive the best and the rest stand behind. By prioritizing excellence in everything we do, we ensure your business growth with the best performance.",
     icon: Superior,
   },
   {
@@ -418,7 +418,7 @@ export const aboutUsCardData = [
   {
     title: "Inveterate Technical Support",
     description:
-      "We serve as your emergency support. So, if you need a hand, our team is always around! We’re here to help and guide you with any queries you have and any support you require from our end.",
+    "We serve as your emergency support. So, if you need a hand, our team is always around! We’re here to help and guide you with any queries you have.",
     icon: Technical,
   },
 ];
