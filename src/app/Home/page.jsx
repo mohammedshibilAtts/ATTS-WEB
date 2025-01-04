@@ -101,7 +101,7 @@ function page() {
       <div className="w-full">
         <StaggeredSection>
           <div className="main xl:px-28 ">
-            <div className="title flex flex-col lg:flex-row items-center px-1 sm:px-8 pt-16 pb-3 text-black">
+            <div className="title flex flex-col lg:flex-row items-center px-1 sm:px-8 pt-3 pb-3 text-black">
               <div className="left w-full lg:w-2/3 text-center lg:text-left lg:mb-0">
                 <h2 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
                   Your Partner in Crafting Your Digital DNA {" - "}
@@ -227,7 +227,7 @@ function page() {
 
         <ScrollMotion
           children={
-            <div className=" bg-white  px-8  xl:px-32 mt-16">
+            <div className=" bg-white  px-8  xl:px-32 mt-8 xl:mt-16">
               <div className="title-card flex justify-center md:justify-start">
                 <TitleBox title={"Our services"} />
               </div>
@@ -278,7 +278,7 @@ function page() {
 
         <div
           ref={sectionRef}
-          className="bg-[#010202] pt-16 relative rounded-3xl mt-12 md:h-[765px]  h-[650px]"
+          className="bg-[#010202] pt-16 relative rounded-3xl mt-12 md:h-[765px]  h-[650px] mx-1"
         >
           <ScrollMotion
             children={
@@ -335,7 +335,7 @@ function page() {
                           </div>
                           <hr className="w-40  text-sm " />
 
-                          <p className="text-lg md:text-xl font-unbounded">
+                          <p className="text-lg md:text-xl font-unbounded text-[#B5D3F5]">
                             {stat.title}
                           </p>
                         </div>
@@ -369,51 +369,64 @@ function page() {
                 Direct From Clients.
               </h2>
             </div>
-
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 p-4 lg:p-8 ">
-              <div className="w-1/2 md:w-1/4 mb-6 md:mb-0">
+            <div className="flex flex-col md:flex-row items-center justify-between min-h-[550px] p-4 lg:p-8 gap-4">
+              {/* Image Section */}
+              <div className="w-32 md:w-48 flex-shrink-0">
                 <Image
                   src={image}
                   alt={name}
-                  className="rounded-x-full mx-auto rounded-tl-full rounded-br-full rounded-bl-full w-40 h-40 md:w-48 md:h-48 object-cover border"
+                  className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-tl-full rounded-br-full rounded-bl-full object-cover border mx-auto"
                 />
               </div>
 
-              <div className="w-full lg:w-2/4">
-                <div className="text-5xl md:text-7xl text-gray-800 mb-4  text-center md:text-left">
-                  “
+              {/* Description Section */}
+              <div className="flex-1 flex justify-center items-center h-full">
+                <div className="relative p-4 md:p-8 w-full">
+                  <span className="absolute top-0 left-0 text-4xl md:text-5xl lg:text-7xl text-gray-800">
+                    "
+                  </span>
+                  <div className="overflow-y-auto px-2 pt-8 md:pt-10">
+                    <p className="text-gray-600 text-base md:text-lg">{text}</p>
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-800 ms-2">
+                      {name}
+                    </h3>
+                  </div>
                 </div>
-                <p className="text-gray-600 text-lg mb-6  text-center md:text-left">
-                  {text}
-                </p>
-                <h3 className="text-xl font-semibold text-gray-800  text-center md:text-left">
-                  {name}
-                </h3>
-                <p className="text-gray-800 text-center md:text-left">{role}</p>
               </div>
 
-              <div className="flex flex-col gap-4 md:gap-6 items-center">
-                <div className="lg:hidden flex flex-row gap-4">
-                  <button onClick={handlePrev} className="text-[#17171966]">
-                    <CiCircleChevLeft size={40} />
+              {/* Navigation Section */}
+              <div className="w-full md:w-16 flex-shrink-0 flex justify-center md:justify-start">
+                {/* Mobile Navigation */}
+                <div className="flex md:hidden gap-4">
+                  <button
+                    onClick={handlePrev}
+                    className="text-[#17171966] hover:text-gray-800 transition-colors"
+                  >
+                    <CiCircleChevLeft size={32} />
                   </button>
-                  <button onClick={handleNext} className="text-[#17171966]">
-                    <CiCircleChevRight size={40} />
+                  <button
+                    onClick={handleNext}
+                    className="text-[#17171966] hover:text-gray-800 transition-colors"
+                  >
+                    <CiCircleChevRight size={32} />
                   </button>
                 </div>
 
-                <div className="hidden lg:flex flex-col gap-4 items-center">
-                  <button onClick={handlePrev} className="p-2">
-                    <IoChevronUpCircleOutline
-                      size={40}
-                      className="text-[#17171966]"
-                    />
+                {/* Desktop Navigation */}
+                <div className="hidden md:flex flex-col gap-4">
+                  <button
+                    onClick={handlePrev}
+                    className="text-[#17171966] hover:text-gray-800 transition-colors"
+                  >
+                    <IoChevronUpCircleOutline size={40} />
                   </button>
-                  <button onClick={handleNext} className="p-2">
-                    <IoChevronDownCircleOutline
-                      size={40}
-                      className="text-[#17171966]"
-                    />
+                  <button
+                    onClick={handleNext}
+                    className="text-[#17171966] hover:text-gray-800 transition-colors"
+                  >
+                    <IoChevronDownCircleOutline size={40} />
                   </button>
                 </div>
               </div>
@@ -483,7 +496,7 @@ function page() {
 
         <ScrollMotion
           children={
-            <div className="bg-white  px-2 pt-8 xl:px-32  md:px-5">
+            <div className="bg-white  px-2 pt-8 xl:px-28  md:px-5">
               <div className="title-card flex justify-center md:justify-start">
                 <TitleBox title={"Blogs"} />
               </div>
@@ -501,26 +514,53 @@ function page() {
                     <Button title={"View All Blogs"} link="/blog" />
                   </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 mb-3 mt-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-4 px-4 md:px-6">
                   {blogData.map((data, index) => (
-                    // <Link href={`/blog/${index+1}`} key={index}>
-                    <div className="relative overflow-hidden rounded-lg shadow-lg" key={index}>
-                      <Image
-                        src={data.img}
-                        alt="Card Image"
-                        className="w-full h-56 sm:h-64 lg:h-80 object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4">
-                        <div className="flex items-center text-sm text-white space-x-4 mb-2">
-                          <div className="flex items-center"></div>
-                          <div className="flex items-center"></div>
-                        </div>
-                        <h3 className="font-unbounded text-white text-1xl hover:underline transition-all duration-300 ease-in-out transform ">
-                          {data.content}
-                        </h3>
+                    <div
+                      key={index}
+                      className="group relative overflow-hidden rounded-lg shadow-lg  transition-shadow duration-300"
+                    >
+                      {/* Image Container with adjusted aspect ratio and full image display */}
+                      <div className="relative w-full h-[300px] md:h-[350px] lg:h-[400px]">
+                        <Image
+                          src={data.img}
+                          alt={data.content || "Blog post image"}
+                          fill
+                          sizes="(max-width: 640px) 100vw, 
+                     (max-width: 1024px) 50vw,
+                     33vw"
+                          className="object-fill object-center transition-transform duration-300 g"
+                          priority={index < 3}
+                          quality={90}
+                        />
                       </div>
+
+                      {/* Improved Content Overlay with stronger background gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent flex flex-col justify-end p-4 md:p-6">
+                        {/* Meta Information */}
+                        <div className="flex items-center gap-4 text-sm text-white/90 mb-2">
+                          {/* Meta info components can go here */}
+                        </div>
+
+                        {/* Content Container with dark background */}
+                        <div className="bg-black/40 backdrop-blur-sm rounded-lg p-3 transition-all duration-300">
+                          {/* Title */}
+                          <h3 className="font-unbounded text-white  group-hover:underline">
+                            {data.content}
+                          </h3>
+
+                          {/* Description */}
+                          {data.description && (
+                            <p className="text-white/90 text-sm mt-2 line-clamp-2 hidden md:block">
+                              {data.description}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Enhanced Hover Overlay */}
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
-                    // </Link>
                   ))}
                 </div>
               </div>
@@ -533,7 +573,7 @@ function page() {
         {/* Contact us */}
 
         <ScrollMotion>
-          <div className=" px-8  xl:px-32  align-middle ">
+          <div className=" px-8  xl:px-32  align-middle md:mt-9">
             <Contactus />
           </div>
         </ScrollMotion>

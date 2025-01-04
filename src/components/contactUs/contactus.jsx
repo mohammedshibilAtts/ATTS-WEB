@@ -87,7 +87,7 @@ const ContactForm = () => {
         <h1 className="text-5xl lg:text-8xl font-unbounded tracking-tight">
           Let's
           <br />
-          <span className="text-blue-900 text-9xl lg:text-8xl font-unbounded tracking-tight">
+          <span className="text-[#003067] text-7xl lg:text-8xl font-unbounded tracking-tight">
             Talk!
           </span>
         </h1>

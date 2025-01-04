@@ -121,15 +121,15 @@ const JobListings = () => {
           className="overflow-y-auto overflow-x-hidden fixed inset-0 z-50 flex justify-center items-center w-full h-full bg-black bg-opacity-50 backdrop-blur-sm"
         >
           <div className="relative p-4 w-full max-w-5xl max-h-full">
-            <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-              <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+            <div className="relative bg-white rounded-lg shadow ">
+              <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t ">
+                <h3 className="text-xl font-semibold text-gray-900 ">
                   {selectedJob.title}
                 </h3>
                 <button
                   type="button"
                   onClick={closeModal}
-                  className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
                 >
                   <svg
                     className="w-3 h-3"
@@ -150,7 +150,7 @@ const JobListings = () => {
                 </button>
               </div>
               <div className="p-4 md:p-5 space-y-4">
-                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                <p className="text-base leading-relaxed text-gray-500">
                   {selectedJob.jd}
                 </p>
 
@@ -175,6 +175,8 @@ const JobListings = () => {
                 </div>
 
                 <div className="space-y-2">
+                {selectedJob.Requirements.length !==0 &&(
+                  <>
                   <h4 className="text-lg font-medium text-gray-900">
                     Requirements:
                   </h4>
@@ -185,14 +187,16 @@ const JobListings = () => {
                       </li>
                     ))}
                   </ul>
+                  </>
+                   )}
                 </div>
               </div>
-              <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+              <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b ">
                 <a href="mailto:careers@atts.in">
                   <button
                     onClick={closeModal} // Close the modal when "I accept" is clicked
                     type="button"
-                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                   >
                     Share Resume
                   </button>

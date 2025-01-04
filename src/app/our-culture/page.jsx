@@ -17,11 +17,11 @@ import TitleBox from "@/components/titleBox/titleBox";
 import WorkEnvironment from "@/assests/images/workenv.jpg";
 import { motion } from "framer-motion";
 
-import Vinitha_Vijayaragavan from "@/assests/images/Vinitha_Vijayaragavan.jpg";
-import Sylesh_Shanmugam from "@/assests/images/Sylesh_Shanmugam.jpg";
-import Aravindraj_Mani from "@/assests/images/Aravindraj_Mani.jpg";
-import Prabhu_Manickam from "@/assests/images/Prabhu_Manickam.jpg";
-import Karthik_Sadhasivam from "@/assests/images/Karthik_Sadhasivam.jpg";
+import Vinitha_Vijayaragavan from "@/assests/images/Vinitha_Vijayaragavan.webp";
+import Sylesh_Shanmugam from "@/assests/images/Sylesh_Shanmugam.webp";
+import Aravindraj_Mani from "@/assests/images/Aravindraj_Mani.webp";
+import Prabhu_Manickam from "@/assests/images/Prabhu_Manickam.webp";
+import Karthik_Sadhasivam from "@/assests/images/Karthik_Sadhasivam.webp";
 
 function page() {
   // const tabData = [
@@ -170,7 +170,7 @@ function page() {
       <div className="bg-black w-full relative">
         <div className="relative">
           {/* Mobile View with Text Overlay */}
-          <div className="lg:hidden relative">
+          <div className="xl:hidden relative">
             {/* Image Container */}
             <div className="w-full h-[500px] relative">
               <Image
@@ -197,7 +197,7 @@ function page() {
           </div>
 
           {/* Desktop Image Grid */}
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             {/* Use motion.div for the parent container */}
             <motion.div
               className="images object-cover hidden lg:block"
@@ -234,7 +234,7 @@ function page() {
           </div>
 
           {/* Navigation Tabs */}
-          <div className="hidden lg:flex justify-center text-white mt-56 relative z-10 px-8 gap-10 md:gap-20 lg:gap-32">
+          <div className="hidden xl:flex justify-center text-white mt-56 relative z-10 px-8 gap-10 md:gap-20 lg:gap-32">
             {[].map((item, index) => (
               <button
                 key={index}
@@ -261,7 +261,7 @@ function page() {
 
       {/* Life At atts  */}
       <div
-        className="bg-white px-4 sm:px-8 md:px-16 lg:px-30  mt-5"
+        className="bg-white px-4 xl:px-30  mt-5"
         // ref={section1Ref}
       >
         <div className="flex flex-col lg:flex-row">
@@ -275,13 +275,13 @@ function page() {
             </h1>
           </div>
 
-          <div className="flex-1 sm:ml-4 p-4 text-sm sm:text-base">
-            <p className="text-start lg:text-left ps-0 md:ps-6">
+          <div className="flex-1 sm:ml-4 xl:p-4 text-sm sm:text-base">
+            <p className="text-start lg:text-left ps-0 xl:ps-6">
               We make sure every team member feels right at home with their
               colleagues, the workspace, and our clients. We celebrate the
               skills of our team and encourage them to think outside the box. 
             </p>
-            <p className="text-start lg:text-left ps-0 md:ps-6 mt-3">
+            <p className="text-start lg:text-left ps-0 xl:ps-6 mt-3">
               We’re a crew of creative, skilled, dependable, and experienced
               pros offering straightforward advice to our clients and helpful
               feedback to each other. We’re always working to raise the bar and
@@ -294,7 +294,7 @@ function page() {
 
       {/* our Culture */}
       <div
-        className="bg-white  px-4 sm:px-8 md:px-16 lg:px-32  mt-5"
+        className="bg-white px-5  xl:px-32  mt-5"
         // ref={section2Ref}
       >
         <div className="flex flex-col justify-center items-center">
@@ -313,7 +313,7 @@ function page() {
         </div>
 
         <div className="description   mt-4">
-          <p className="text-start lg:text-left ps-0 md:ps-6 mt-3">
+          <p className="text-start lg:text-left ps-0 xl:ps-6 mt-3">
             Employees take the top spot in our world! We aim to create a vibe
             where you’ll be excited to work and have fun while doing it. We
             don’t just grind - we keep our team energized with things that bring
@@ -322,9 +322,9 @@ function page() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-4">
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 p-4">
           {/* Left column - Person with charts */}
-          <div className="md:col-span-3 h-[400px]">
+          <div className="xl:col-span-3 h-[400px]">
             <div className="rounded-lg overflow-hidden shadow-md h-full">
               <Image
                 src={OfficePng}
@@ -335,7 +335,7 @@ function page() {
           </div>
 
           {/* Center column - Team meeting */}
-          <div className="md:col-span-6 h-[250px]  md:h-[400px] ">
+          <div className="xl:col-span-6 h-[250px]  md:h-[400px] ">
             <div className="rounded-lg overflow-hidden shadow-md  h-full">
               <div className="h-full">
                 <video
@@ -353,7 +353,7 @@ function page() {
           </div>
 
           {/* Right column - Office spaces */}
-          <div className="md:col-span-3 grid grid-rows-2 gap-4 h-[400px]">
+          <div className="xl:col-span-3 grid grid-rows-2 gap-4 h-[800px] xl:h-[400px]">
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
                 src={About8}
@@ -373,7 +373,7 @@ function page() {
       </div>
 
       <div
-        className="bg-white   sm:px-8 md:px-16 lg:px-32  mt-5"
+        className="bg-white   sm:px-8  xl:px-32  mt-5"
         // ref={section3Ref}
       >
         <div className="flex flex-col justify-center items-center">
@@ -381,7 +381,7 @@ function page() {
             <TitleBox title={"Meet Our Team"} />
           </div>
 
-          <div className="description px-4 sm:px-8 md:px-16 lg:px-32">
+          <div className="description px-4 sm:px-8  xl:px-32">
             <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
               Don’t just take our word for it
               <span className="text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] md:block ">
@@ -460,7 +460,7 @@ function page() {
         </div>
 
         {/* Text content */}
-        <div className="absolute inset-0 flex justify-center items-center px-2 md:px-16 bg-opacity-40 bg-black mt-9">
+        <div className="absolute inset-0 flex justify-center items-center px-2  bg-opacity-40 bg-black mt-9">
           <div className="text-white  sm:text-left">
             {/* Title card */}
             <div className="titleCard mb-4 flex justify-center md:justify-start">
@@ -501,7 +501,7 @@ function page() {
         </div>
       </div>
 
-      <div className="bg-white  flex justify-center  md:px-32 mt-6  lg:mt16">
+      <div className="bg-white  flex justify-center   mt-6  lg:mt16">
         <Contactus />
       </div>
     </>

@@ -17,8 +17,8 @@ function page() {
     <>
       {/* hero */}
       <FadeMotion>
-        <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-30 mt-8">
-          <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-30">
+        <div className="bg-white px-4 sm:px-8 xl:px-16 lg:px-30 mt-8">
+          <div className="Static-Web mt-12 px-4 sm:px-8 xl:px-16 lg:px-30">
             <div className="title mb-4">
               <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start md:text-center  ">
                 Find Your Future with ATTS Technologies{" "}
@@ -45,8 +45,8 @@ function page() {
 
       <div className=" w-full">
         <FadeMotion>
-          <div className="bg-white   px-8 pt-9 sm:px-8 md:px-16 mt-5 ">
-            <div className="title mb-4 sm:px-8 md:px-16 lg:px-30 ">
+          <div className="bg-white   px-2 pt-9  xl:px-16 mt-5 ">
+            <div className="title mb-4 sm:px-8 xl:px-16 lg:px-30 ">
               <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  ">
                 Explore Careers at {""}
                 <span className="text-[#003067] font-unbounded text-2xl md:text-3xl">
@@ -61,7 +61,7 @@ function page() {
         </FadeMotion>
       </div>
 
-      <div className="bg-white px-8 sm:px-8 md:px-16 lg:px-32 pt-9 mt-5 mb-6">
+      <div className="bg-white px-8 sm:px-8 xl:px-16 lg:px-32 pt-9 mt-5 mb-6">
         <div className="titleBox flex justify-center md:justify-start">
           <TitleBox title={"We’re Special. Here’s Why!"} className={"w-72"} />
         </div>

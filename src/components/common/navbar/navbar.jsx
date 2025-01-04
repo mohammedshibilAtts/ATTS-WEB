@@ -1,9 +1,9 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Logo from "../../../assests/images/logo.svg";
-import About from "../../../assests/images/Menu_About.jpg";
-import culture from "../../../assests/images/Menu_culture.jpg";
-import Carrer from "../../../assests/images/careerAtts.jpg";
+import About from "../../../assests/images/Menu_About.webp";
+import culture from "../../../assests/images/Menu_culture.webp";
+import Carrer from "../../../assests/images/careerAtts.webp";
 import Aurumm from "../../../assests/images/Aurumm.png";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
@@ -626,7 +626,7 @@ const Navbar = () => {
                       <span className="font-semibold text-white">AURUMM</span> -
                       The Ultimate Software Suite
                     </motion.p>
-                    <Link href={"https://aurumm.co/products/"}>
+                    <Link href={"https://aurumm.co/"}>
                       <motion.button
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}

@@ -16,7 +16,7 @@ function Page() {
       {/* Header */}
 
       <ScrollMotion>
-      <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-30 pt-9 mt-5">
+      <div className="bg-white px-4  xl:px-30  mt-2">
         <div className="flex flex-col lg:flex-row">
           <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 px-4 flex items-center ">
             <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
@@ -28,11 +28,11 @@ function Page() {
             </h1>
           </div>
 
-          <div className="flex-1 sm:ml-4 p-4 text-sm sm:text-base">
-            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-0 md:ps-6 lg:text-2xl ">
+          <div className="flex-1 sm:ml-4 mt-2 xl:mt-0 xl:p-4 text-sm sm:text-base">
+            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-0 xl:ps-6 lg:text-2xl ">
               At ATTS Technologies Pvt. Ltd.
             </h3>
-            <p className="text-start lg:text-left ps-0 md:ps-6 mt-3">
+            <p className="text-start lg:text-left ps-0 xl:ps-6 mt-3">
               We offer you the best website, designed and crafted to your
               brand’s voice by a team backed by years of industry experience and
               a proven track record. From UI/UX design to wireframing, research,
@@ -51,14 +51,14 @@ function Page() {
 
       {/* Our Service */}
       
-      <div className="bg-white  px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-4">
+      <div className="bg-white  px-4  xl:px-32 pt-9 mt-4">
         <ScrollMotion>
         <div className="flex flex-col justify-center items-center">
           <div className="title-box mb-6 sm:mb-8">
             <TitleBox title={"Our Services"} />
           </div>
 
-          <div className="description px-4 sm:px-8 md:px-16 lg:px-32">
+          <div className="description px-4  xl:px-32">
             <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
               A Website Designed to Match{" "}
               <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] md:block">
@@ -79,7 +79,7 @@ function Page() {
           </div>
        
 
-        <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-2">
+        <div className="Static-Web mt-12 px-4  xl:px-2">
           <div className="title mb-4">
             <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-center  text-[#003067]">
               Static Website
@@ -112,7 +112,7 @@ function Page() {
               />
             </div>
 
-        <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-2">
+        <div className="Static-Web mt-12 px-4  xl:px-2">
           <div className="title mb-4">
             <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-center  text-[#003067]">
               Dynamic Website
@@ -139,7 +139,7 @@ function Page() {
 
       {/* What we can help you with */}
       <ScrollMotion>
-      <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-5">
+      <div className="bg-white px-4  xl:px-32 pt-9 mt-5">
         <div className="titleBox flex justify-center md:justify-start">
           <TitleBox title={"What we can help you with"} className={"w-72"} />
         </div>

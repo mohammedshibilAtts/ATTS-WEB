@@ -102,13 +102,13 @@ const cardVideos = [...videoCard1,videoCard2].map((video) => (
       <div className="w-full">
         <VideoCarousel videos={videos} />
 
-        <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-4">
+        <div className="bg-white px-4 xl:px-32 pt-9 mt-4">
           <div className="flex flex-col justify-center items-center">
             <div className="title-box mb-6 sm:mb-8">
               <TitleBox title={"Our Services"} />
             </div>
             <div className="text-start md:text-center sm:text-left  flex-1">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
+              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black md:text-start">
                 Ads that shine, videos that work—let’s{" "}
                 <span className="text-[#003067] md:block">get your brand noticed!</span>
               </h1>
@@ -246,28 +246,25 @@ const cardVideos = [...videoCard1,videoCard2].map((video) => (
 
         {/* What we can help you with */}
 
-        <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-5">
-          <div className="titleBox">
+        <div className="bg-white px-4 xl:px-32  mt-5">
+          <div className="titleBox  flex justify-center xl:justify-start">
             <TitleBox title={"What we can help you with"} className={"w-72"} />
           </div>
           <StaggeredSection>
-            <div className="title flex flex-col sm:flex-row justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6">
-              <div className="text-start sm:text-left  flex-1">
-                <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
-                  Performance marketing pros committed{" "}
-                  <span className="text-[#003067]">
-                    to elevating your brand to a broader audience.
-                  </span>
-                </h1>
-              </div>
-              <div className="text-center sm:text-left  group flex-1 flex justify-center md:justify-end h-full  ">
-                <Button
-                  title={"Get in Touch"}
-                  className="mt-4 sm:mt-0"
-                  link="/lets-talk"
-                />
-              </div>
+  
+
+            <div className="description mt-5">
+              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  xl:text-center px-4  text-black">
+              Unique Minds boosting your brand through {" "}
+                <span className="text-xl md:text-3xl font-bold  font-unbounded   text-center text-[#003067] xl:block">
+                Ad Films & Multimedia Advertising. 
+                </span>
+              </h1>
             </div>
+       
+
+         
+   
           </StaggeredSection>
 
           <ScrollMotion>
@@ -309,7 +306,7 @@ const cardVideos = [...videoCard1,videoCard2].map((video) => (
           </ScrollMotion>
         </div>
 
-        <div className="bg-white  flex justify-center  md:px-32 mt-6  lg:mt16">
+        <div className="bg-white  flex justify-center  xl:px-32 mt-6">
         <Contactus />
       </div>
       </div>

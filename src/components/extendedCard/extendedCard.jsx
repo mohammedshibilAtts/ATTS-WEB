@@ -51,7 +51,7 @@ const OpenCards = ({ cards }) => {
   }
 
   return (
-    <section className='py-16'>
+    <section className='py-8'>
       <div className='w-full'>
         <div className='flex flex-col md:flex-row justify-center items-center space-x-1 space-y-4 md:space-y-0'>
           {cards.map((card, index) => (

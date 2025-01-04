@@ -52,20 +52,20 @@ function Page() {
     <>
       {/* Header */}
       <ScrollMotion>
-        <div className="bg-white px-0  sm:px-8 md:px-16 lg:px-32 pt-9 mt-5">
-          <div className="flex flex-col md:flex-row">
-            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 px-9 flex items-center">
+        <div className="bg-white px-4  xl:px-32  mt-3">
+          <div className="flex flex-col xl:flex-row">
+            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 px-4 flex items-center">
               <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black ">
                 <span className="text-[#003067]">Make Those Clicks Count </span>
                 with Performance Marketing Services in Coimbatore!
               </h1>
             </div>
 
-            <div className="flex-1 sm:ml-4 p-4 text-sm sm:text-base">
-            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-6 lg:text-2xl ">
+            <div className="flex-1 sm:ml-4 xl:p-4 text-sm sm:text-base">
+            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded xl:ps-6 lg:text-2xl ">
               At ATTS Technologies Pvt. Ltd.
             </h3>
-              <p className="text-start lg:text-left ps-6 mt-4">
+              <p className="text-start lg:text-left xl:ps-6 mt-4">
                 We offer you the best performance marketing services in
                 Coimbatore which propels your business and maximizes your ROI.
                 We specialize in delivering measurable results through targeted
@@ -112,7 +112,7 @@ function Page() {
       {/* What we can help you with */}
 
       <ScrollMotion>
-        <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-5 ">
+        <div className="bg-white px-4 xl:px-32  mt-3 ">
           <div className="titleBox flex justify-center flex-row md:justify-start">
             <TitleBox title={"What we can help you with"} className={"w-72"} />
           </div>
@@ -134,7 +134,7 @@ function Page() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-8">
             {performanceMarketing.map((item, index) => (
               <motion.div
                 key={index}
@@ -174,7 +174,7 @@ function Page() {
       {/* Contact us */}
 
       <ScrollMotion>
-      <div className="bg-white  flex justify-center  md:px-32 mt-6  lg:mt16">
+      <div className="bg-white  flex justify-center  xl:px-32 mt-6  ">
         <Contactus />
       </div>
       </ScrollMotion>

@@ -8,14 +8,14 @@ import Contactus from "@/components/contactUs/contactus";
 import Image from "next/image";
 import StaggeredSection from "@/components/animation/StaggeredSection";
 import Button from "@/components/button/button";
-import Banner1 from "@/assests/images/photoBanner1.jpg";
-import Banner2 from "@/assests/images/photoBanner2.jpg";
-import Banner3 from "@/assests/images/photoBanner3.jpg";
-import Banner4 from "@/assests/images/photoBanner4.jpg";
-import Photography1 from "@/assests/images/photography1.jpg";
-import Photography2 from "@/assests/images/photography2.jpg";
-import Photography3 from "@/assests/images/photography3.jpg";
-import Photography4 from "@/assests/images/photography4.jpg";
+import Banner1 from "@/assests/images/photoBanner1.webp";
+import Banner2 from "@/assests/images/photoBanner2.webp";
+import Banner3 from "@/assests/images/photoBanner3.webp";
+import Banner4 from "@/assests/images/photoBanner4.webp";
+// import Photography1 from "@/assests/images/photography1.jpg";
+// import Photography2 from "@/assests/images/photography2.jpg";
+// import Photography3 from "@/assests/images/photography3.jpg";
+// import Photography4 from "@/assests/images/photography4.jpg";
 import ScrollMotion from "@/components/animation/scrollMotion";
 function page() {
   const Images = [
@@ -129,7 +129,7 @@ function page() {
           </div>
         </div>
 
-        <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-4">
+        <div className="bg-white px-4xl:px-32 pt-5 mt-4">
           <div className="flex flex-col justify-center items-center">
             <div className="title-box mb-6 sm:mb-8">
               <TitleBox title={"Our Services"} />
@@ -155,28 +155,32 @@ function page() {
 
         {/* What we can help you with */}
 
-        <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-5">
-          <div className="titleBox flex justify-center md:justify-start">
+        
+         
+          <ScrollMotion>
+        <div className="bg-white px-4 xl:px-32  mt-3 ">
+          <div className="titleBox flex justify-center flex-row md:justify-start">
             <TitleBox title={"What we can help you with"} className={"w-72"} />
           </div>
-          <StaggeredSection>
-            <div className="title flex flex-col sm:flex-row justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6">
-              <div className="text-start sm:text-left  flex-1">
-                <h1 className=" text-black text-xl md:text-3xl font-bold  font-unbounded ">
-                  A team of experts elevating your brand with{" "}
-                  <span className="text-[#003067]">powerful photography </span>
-                  and <span className="text-[#003067]">visual content.</span>
-                </h1>
-              </div>
-              <div className="text-center sm:text-left  group flex-1 flex justify-center md:justify-end h-full  ">
-                <Button
-                  title={"Get in Touch"}
-                  className="mt-4 sm:mt-0"
-                  link="/lets-talk"
-                />
-              </div>
+          <div className="title flex flex-col lg:flex-row justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6 ">
+            <div className=" sm:text-left  flex-1">
+              <h1 className="text-xl md:text-3xl font-bold  font-unbounded px-5  text-black ">
+                Performance marketing pros committed{" "}
+                <span className="text-[#003067]">
+                  to elevating your brand to a broader audience.
+                </span>
+              </h1>
             </div>
-          </StaggeredSection>
+            <div className="text-center sm:text-left   group flex-1 flex justify-center md:justify-end h-full  pt-4">
+              <Button
+                title={"Get in Touch"}
+                className="mt-4 sm:mt-0"
+                link="/lets-talk"
+              />
+            </div>
+          </div>
+          </div>
+          </ScrollMotion>
 
           <ScrollMotion>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-16">
@@ -217,10 +221,9 @@ function page() {
           </ScrollMotion>
         </div>
 
-        <div className="  px-8  md:px-32 ">
+        <div className="  px-8  xl:px-32 mt-9">
           <Contactus />
         </div>
-      </div>
     </>
   );
 }

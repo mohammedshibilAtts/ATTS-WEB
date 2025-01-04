@@ -223,7 +223,7 @@ const Swamy_Jewellery = require("../assests/images/SwamyJewellery.webp");
 const Metroflex_Mattress = require("../assests/images/MetroflexMattress.webp");
 const Kavitha_Jewellery = require("../assests/images/KavithaJewellery.webp");
 const SVJ = require("../assests/images/ShreeVenkatachalapathy.webp");
-const Sree_Daksha = require("../assests/images/KavithaJewellery.webp");
+const Sree_Daksha = require("../assests/images/SreeDaksha.webp");
 const SriRajeswari = require("../assests/images/SriRajeswari.webp");
 
 export const reviews = [

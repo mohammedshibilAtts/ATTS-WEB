@@ -59,9 +59,9 @@ function Page() {
     <>
       {/* Header */}
       <ScrollMotion>
-        <div className="bg-white px-0  sm:px-8 md:px-16 lg:px-32 pt-9 mt-5">
+        <div className="bg-white px-4  xl:px-32 mt-3">
           <div className="flex flex-col lg:flex-row">
-            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 px-9 flex items-center">
+            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 px-3 flex items-center">
               <h1 className="text-xl md:text-3xl font-bold font-unbounded text-black ">
                 <span className="text-[#003067]">
                   Turn Your Business into a Global Brand{" "}
@@ -70,11 +70,11 @@ function Page() {
               </h1>
             </div>
 
-            <div className="flex-1 sm:ml-4 p-4 text-sm sm:text-base">
-            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-6 lg:text-2xl ">
+            <div className="flex-1 sm:ml-4 xl:p-4 text-sm sm:text-base">
+            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded xl:ps-6 lg:text-2xl ">
               At ATTS Technologies Pvt. Ltd.
             </h3>
-              <p className="text-start lg:text-left mt-4 ps-6">
+              <p className="text-start lg:text-left mt-4 xl:ps-6">
                 We create strategies that make your brand pop! Every brand has a
                 story, and we make sure yours is unforgettable. From bold
                 designs to catchy messages, we craft a brand that stands out and
@@ -83,7 +83,7 @@ function Page() {
                 attention and builds a strong connection with your audience. {' '} <br className="mt-3"/> 
         
               </p>
-              <p className="text-start lg:text-left mt-2 ps-6">
+              <p className="text-start lg:text-left mt-2 xl:ps-6">
               Whether you're starting from scratch as a start-up or a business
                 looking to refresh your identity or promote to the global
                 standard, we’ve got the tools to take your brand to the next
@@ -96,7 +96,7 @@ function Page() {
         </ScrollMotion>
 
       {/* Our Service */}
-      <div className="bg-white w-full mt-4">
+      <div className="bg-white w-full mt-5">
         <StaggeredSection>
           <div className="flex flex-col justify-center items-center">
             <div className="title-box mb-6 sm:mb-8">
@@ -128,7 +128,7 @@ function Page() {
 
       {/* What we can help you with */}
 
-      <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-5 ">
+      <div className="bg-white px-4 xl:px-32 mt-3">
         <div className="titleBox flex justify-center flex-row md:justify-start">
           <TitleBox title={"What we can help you with"} className={"w-72"} />
         </div>
@@ -153,7 +153,7 @@ function Page() {
         </ScrollMotion>
 
             <ScrollMotion>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-8">
             {brandServicesCard.map((item, index) => (
               <motion.div
                 key={index}
@@ -193,7 +193,7 @@ function Page() {
 
       {/* Contact us */}
       <ScrollMotion>
-      <div className="bg-white  flex justify-center  md:px-32 mt-6  lg:mt16">
+      <div className="bg-white  flex justify-center  xl:px-32 mt-6  ">
         <Contactus />
       </div>
       </ScrollMotion>

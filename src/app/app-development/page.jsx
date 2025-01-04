@@ -15,7 +15,7 @@ function Page() {
     <>
       {/* Header */}
     <ScrollMotion>
-      <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-30 pt-9 mt-5">
+      <div className="bg-white px-4  xl:px-30  mt-2">
         <div className="flex flex-col lg:flex-row">
           <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 px-4 flex items-center ">
             <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
@@ -26,11 +26,11 @@ function Page() {
             </h1>
           </div>
 
-          <div className="flex-1 sm:ml-4 p-4 text-sm sm:text-base">
-            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-0 md:ps-6 lg:text-2xl ">
+          <div className="flex-1 sm:ml-4 xl:p-4 text-sm sm:text-base">
+            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-0 xl:ps-6 lg:text-2xl ">
               At ATTS Technologies Pvt. Ltd.
             </h3>
-            <p className="text-start lg:text-left ps-0 md:ps-6 mt-3">
+            <p className="text-start lg:text-left ps-0 xl:ps-6 mt-3">
               We have a team of techies who intend to craft solutions to develop
               your business. With intellectually equipped experience, our team
               develops applications - YOUR application! We ensure your mobile
@@ -49,14 +49,14 @@ function Page() {
 
       
       {/* Our Service */}
-      <div className="bg-white  px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-4">
+      <div className="bg-white  px-4 xl:px-32 pt-9 mt-4">
       <ScrollMotion>
         <div className="flex flex-col justify-center items-center">
           <div className="title-box mb-6 sm:mb-8">
             <TitleBox title={"Our Services"} />
           </div>
 
-          <div className="description px-4 sm:px-8 md:px-16 lg:px-32">
+          <div className="description px-4 xl:px-32">
             <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
               The Perfect Mobile App, Designed with{" "}
               <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] xl:block">
@@ -77,7 +77,7 @@ function Page() {
           </div>
         
 
-        <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-2">
+        <div className="Static-Web mt-12 px-4 xl:px-2">
           <div className="title mb-4">
             <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-center ">
               Crafting Excellence for <span className=" text-[#003067]">Android & iOS Devices</span>
@@ -111,7 +111,7 @@ function Page() {
             </div>
      
 
-        <div className="Static-Web mt-12 px-4 sm:px-8 md:px-16 lg:px-2">
+        <div className="Static-Web mt-12 px-4 xl:px-2">
           <div className="title mb-4">
             <h1 className=" text-xl md:text-3xl font-bold  font-unbounded  text-center   text-[#003067]">
               User experience design
@@ -135,7 +135,7 @@ function Page() {
 
       {/* What we can help you with */}
       <ScrollMotion>
-      <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-5">
+      <div className="bg-white px-4 xl:px-32 pt-9 mt-5">
         <div className="titleBox flex justify-center md:justify-start">
           <TitleBox title={"What we can help you with"} className={"w-72"} />
         </div>
@@ -184,9 +184,11 @@ function Page() {
       </ScrollMotion>
       {/* Contact us */}
 
-      <div className="bg-white  px-8  md:px-32 mt-6  lg:mt16">
+     <ScrollMotion>
+     <div className="bg-white  px-4  md:px-32 mt-6  lg:mt16">
         <Contactus />
       </div>
+     </ScrollMotion>
     </>
   );
 }

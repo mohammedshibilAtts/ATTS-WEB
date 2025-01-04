@@ -58,7 +58,7 @@ function page() {
       </FadeMotion>
       {/* hero About */}
 
-      <div className="bg-white px-8 pt-9 md:px-32">
+      <div className="bg-white px-8 pt-9 xl:px-32">
         <TitleBox title={"About Us"} />
         <div className="mt-5 flex justify-center md:justify-start">
           <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
@@ -83,7 +83,7 @@ function page() {
                 powerful yet simple technology.
               </p>
             </div>
-            <div className="mt-10 ">
+            <div className="mt-10 hidden">
               <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
               Let’s work together & turn ideas {" "}
                 <span className=" text-xl md:text-3xl font-bold  font-unbounded  md:text-start md:block  text-[#003067]">
@@ -113,7 +113,7 @@ function page() {
             </div>
           </div>
 
-          <div className="content-scroll flex-1  px-4 md:px-9 items-center justify-center mb-4">
+          <div className="content-scroll flex-1  px-4 xl:px-9 items-center justify-center mb-4">
             {aboutCompany.map((data) => (
               <div key={data.title} className="mt-5">
                 <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-[#003067]">
@@ -128,7 +128,7 @@ function page() {
 
       {/* brandCollaborations */}
 
-      <div className="bg-[#010202] pt-16 relative rounded-3xl mt-12 w-full">
+      <div className="bg-[#010202] pt-16 relative rounded-3xl mt-12 w-full ">
         <div className="text-center mb-8">
           <div className="bg-white text-[#0c192d] inline-block px-4 py-2 rounded-full font-unbounded text-sm mb-4">
             Brand Collaborations
@@ -146,7 +146,7 @@ function page() {
           />
         </div>
 
-        <div className="flex flex-wrap justify-between items-start px-4 md:px-40 mb-16 relative mt-6">
+        <div className="flex flex-wrap justify-between items-start px-4 xl:px-40 mb-16 relative mt-6">
           <div className="bg-white text-[#0c192d] flex px-4 py-2 text-center rounded-full font-unbounded text-md mb-4">
             We're Special. Here’s Why?
           </div>
@@ -160,7 +160,7 @@ function page() {
           </div>
         </div>
 
-        <div className="card flex flex-wrap px-4 gap-4 justify-center">
+        <div className="card flex flex-wrap  gap-4 justify-center">
           {aboutUsCardData.map((data, index) => (
             <div
               key={index}

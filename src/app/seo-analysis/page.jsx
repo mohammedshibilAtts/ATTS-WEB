@@ -52,10 +52,10 @@ function Page() {
     <>
       {/* Header */}
       <ScrollMotion>
-        <div className="bg-white px-0  sm:px-8 md:px-16 lg:px-32 pt-9 mt-5">
+        <div className="bg-white  px-4 xl:px-30 mt-3">
           <div className="flex flex-col lg:flex-row">
-            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 px-9 flex items-center">
-              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black ">
+            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 px-4  flex items-center">
+              <h1 className=" text-xl md:text-3xl font-bold   font-unbounded text-black ">
                 <span className="text-[#003067]">
                   Dominate search rankings{" "}
                 </span>
@@ -63,11 +63,11 @@ function Page() {
               </h1>
             </div>
 
-            <div className="flex-1 sm:ml-4 p-4 text-sm sm:text-base">
-            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-6 lg:text-2xl ">
+            <div className="flex-1 sm:ml-4 xl:p-4 text-sm sm:text-base">
+            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded xl:ps-6 lg:text-2xl ">
               At ATTS Technologies Pvt. Ltd.
             </h3>
-              <p className="text-start lg:text-left ps-6 mt-4">
+              <p className="text-start lg:text-left xl:ps-6 mt-4">
                 Do you want to see your business ranking top? SEO is your best
                 buddy when you want to uplift your brand naturally. Boost your
                 website’s performance with our detailed SEO analysis. We focus
@@ -117,11 +117,11 @@ function Page() {
       {/* What we can help you with */}
 
       <ScrollMotion>
-        <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-32 pt-9 mt-5 ">
+        <div className="bg-white px-4  xl:px-32  mt-3 ">
           <div className="titleBox flex justify-center flex-row md:justify-start">
             <TitleBox title={"What we can help you with"} className={"w-72"} />
           </div>
-          <div className="title flex flex-col lg:flex-row justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6 ">
+          <div className="title flex flex-col xl:flex-row justify-center mt-5 space-y-4 sm:space-y-0 sm:space-x-6 ">
             <div className=" sm:text-left  flex-1">
               <h1 className=" text-xl md:text-3xl font-bold  font-unbounded px-5  text-black ">
                 Your Trusted SEO Experts, {" "}
