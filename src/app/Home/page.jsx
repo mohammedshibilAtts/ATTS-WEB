@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import HomePng from "../../assests/images/HomePng.png";
-import HomeAbout from "../../assests/images/HomeAbout.png";
+import HomeAbout from "../../assests/images/HomeAbout.webp";
 import Image from "next/image";
 import Button from "@/components/button/button";
 import { AnimatePresence, motion } from "framer-motion";
@@ -14,7 +13,7 @@ import {
   serviceData,
   TestimonialsInfo,
 } from "@/constants/constant";
-import collabImage from "../../assests/images/brandcollab.png";
+import collabImage from "../../assests/images/brandcollab.webp";
 import CountUp from "react-countup";
 import Contactus from "@/components/contactUs/contactus";
 import AnimatedSection from "@/components/animation/animationSection";
@@ -29,6 +28,7 @@ import {
 } from "react-icons/io5";
 import Link from "next/link";
 import ScrollMotion from "@/components/animation/scrollMotion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 function page() {
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef(null);
@@ -94,6 +94,67 @@ function page() {
   }, [reviews.length]);
 
   const { image, name, role, text } = reviews[currentIndex];
+  const blogs = [
+    {
+      id: 1,
+      title: "The Future of Digital Marketing",
+      category: "Marketing",
+      date: "Jan 15, 2024",
+      image: "/api/placeholder/600/400",
+      excerpt: "Discover the latest trends shaping the future of digital marketing and how to stay ahead.",
+      readTime: "5 min read"
+    },
+    {
+      id: 2,
+      title: "Web Design Trends 2024",
+      category: "Design",
+      date: "Jan 18, 2024",
+      image: "/api/placeholder/600/400",
+      excerpt: "Explore the most innovative web design trends that are dominating the digital landscape.",
+      readTime: "4 min read"
+    },
+    {
+      id: 3,
+      title: "SEO Strategies That Work",
+      category: "SEO",
+      date: "Jan 20, 2024",
+      image: "/api/placeholder/600/400",
+      excerpt: "Learn the most effective SEO strategies to improve your website's visibility.",
+      readTime: "6 min read"
+    },
+    {
+      id: 4,
+      title: "Content Creation Guide",
+      category: "Content",
+      date: "Jan 22, 2024",
+      image: "/api/placeholder/600/400",
+      excerpt: "Master the art of creating engaging content that resonates with your audience.",
+      readTime: "7 min read"
+    },
+    {
+      id: 5,
+      title: "Social Media Marketing",
+      category: "Social Media",
+      date: "Jan 25, 2024",
+      image: "/api/placeholder/600/400",
+      excerpt: "Maximize your social media presence with these proven marketing strategies.",
+      readTime: "5 min read"
+    }
+  ];
+
+  const scrollContainer = React.useRef(null);
+
+  const scroll = (direction) => {
+    const container = scrollContainer.current;
+    const scrollAmount = 400;
+    if (container) {
+      const targetScroll = container.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount);
+      container.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <>
@@ -101,7 +162,7 @@ function page() {
       <div className="w-full">
         <StaggeredSection>
           <div className="main xl:px-28 ">
-            <div className="title flex flex-col lg:flex-row items-center px-1 sm:px-8 pt-3 pb-3 text-black">
+            <div className="title flex flex-col lg:flex-row items-center px-1 sm:px-4 pt-3 pb-3 text-black">
               <div className="left w-full lg:w-2/3 text-center lg:text-left lg:mb-0">
                 <h2 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
                   Your Partner in Crafting Your Digital DNA {" - "}
@@ -163,7 +224,7 @@ function page() {
 
         <ScrollMotion
           children={
-            <div className=" bg-white px-8 pt-9 xl:px-32">
+            <div className=" bg-white px-4 pt-9 xl:px-32">
               <div className="title-card flex justify-center md:justify-start">
                 <TitleBox title={"About Us"} />
               </div>
@@ -179,7 +240,7 @@ function page() {
                 <div className=" relative image flex items-center pe-9  ">
                   <div className=" w-full  aspect-[4/3] lg:aspect-[4/1] rounded-4xl overflow-hidden ms-9">
                     {/* Main large image */}
-                    <div className="absolute left-0 right-1  top-0 bottom-0">
+                    <div className="absolute left-0 right-10  top-0 bottom-0">
                       <Image
                         src={HomeAbout}
                         alt="Main content"
@@ -190,7 +251,7 @@ function page() {
                     </div>
                   </div>
                 </div>
-                <div className="details p-4 md:p-0 text-gray-800  mt-14">
+                <div className="details xl:p-4 md:p-0 text-gray-800  mt-14">
                   <p className="font-sans">
                     ATTS Technologies is driven by the motive of evolving
                     companies into brands. We are equipped with a team of
@@ -227,7 +288,7 @@ function page() {
 
         <ScrollMotion
           children={
-            <div className=" bg-white  px-8  xl:px-32 mt-8 xl:mt-16">
+            <div className=" bg-white  px-4  xl:px-32 mt-8 xl:mt-16">
               <div className="title-card flex justify-center md:justify-start">
                 <TitleBox title={"Our services"} />
               </div>
@@ -335,7 +396,7 @@ function page() {
                           </div>
                           <hr className="w-40  text-sm " />
 
-                          <p className="text-lg md:text-xl font-unbounded text-[#B5D3F5]">
+                          <p className="text-lg md:text-xl font-unbounded ">
                             {stat.title}
                           </p>
                         </div>
@@ -343,7 +404,7 @@ function page() {
                     </div>
                   </div>
 
-                  <div className="absolute bottom-0 right-0">
+                  <div className=" bottom-0 right-0 absolute">
                     <Image
                       src={collabImage}
                       alt="Brand Collaborations"
@@ -359,7 +420,7 @@ function page() {
         {/* Testimonials */}
 
         <ScrollMotion>
-          <div className="main px-8 mt-9 xl:px-32">
+          <div className="main px-4 mt-9 xl:px-32">
             <TitleBox title={"Testimonials"} />
             <div className="mt-9 ">
               <h2 className="text-xl md:text-3xl font-bold  font-unbounded mb-2">
@@ -503,7 +564,7 @@ function page() {
               <div className="mt-5 ">
                 <div className="title flex justify-between items-center">
                   <div className="start ">
-                    <h2 className="text-xl md:text-3xl font-bold  font-unbounded">
+                    <h2 className="text-xl md:text-3xl font-bold  px-4 font-unbounded">
                       Read our Latest{" "}
                       <span className="text-xl md:text-3xl font-bold  font-unbounded text-[#003067]">
                         Blogs & article
@@ -514,55 +575,53 @@ function page() {
                     <Button title={"View All Blogs"} link="/blog" />
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-4 px-4 md:px-6">
-                  {blogData.map((data, index) => (
-                    <div
-                      key={index}
-                      className="group relative overflow-hidden rounded-lg shadow-lg  transition-shadow duration-300"
-                    >
-                      {/* Image Container with adjusted aspect ratio and full image display */}
-                      <div className="relative w-full h-[300px] md:h-[350px] lg:h-[400px]">
-                        <Image
-                          src={data.img}
-                          alt={data.content || "Blog post image"}
-                          fill
-                          sizes="(max-width: 640px) 100vw, 
-                     (max-width: 1024px) 50vw,
-                     33vw"
-                          className="object-fill object-center transition-transform duration-300 g"
-                          priority={index < 3}
-                          quality={90}
-                        />
-                      </div>
+                <div className="relative max-w-full px-4 ">
+     
 
-                      {/* Improved Content Overlay with stronger background gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent flex flex-col justify-end p-4 md:p-6">
-                        {/* Meta Information */}
-                        <div className="flex items-center gap-4 text-sm text-white/90 mb-2">
-                          {/* Meta info components can go here */}
-                        </div>
+     
 
-                        {/* Content Container with dark background */}
-                        <div className="bg-black/40 backdrop-blur-sm rounded-lg p-3 transition-all duration-300">
-                          {/* Title */}
-                          <h3 className="font-unbounded text-white  group-hover:underline">
-                            {data.content}
-                          </h3>
-
-                          {/* Description */}
-                          {data.description && (
-                            <p className="text-white/90 text-sm mt-2 line-clamp-2 hidden md:block">
-                              {data.description}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-
-                      {/* Enhanced Hover Overlay */}
-                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                  ))}
-                </div>
+      {/* Cards Container */}
+      <div 
+        ref={scrollContainer}
+        className="flex gap-6 overflow-x-auto scrollbar-hide max-w-8xl mx-auto scroll-smooth py-7"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        {blogData.map((blog,index) => (
+          <motion.div
+            key={index}
+            className="flex-none w-[300px] md:w-[400px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="relative h-48 overflow-hidden">
+              <Image 
+                src={blog.img} 
+                alt={blog.content}
+                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+              />
+              
+            </div>
+            
+            <div className="p-6">
+              <div className="flex justify-between items-center text-sm text-gray-500 mb-3">
+                <span>{blog.date}</span>
+                <span>{blog.readTime}</span>
+              </div>
+              
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                {blog.content}
+              </h3>
+              
+              <p className="text-gray-600 mb-4 line-clamp-2">
+                {blog.excerpt}
+              </p>
+              
+              <Button title={'Read More'}/>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
               </div>
               <div className="hidden group">
                 <Button title={"View All Blogs"} link="/blog" />
@@ -573,7 +632,7 @@ function page() {
         {/* Contact us */}
 
         <ScrollMotion>
-          <div className=" px-8  xl:px-32  align-middle md:mt-9">
+          <div className="  xl:px-32  align-middle md:mt-9">
             <Contactus />
           </div>
         </ScrollMotion>

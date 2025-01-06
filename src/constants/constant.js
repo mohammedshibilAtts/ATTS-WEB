@@ -306,9 +306,9 @@ export const TestimonialsInfo = [
 ];
 
 //   blog data
-const Blog1 = require("../assests/images/blog1.png");
-const Blog2 = require("../assests/images/blog2.jpg");
-const Blog3 = require("../assests/images/blog3.jpg");
+const Blog1 = require("../assests/images/blog1.webp");
+const Blog2 = require("../assests/images/blog2.webp");
+const Blog3 = require("../assests/images/blog3.webp");
 
 export const blogData = [
   {

@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0B1320] text-[#c4cdd5] pb-2 pt-5 sm:pb-2 w-full ">
+    <footer className="bg-[#010202] text-[#c4cdd5] pb-2 pt-5 sm:pb-2 w-full ">
       <div className=" mx-auto px-4 sm:px-6">
         <div className="flex flex-col ms-9 lg:flex-row gap-8 lg:gap-12">
           {/* Left Half - Company Description */}
@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 ">
               {/* Menu */}
               <div className="md:ms-9">
-                <h3 className="text-[#B5D3F5] font-unbounded text-lg ">Menu</h3>
+                <h3 className="text-[#B5D3F5] font-unbounded text-lg mb-6 ">Menu</h3>
                 <ul className="space-y-2 cursor-pointer text-sm sm:text-base ">
                   <li className="hover:text-white transition-colors xl:hover:underline"> <Link href={'/'}>Home </Link> </li>
                   <li className="hover:text-white transition-colors xl:hover:underline"> <Link href={'about'}>About </Link></li>
@@ -37,8 +37,8 @@ const Footer = () => {
 
               {/* Services */}
               <div>
-                <h3 className="text-[#B5D3F5] font-unbounded text-lg ">Services</h3>
-                <ul className="space-y-2 cursor-pointer text-sm sm:text-base">
+                <h3 className="text-[#B5D3F5] font-unbounded text-lg mb-6 ">Services</h3>
+                <ul className="space-y-2 cursor-pointer text-sm sm:text-base  ">
                   <li className="hover:text-white transition-colors xl:hover:underline"><Link href={'web-development'}>Web Design & Development </Link></li>
                   <li className="hover:text-white transition-colors xl:hover:underline"><Link href={"app-development"}>Mobile app Development </Link></li>
                   <li className="hover:text-white transition-colors xl:hover:underline"> <Link href={"seo-analysis"}>SEO</Link>  </li>
@@ -50,8 +50,8 @@ const Footer = () => {
 
               {/* Product - Hidden on smallest screens, shown in Services column */}
               <div className="hidden sm:block">
-                <h3 className="text-[#B5D3F5] font-unbounded text-lg ">Product</h3>
-                <ul className="space-y-2 cursor-pointer text-sm sm:text-base">
+                <h3 className="text-[#B5D3F5] font-unbounded text-lg mb-6 ">Product</h3>
+                <ul className="space-y-2 cursor-pointer text-sm sm:text-base ">
                   <li className="hover:text-white transition-colors xl:hover:underline"><Link href={'https://aurumm.co/products/aupay/'}>Aurumm</Link></li>
       
                 </ul>
@@ -71,18 +71,26 @@ const Footer = () => {
 
         {/* Contact Information */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-          <div className="flex items-center gap-3 bg-[#1c2a41] p-3 sm:p-4 rounded-lg hover:bg-[#243451] transition-colors xl:hover:underline">
+        <a href="mailto:Support@atts.in">
+          <div className="flex items-center gap-3 bg-[#2c2d2d] p-3 sm:p-4 rounded-lg hover:bg-[#282929] transition-colors xl:hover:underline">
             <MdOutlineMail className="text-xl sm:text-2xl flex-shrink-0" />
-            <span className="text-sm sm:text-base"><a href="mailto:Support@atts.in">Support@atts.in</a></span>
+            <span className="text-sm sm:text-base">Support@atts.in</span>
           </div>
-          <div className="flex items-center gap-3 bg-[#1c2a41] p-3 sm:p-4 rounded-lg hover:bg-[#243451] transition-colors xl:hover:underline">
+          </a>
+
+          <a href="tel:+919874563210">
+          <div className="flex items-center gap-3 bg-[#2c2d2d] p-3 sm:p-4 rounded-lg hover:bg-[#282929] transition-colors xl:hover:underline">
             <FaPhone className="text-xl sm:text-2xl flex-shrink-0" />
-            <span className="text-sm sm:text-base"><a href="tel:+919874563210">+91 9874563210</a></span>
+            <span className="text-sm sm:text-base">+91 9874563210</span>
           </div>
-          <div className="flex items-center gap-3 bg-[#1c2a41] p-3 sm:p-4 rounded-lg hover:bg-[#243451] transition-colors xl:hover:underline col-span-1 sm:col-span-2 lg:col-span-1">
+          </a>
+          
+          <a href="https://maps.app.goo.gl/UbxWGNKe5sXsCEbc8">
+          <div className="flex items-center gap-3 bg-[#2c2d2d] p-3 sm:p-4 rounded-lg hover:bg-[#282929] transition-colors xl:hover:underline col-span-1 sm:col-span-2 lg:col-span-1">
             <CiLocationOn className="text-xl sm:text-2xl flex-shrink-0" />
-            <span className="text-sm sm:text-base"><a href="https://maps.app.goo.gl/UbxWGNKe5sXsCEbc8">Mullai Nagar, Coimbatore, Tamilnadu 641041</a></span>
+            <span className="text-sm sm:text-base">Mullai Nagar, Coimbatore, Tamilnadu 641041</span>
           </div>
+          </a>
         </div>
 
         {/* Social Media & Copyright */}

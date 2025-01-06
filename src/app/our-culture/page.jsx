@@ -54,7 +54,7 @@ function page() {
     {
       id: 1,
       name: "Aravindraj Mani",
-      role: "Senior Digital Marketing Executive",
+      role: "Digital Marketing Team Lead",
       icon: Aravindraj_Mani,
       image: Aravindraj_Mani,
       quote:
@@ -63,7 +63,7 @@ function page() {
     {
       id: 2,
       name: "Sylesh Shanmugam",
-      role: "Digital Marketing Executive",
+      role: "Key Account Manager & Sr Digital Marketing Executive",
       icon: Sylesh_Shanmugam,
       image: Sylesh_Shanmugam,
       quote: "Arion Media Corp is more than just a workplace; it’s a family where creativity, growth, and dreams are nurtured. From day one, I’ve felt valued, supported, and inspired to bring my best. Every challenge is met together, every success is celebrated like our own. The leadership, teamwork, and shared passion make this journey deeply fulfilling. It’s a place where hard work turns into impact, and I’m incredibly proud to belong here.",
@@ -71,7 +71,7 @@ function page() {
     {
       id: 3,
       name: "Prabhu Manickam",
-      role: "Senior Visualizer",
+      role: "Lead Designer & Visualizer",
       icon: Prabhu_Manickam,
       image: Prabhu_Manickam,
       quote: "With 18 years of experience, the last four and a half at ATTS have been the best part of my career. Working closely with our MD, Mr. Manoj Chandran, has really pushed me to the next level. The vibe here is all about respect, teamwork, creativity, and constant learning. Feeling lucky and excited to see what’s next and do even more for the company!",
@@ -87,7 +87,7 @@ function page() {
     {
       id: 5,
       name: "Vinitha Vijayaragavan",
-      role: "Talent Acquisition",
+      role: "Talent Acquisition Specialist",
       icon: Vinitha_Vijayaragavan,
       image: Vinitha_Vijayaragavan,
       quote: "ATTS Technologies has been a remarkable place for my professional growth, where I’ve learned and evolved tremendously in my career. I feel consistently valued, empowered, and appreciated for my contributions. The energy and innovation of brilliant young minds make this workplace truly inclusive, inspiring, and welcoming workplace.",

@@ -254,9 +254,9 @@ const cardVideos = [...videoCard1,videoCard2].map((video) => (
   
 
             <div className="description mt-5">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  xl:text-center px-4  text-black">
+              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  px-4  text-black">
               Unique Minds boosting your brand through {" "}
-                <span className="text-xl md:text-3xl font-bold  font-unbounded   text-center text-[#003067] xl:block">
+                <span className="text-xl md:text-3xl font-bold  font-unbounded    text-[#003067] xl:block">
                 Ad Films & Multimedia Advertising. 
                 </span>
               </h1>

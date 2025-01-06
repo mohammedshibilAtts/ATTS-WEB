@@ -45,8 +45,8 @@ function page() {
 
       <div className=" w-full">
         <FadeMotion>
-          <div className="bg-white   px-2 pt-9  xl:px-16 mt-5 ">
-            <div className="title mb-4 sm:px-8 xl:px-16 lg:px-30 ">
+          <div className="bg-white   px-4 pt-9  xl:px-16 mt-5 ">
+            <div className="title mb-4 px-4 xl:px-16 lg:px-30 ">
               <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  ">
                 Explore Careers at {""}
                 <span className="text-[#003067] font-unbounded text-2xl md:text-3xl">
