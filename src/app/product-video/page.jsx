@@ -82,7 +82,7 @@ function page() {
       </div>
     </div>
   ))
-const cardVideos = [...videoCard1,videoCard2].map((video) => (
+const cardVideos = [...videoCard1,...videoCard2].map((video) => (
   <div key={video.id} className="relative">
     <video
       src={video.src}
@@ -107,10 +107,13 @@ const cardVideos = [...videoCard1,videoCard2].map((video) => (
             <div className="title-box mb-6 sm:mb-8">
               <TitleBox title={"Our Services"} />
             </div>
-            <div className="text-start md:text-center sm:text-left  flex-1">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black md:text-start">
-                Ads that shine, videos that work—let’s{" "}
-                <span className="text-[#003067] md:block">get your brand noticed!</span>
+            
+            <div className="description ">
+              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-start  md:text-center md:px-9  text-black">
+              Ads that shine, videos that work—let’s{" "}
+                <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-center text-[#003067] md:block">
+                get your brand noticed!
+                </span>
               </h1>
             </div>
           </div>
@@ -254,7 +257,7 @@ const cardVideos = [...videoCard1,videoCard2].map((video) => (
   
 
             <div className="description mt-5">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  px-4  text-black">
+              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  md:px-4  text-black">
               Unique Minds boosting your brand through {" "}
                 <span className="text-xl md:text-3xl font-bold  font-unbounded    text-[#003067] xl:block">
                 Ad Films & Multimedia Advertising. 

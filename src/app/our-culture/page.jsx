@@ -184,11 +184,11 @@ function page() {
               <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
 
               {/* Content Section for Mobile */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-4 z-10">
+              <div className="absolute inset-0 flex flex-col items-center justify-center  p-4 z-10">
                 <div className="inline-block bg-white px-4 py-1.5 rounded-full text-sm font-unbounded mb-4">
                   Our Culture
                 </div>
-                <h1 className="text-white text-xl md:text-3xl font-bold  font-unbounded items-center  leading-tight text-start">
+                <h1 className="text-white text-xl md:text-3xl font-bold  font-unbounded items-center text-center  leading-tight lg:text-start">
                   Just a bunch of creative humans, enjoying every moment of what
                   we do!
                 </h1>
@@ -265,17 +265,18 @@ function page() {
         // ref={section1Ref}
       >
         <div className="flex flex-col lg:flex-row">
-          <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 px-4 ">
+          <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 ">
             <div className="title-box flex justify-center md:justify-start">
               <TitleBox title={"Life at ATTS"} />
             </div>
+            
             <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black mt-6">
               Learn, explore, and totally be yourself - it’s like home,
               <span className="text-[#003067]"> but way more exciting!</span>
             </h1>
           </div>
 
-          <div className="flex-1 sm:ml-4 xl:p-4 text-sm sm:text-base">
+          <div className="flex-1 xl:p-4 text-sm sm:text-base">
             <p className="text-start lg:text-left ps-0 xl:ps-6">
               We make sure every team member feels right at home with their
               colleagues, the workspace, and our clients. We celebrate the
@@ -471,13 +472,13 @@ function page() {
 
             {/* Headings */}
             <div className="sm:px-4 sm:py-3">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded mb-2">
+              <h1 className="text-xl md:text-3xl font-bold text-center md:text-start font-unbounded mb-2">
                 Innovating Ideas..!
               </h1>
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded mb-2">
+              <h1 className="text-xl md:text-3xl font-bold text-center md:text-start font-unbounded mb-2">
                 Crafting Designs..!
               </h1>
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded mb-2">
+              <h1 className="text-xl md:text-3xl font-bold text-center md:text-start font-unbounded mb-2">
                 Building Brands..!
               </h1>
 

@@ -29,6 +29,7 @@ import {
 import Link from "next/link";
 import ScrollMotion from "@/components/animation/scrollMotion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Head from "next/head";
 function page() {
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef(null);
@@ -158,11 +159,19 @@ function page() {
 
   return (
     <>
+    <Head>
+      <title>Hybrid IT Solution Company in Coimbatore</title>
+      <meta name="description" content="Hybrid IT Solution Company in Coimbatore, Software Development Company in Coimbatore, App Development Company in Coimbatore, Best Web Development Company in Coimbatore, Best Web Design Company in Coimbatore, Digital Marketing Company in Coimbatore, Branding Company in Coimbatore, Advertising Company in Coimbatore"/>
+      <meta property="og:title" content="Home page of ATTS" />
+      <meta property="og:description" content="Amplify your business's online presence with the best IT and branding agency in Coimbatore. Specializing in hybrid IT solutions, software and app development, web design, branding, and advertising, we craft custom solutions to help your business thrive in the digital landscape" />
+      {/* <meta property="og:image" content="https://example.com/thumbnail.jpg" />
+      <meta name="twitter:card" content="summary_large_image" /> */}
+    </Head>
       {/* Hero */}
       <div className="w-full">
-        <StaggeredSection>
+      <ScrollMotion>
           <div className="main xl:px-28 ">
-            <div className="title flex flex-col lg:flex-row items-center px-1 sm:px-4 pt-3 pb-3 text-black">
+            <div className="title flex flex-col lg:flex-row items-center px-1 sm:px-4 pt-3 pb-3 text-black mt-8">
               <div className="left w-full lg:w-2/3 text-center lg:text-left lg:mb-0">
                 <h2 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
                   Your Partner in Crafting Your Digital DNA {" - "}
@@ -218,7 +227,7 @@ function page() {
               </div>
             </div>
           </div>
-        </StaggeredSection>
+          </ScrollMotion>
 
         {/* // About us */}
 
@@ -369,13 +378,13 @@ function page() {
                         India
                       </span>
                     </h1>
-                    <h1 className="text-xl md:text-4xl font-bold  tracking-wider font-unbounded text-white text-center">
+                    <h1 className="text-xl md:text-4xl font-bold mt-4 tracking-wider font-unbounded text-white text-center">
                       For Global{" "}
                       <span className="text-xl md:text-4xl font-bold tracking-wider  font-unbounded  text-center text-[#B5D3F5]">
                         Reach
                       </span>
                     </h1>
-                    <div className="grid grid-cols-2 mt-6 xl:px-16 md:mt-20 1xl:ms-50">
+                    <div className="grid grid-cols-2 mt-4 xl:px-16 md:mt-14 1xl:ms-50">
                       {Homestatics.map((stat) => (
                         <div
                           key={stat.title}
@@ -608,7 +617,7 @@ function page() {
                 <span>{blog.readTime}</span>
               </div>
               
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text- font-unbounded text-gray-900 mb-2">
                 {blog.content}
               </h3>
               

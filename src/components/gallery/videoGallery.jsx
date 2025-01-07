@@ -65,7 +65,7 @@ const VideoCarousel = ({ videos }) => {
               <div className="absolute inset-0 bg-black/50" />
 
               {/* Centered Content with New Style */}
-              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 font-unbounded text-center mx-auto w-3/5 ">
+              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 font-unbounded text-center mx-auto md:w-3/5 ">
                 {/* Small Header Text */}
                 <div className="text-white text-xs sm:text-sm md:text-base uppercase tracking-wider mb-4">
                   {video.topText || "AD FILMS & MULTIMEDIA ADVERTISING"}

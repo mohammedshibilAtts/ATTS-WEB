@@ -1,184 +1,195 @@
-"use client";
-import React from 'react';
-import Image from 'next/image';
-import { useParams } from 'next/navigation';
-import Banner from "@/assests/images/blogBanner.jpg";
+"use client"
+import React, { useState, useEffect } from 'react';
+import { Calendar, Clock, User, ThumbsUp, Share2, Bookmark, ChevronUp } from 'lucide-react';
 
-const blogData = [
-  {
-    title: "1",
-    subtitle: "Newest design to Try Better",
-    description: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-    author: "Random Resources",
-    date: "27.11.2024",
-    bannerImage: Banner,
-    sections: [
-      {
-        title: "Lorem Ipsum is simply dummy text",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lacus...",
-        image: Banner,
-      },
-      {
-        title: "Lorem Ipsum is simply dummy text",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lacus...",
-        image: Banner,
-      },
-    ],
-    quote: "Lorem Ipsum is simply dummy text",
-  },
-  {
-    title: "2",
-    subtitle: "Newest design to Try Better",
-    description: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-    author: "Random Resources",
-    date: "27.11.2024",
-    bannerImage: Banner,
-    sections: [
-      {
-        title: "Lorem Ipsum is simply dummy text",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lacus...",
-        image: Banner,
-      },
-      {
-        title: "Lorem Ipsum is simply dummy text",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lacus...",
-        image: Banner,
-      },
-    ],
-    quote: "Lorem Ipsum is simply dummy text",
-  },
-  {
-    title: "3",
-    subtitle: "Newest design to Try Better",
-    description: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-    author: "Random Resources",
-    date: "27.11.2024",
-    bannerImage: Banner,
-    sections: [
-      {
-        title: "Lorem Ipsum is simply dummy text",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lacus...",
-        image: Banner,
-      },
-      {
-        title: "Lorem Ipsum is simply dummy text",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lacus...",
-        image: Banner,
-      },
-    ],
-    quote: "Lorem Ipsum is simply dummy text",
-  },
-];
+const Page = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
-const BlogLayout = () => {
-  const { id } = useParams();
-  const blog = blogData[id];
+  const blogPost = {
+    title: "How Many Backlinks Needed Per Month to Your Website?",
+    author: "SEO Expert",
+    date: "February 5, 2022",
+    readTime: "10 min read",
+    featuredImage: "/api/placeholder/1200/600",
+    secondaryImage: "/api/placeholder/800/400",
+    content: {
+      introduction: `This is perhaps the most asked question; by now, almost every person in the SEO industry has given the most annoying answer. "It varies from time to time..." Well, today, we will try to answer this question!`,
+      sections: [
+        {
+          id: "what-are-backlinks",
+          title: "What Are Backlinks?",
+          content: `As many of you know that backlinks play a significant role in SEO. Backlinks will help you rank your website to increase your organic traffic. You might have seen blogs with statistics, news, examples, etc. Have you noticed hyperlinks to other websites? Maybe everyone has it. These contextual links are called backlinks, also called inbound links. It is a hyperlink from one website to another website. Contextual links are referring to another topic to the reader by anchoring relevant words.`
+        },
+        {
+          id: "dofollow-nofollow",
+          title: "What are Dofollow and Nofollow backlinks?",
+          content: `It's no top secret that backlinks are significant for SEO. They are among the most powerful ranking factors and can thrust your site to the top or pull it down. Generally, there are two types of backlinks: one is "Dofollow" and another one "Nofollow" backlinks.`
+        },
+        {
+          id: "organic-backlinks",
+          title: "Can you get backlinks organically for your website?",
+          content: `There's no one-size-fits-all answer to this question, but you can build your best link-building strategy for the best way to get organic backlinks depends on the type of site you're targeting, the quality of your content, and the amount of effort you're willing to put in.`
+        },
+        {
+          id: "backlinks-needed",
+          title: "How many backlinks are needed to rank your website?",
+          content: `Is it possible to tell how many bricks are required to build a good house? Or, how many grains of rice would you need to soothe your appetite? A few people can reside in a house with minimal bricks and a single room, and others require a stately home. Likewise, some people only need a little rice in their food, while others live only on rice.`
+        }
+      ]
+    }
+  };
 
-  // Check if the id is valid
-  if (!blog) {
-    return (
-      <div className="flex justify-center items-center min-h-screen bg-gray-50 p-6">
-        <div className="max-w-4xl p-8 bg-white rounded-lg shadow-lg text-center">
-          <h1 className="text-4xl font-bold text-red-500 mb-6">Oops! Page Not Found</h1>
-          <p className="text-lg text-gray-700 mb-4">
-            The blog post you're looking for doesn't exist or has been removed.
-          </p>
-          <p className="text-gray-500 mb-4">
-            Please check the URL or return to the homepage.
-          </p>
-          <a href="/" className="inline-block mt-4 px-6 py-3 bg-blue-500 text-white text-lg rounded-md hover:bg-blue-600 transition-colors">
-            Go Back to Homepage
-          </a>
-        </div>
-      </div>
-    );
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
-    <div className=" ">
-
-      {/* Hero Section */}
-      <div className="relative w-full h-[500px] overflow-hidden mb-16">
-        <div className="absolute inset-0 bg-black/60 z-10" />
-        <Image
-          src={blog.bannerImage}
-          alt={blog.title}
-          className="w-full h-full object-cover"
-          width={1000}
-          height={500}
-        />
-        <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-start text-white z-20">
-          <span className="text-sm">By {blog.author}</span>
-          <span className="text-sm">{blog.date}</span>
-        </div>
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-white z-20 px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            {blog.title}
+    <div className=" bg-gray-50">
+      {/* Header */}
+      <header className="w-full bg-white shadow-sm sticky top-20 z-10">
+        <div className="max-w-6xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            {blogPost.title}
           </h1>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-            {blog.subtitle}
-          </h2>
-          <p className="text-center max-w-2xl">
-            {blog.description}
-          </p>
+          
+          <div className="flex flex-wrap items-center gap-4 text-gray-600">
+            <div className="flex items-center gap-2">
+              <User size={18} />
+              <span>{blogPost.author}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Calendar size={18} />
+              <span>{blogPost.date}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock size={18} />
+              <span>{blogPost.readTime}</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Featured Image */}
+      <div className="w-full bg-gray-100">
+        <div className="max-w-6xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <img
+              src={blogPost.featuredImage}
+              alt="Featured image showing backlink strategy"
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
       </div>
 
-      <div className="px-5 mb-9">
-        {/* Article Section 1 */}
-        {blog.sections.map((section, index) => (
-          <div key={index} className="grid md:grid-cols-2 gap-8 mb-16">
-            {index % 2 === 0 ? (
-              <>
-                <div className="rounded-lg overflow-hidden">
-                  <Image
-                    src={section.image}
-                    alt={section.title}
-                    className="w-full h-[300px] object-cover"
-                    width={1000}
-                    height={300}
-                  />
-                </div>
-                <div className="flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold text-[#003067] mb-4">
+      {/* Main Content */}
+      <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+          {/* Table of Contents - Desktop */}
+          <div className="hidden lg:block lg:col-span-3">
+            <div className="sticky top-60">
+              <nav className="space-y-1">
+                <h2 className="text-lg font-semibold mb-4">Table of Contents</h2>
+                {blogPost.content.sections.map((section) => (
+                  <a
+                    key={section.id}
+                    href={`#${section.id}`}
+                    className={`block px-3 py-2 text-sm rounded-md transition-colors ${
+                      activeSection === section.id
+                        ? 'bg-blue-100 text-blue-800'
+                        : 'text-gray-600 hover:bg-gray-100'
+                    }`}
+                  >
                     {section.title}
-                  </h3>
-                  <p className="text-gray-600">{section.content}</p>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="flex flex-col justify-center md:order-1">
-                  <h3 className="text-2xl font-bold text-[#003067] mb-4">
-                    {section.title}
-                  </h3>
-                  <p className="text-gray-600">{section.content}</p>
-                </div>
-                <div className="rounded-lg overflow-hidden md:order-2">
-                  <Image
-                    src={section.image}
-                    alt={section.title}
-                    className="w-full h-[300px] object-cover"
-                    width={1000}
-                    height={300}
-                  />
-                </div>
-              </>
-            )}
+                  </a>
+                ))}
+              </nav>
+            </div>
           </div>
-        ))}
 
-        {/* Quote Section */}
-        {blog.quote && (
-          <div className="bg-gray-900 rounded-lg p-8 text-white">
-            <blockquote className="text-2xl md:text-3xl font-bold text-center">
-              {blog.quote}
-            </blockquote>
-          </div>
-        )}
+          {/* Main Content */}
+          <main className="lg:col-span-9">
+            <article className="prose lg:prose-lg max-w-none">
+              <p className="text-xl text-gray-700 mb-8">{blogPost.content.introduction}</p>
+              
+              {/* First Two Sections */}
+              {blogPost.content.sections.slice(0, 2).map((section) => (
+                <section key={section.id} id={section.id} className="mb-12">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">{section.title}</h2>
+                  <p className="text-gray-700 leading-relaxed">{section.content}</p>
+                </section>
+              ))}
+
+              {/* Second Image */}
+              <div className="my-12">
+                <div className="rounded-lg overflow-hidden shadow-md">
+                  <img
+                    src={blogPost.secondaryImage}
+                    alt="Backlink types and strategies"
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="bg-gray-50 px-4 py-3">
+                    <p className="text-sm text-gray-600 italic">
+                      Different types of backlinks and their impact on SEO
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Remaining Sections */}
+              {blogPost.content.sections.slice(2).map((section) => (
+                <section key={section.id} id={section.id} className="mb-12">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">{section.title}</h2>
+                  <p className="text-gray-700 leading-relaxed">{section.content}</p>
+                </section>
+              ))}
+            </article>
+
+            {/* Article Footer */}
+            <div className="border-t border-gray-200 pt-6 mt-8">
+              <div className="flex justify-between items-center">
+                <div className="flex gap-6">
+                  <button className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
+                    <ThumbsUp size={20} />
+                    <span>Like</span>
+                  </button>
+                  <button className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
+                    <Share2 size={20} />
+                    <span>Share</span>
+                  </button>
+                </div>
+                <button className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
+                  <Bookmark size={20} />
+                  <span>Save</span>
+                </button>
+              </div>
+            </div>
+          </main>
+        </div>
       </div>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+          aria-label="Scroll to top"
+        >
+          <ChevronUp size={24} />
+        </button>
+      )}
     </div>
   );
 };
 
-export default BlogLayout;
+export default Page;

@@ -25,17 +25,21 @@ function page() {
     { src: Banner4 },
   ];
   const [activeIndex, setActiveIndex] = useState(0);
-  
+
   const handleIndicatorClick = (index) => {
     setActiveIndex(index);
   };
 
   const nextSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex === Images.length - 1 ? 0 : prevIndex + 1));
+    setActiveIndex((prevIndex) =>
+      prevIndex === Images.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const prevSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex === 0 ? Images.length - 1 : prevIndex - 1));
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? Images.length - 1 : prevIndex - 1
+    );
   };
 
   useEffect(() => {
@@ -46,104 +50,105 @@ function page() {
   return (
     <>
       <div className="w-full">
-      <div className="w-full relative">
-      <div className="relative lg:h-[60rem] h-[30rem] md:h-[40rem] overflow-hidden rounded-b-lg">
-        {Images.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 duration-700 ease-in-out ${
-              index === activeIndex ? 'opacity-100 z-20' : 'opacity-0 -z-10'
-            }`}
-          >
-            {/* Image */}
-            <Image
-              className="absolute w-full h-full object-cover"
-              src={image.src}
-              alt="png"
-              fill
-              priority={index === 0}
-            />
-            
-            {/* Black Shade Overlay */}
-            <div className="absolute inset-0 bg-black/75 z-10" />
-            
-            {/* Centered Content with Animations */}
-            <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 font-unbounded">
-  {/* Small Header Text */}
-  <motion.div 
-    className="text-white text-xs sm:text-sm md:text-base uppercase tracking-wider mb-4"
-    initial={{ opacity: 0, y: -50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-  >
-    {image.topText || "AD FILMS & MULTIMEDIA ADVERTISING"}
-  </motion.div>
-  
-  {/* Main Title - Large and Bold */}
-  <motion.h1 
-    className="text-center max-w-5xl"
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, delay: 0.2 }}
-  >
-    <span className="text-[#B5D3F5] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold block mb-2">
-      {image.mainTitle || "Capture your brand’s essence in every frame"}
-    </span>
-  </motion.h1>
-  
-  {/* Description Text */}
-  <motion.p 
-    className="text-white text-xs sm:text-sm md:text-base text-center max-w-3xl mt-6"
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, delay: 0.4 }}
-  >
-    {image.description || "High-quality images that tell your story and connect with your audience—let’s make magic!"}
-  </motion.p>
-</div>
+        <div className="w-full relative">
+          <div className="relative lg:h-[60rem] h-[30rem] md:h-[40rem] overflow-hidden rounded-b-lg">
+            {Images.map((image, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 duration-700 ease-in-out ${
+                  index === activeIndex ? "opacity-100 z-20" : "opacity-0 -z-10"
+                }`}
+              >
+                {/* Image */}
+                <Image
+                  className="absolute w-full h-full object-cover"
+                  src={image.src}
+                  alt="png"
+                  fill
+                  priority={index === 0}
+                />
 
+                {/* Black Shade Overlay */}
+                <div className="absolute inset-0 bg-black/75 z-10" />
+
+                {/* Centered Content with Animations */}
+                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 font-unbounded">
+                  {/* Small Header Text */}
+                  <motion.div
+                    className="text-white text-xs sm:text-sm md:text-base uppercase tracking-wider mb-4"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                  >
+                    {image.topText || "AD FILMS & MULTIMEDIA ADVERTISING"}
+                  </motion.div>
+
+                  {/* Main Title - Large and Bold */}
+                  <motion.h1
+                    className="text-center max-w-5xl"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.2 }}
+                  >
+                    <span className="text-[#B5D3F5] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold block mb-2">
+                      {image.mainTitle ||
+                        "Capture your brand’s essence in every frame"}
+                    </span>
+                  </motion.h1>
+
+                  {/* Description Text */}
+                  <motion.p
+                    className="text-white text-xs sm:text-sm md:text-base text-center max-w-3xl mt-6"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.4 }}
+                  >
+                    {image.description ||
+                      "High-quality images that tell your story and connect with your audience—let’s make magic!"}
+                  </motion.p>
+                </div>
+              </div>
+            ))}
+
+            {/* Side Navigation Buttons */}
+            <div className="absolute inset-y-0 left-0 flex items-center z-30">
+              <button
+                type="button"
+                onClick={prevSlide}
+                className="flex justify-center items-center px-4 h-full cursor-pointer group focus:outline-none w-96"
+              />
+            </div>
+
+            <div className="absolute inset-y-0 right-0 flex items-center z-30">
+              <button
+                type="button"
+                onClick={nextSlide}
+                className="flex justify-center items-center px-4 h-full cursor-pointer group focus:outline-none w-96"
+              />
+            </div>
           </div>
-        ))}
 
-        {/* Side Navigation Buttons */}
-        <div className="absolute inset-y-0 left-0 flex items-center z-30">
-          <button
-            type="button"
-            onClick={prevSlide}
-            className="flex justify-center items-center px-4 h-full cursor-pointer group focus:outline-none w-96"
-          />
+          {/* Indicators */}
+          <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-4 left-1/2">
+            {Images.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  activeIndex === index ? "bg-[#B5D3F5]" : "bg-white"
+                }`}
+                aria-label={`Slide ${index + 1}`}
+                onClick={() => handleIndicatorClick(index)}
+              />
+            ))}
+          </div>
+
+          {/* Page Counter */}
+          <div className="absolute z-30 bottom-4 right-4 text-white text-lg font-bold">
+            <span className="text-[#B5D3F5]">0{activeIndex + 1}</span>
+            <span className="text-white/70">/0{Images.length}</span>
+          </div>
         </div>
-
-        <div className="absolute inset-y-0 right-0 flex items-center z-30">
-          <button
-            type="button"
-            onClick={nextSlide}
-            className="flex justify-center items-center px-4 h-full cursor-pointer group focus:outline-none w-96"
-          />
-        </div>
-      </div>
-
-      {/* Indicators */}
-      <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-4 left-1/2">
-        {Images.map((_, index) => (
-          <button
-            key={index}
-            type="button"
-            className={`w-3 h-3 rounded-full transition-colors ${
-              activeIndex === index ? 'bg-[#B5D3F5]' : 'bg-white'
-            }`}
-            aria-label={`Slide ${index + 1}`}
-            onClick={() => handleIndicatorClick(index)}
-          />
-        ))}
-      </div>
-      
-      {/* Page Counter */}
-      <div className="absolute z-30 bottom-4 right-4 text-white text-lg font-bold">
-        <span className="text-[#B5D3F5]">0{activeIndex + 1}</span>
-        <span className="text-white/70">/0{Images.length}</span>
-      </div>
-    </div>
 
         <div className="bg-white px-4xl:px-32 pt-5 mt-4">
           <div className="flex flex-col justify-center items-center">
@@ -151,9 +156,9 @@ function page() {
               <TitleBox title={"Our Services"} />
             </div>
 
-            <div className="description">
+            <div className="description px-4">
               <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
-                Expert ,{" "}
+                Expert{" "}
                 <span className="text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] ">
                   Photography{" "}
                 </span>
@@ -181,7 +186,7 @@ function page() {
             </div>
             <div className="title flex flex-col lg:flex-row justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6 ">
               <div className=" sm:text-left  flex-1">
-                <h1 className="text-xl md:text-3xl font-bold  font-unbounded px-5  text-black ">
+                <h1 className="text-xl md:text-3xl font-bold  font-unbounded md:px-5  text-black ">
                   Performance marketing pros committed{" "}
                   <span className="text-[#003067]">
                     to elevating your brand to a broader audience.
@@ -199,8 +204,9 @@ function page() {
           </div>
         </ScrollMotion>
 
+        <div className="px-4">
         <ScrollMotion>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-16 px-4">
             {photographyServiceCard.map((item, index) => (
               <motion.div
                 key={index}
@@ -236,9 +242,10 @@ function page() {
             ))}
           </div>
         </ScrollMotion>
+        </div>
       </div>
 
-      <div className="  px-8  xl:px-32 mt-9">
+      <div className="   xl:px-32 mt-9">
         <Contactus />
       </div>
     </>

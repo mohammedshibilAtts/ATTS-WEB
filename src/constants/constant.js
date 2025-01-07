@@ -314,7 +314,7 @@ export const blogData = [
   {
     img: Blog1,
     content:
-      "How Many Backlinks Needed Per Month to Your Website?",
+      "Why is Email List Building Essential for Any Business?",
   },
   {
     img: Blog2,

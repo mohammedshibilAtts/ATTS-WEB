@@ -61,7 +61,7 @@ function Page() {
       <ScrollMotion>
         <div className="bg-white px-4  xl:px-32 mt-3">
           <div className="flex flex-col lg:flex-row">
-            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 px-3 flex items-center">
+            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 md:px-3 flex items-center">
               <h1 className="text-xl md:text-3xl font-bold font-unbounded text-black ">
                 <span className="text-[#003067]">
                   Turn Your Business into a Global Brand{" "}
@@ -70,7 +70,7 @@ function Page() {
               </h1>
             </div>
 
-            <div className="flex-1 sm:ml-4 xl:p-4 text-sm sm:text-base">
+            <div className="flex-1 mt-8 lg:mt-0 sm:ml-4 xl:p-4 text-sm sm:text-base">
             <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded xl:ps-6 lg:text-2xl ">
               At ATTS Technologies Pvt. Ltd.
             </h3>
@@ -103,8 +103,8 @@ function Page() {
               <TitleBox title={"Our Services"} />
             </div>
 
-            <div className="description">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  md:text-center px-9  text-black">
+            <div className="description px-4">
+              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  md:text-center md:px-4  text-black">
               From Concept to Results – We Craft{" "}
                 <span className="text-xl md:text-3xl font-bold  font-unbounded   text-center text-[#003067] md:block">
                 Brands That Work!
@@ -135,7 +135,7 @@ function Page() {
         <ScrollMotion>
           <div className="title flex flex-col lg:flex-row justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6 ">
             <div className=" sm:text-left  flex-1">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded px-5 sm:text-3xl text-black ">
+              <h1 className="text-xl md:text-3xl font-bold  font-unbounded md:px-5 sm:text-3xl text-black ">
               A team of branding architects dedicated to elevating {" "}
                 <span className="text-[#003067]">
                 your brand to global reach. 

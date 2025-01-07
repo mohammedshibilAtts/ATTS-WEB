@@ -54,7 +54,7 @@ function Page() {
       <ScrollMotion>
         <div className="bg-white  px-4 xl:px-30 mt-3">
           <div className="flex flex-col lg:flex-row">
-            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 px-4  flex items-center">
+            <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 md:px-4  flex items-center">
               <h1 className=" text-xl md:text-3xl font-bold   font-unbounded text-black ">
                 <span className="text-[#003067]">
                   Dominate search rankings{" "}
@@ -63,7 +63,7 @@ function Page() {
               </h1>
             </div>
 
-            <div className="flex-1 sm:ml-4 xl:p-4 text-sm sm:text-base">
+            <div className="flex-1 mt-8 lg:mt-0 sm:ml-4 xl:p-4  text-sm sm:text-base">
             <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded xl:ps-6 lg:text-2xl ">
               At ATTS Technologies Pvt. Ltd.
             </h3>
@@ -93,8 +93,8 @@ function Page() {
               <TitleBox title={"Our Services"} />
             </div>
 
-            <div className="description">
-              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-start  md:text-center px-9  text-black">
+            <div className="description px-4">
+              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-start  md:text-center md:px-9  text-black">
                 Perfect SEO Strategies That Get{" "}
                 <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-center text-[#003067] md:block">
                   Results & Keep You Winning! 
@@ -123,14 +123,14 @@ function Page() {
           </div>
           <div className="title flex flex-col xl:flex-row justify-center mt-5 space-y-4 sm:space-y-0 sm:space-x-6 ">
             <div className=" sm:text-left  flex-1">
-              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded px-5  text-black ">
+              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded md:px-5  text-black ">
                 Your Trusted SEO Experts, {" "}
                 <span className="text-[#003067]">
                   Delivering Results That Last!
                 </span>
               </h1>
             </div>
-            <div className="text-center sm:text-left   group flex-1 flex justify-center md:justify-end h-full  pt-4">
+            <div className="text-center sm:text-left   group flex-1 flex justify-center md:justify-end h-full  pt-3">
               <Button
                 title={"Get in Touch"}
                 className="mt-4 sm:mt-0"
@@ -139,7 +139,7 @@ function Page() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-6">
             {SeoServicesCard.map((item, index) => (
               <motion.div
                 key={index}

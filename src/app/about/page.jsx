@@ -58,7 +58,7 @@ function page() {
       </FadeMotion>
       {/* hero About */}
 
-      <div className="bg-white px-8 pt-9 xl:px-32">
+      <div className="bg-white px-4 pt-9 xl:px-32">
         <TitleBox title={"About Us"} />
         <div className="mt-5 flex justify-center md:justify-start">
           <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
@@ -107,7 +107,7 @@ function page() {
                 className="h-[400px] object-contain relative"
               />
             </FadeMotion>
-            <div className="name border-2 rounded-3xl border-black  px-8 absolute  mt-96 font-unbounded me-20 py-3 mb-7">
+            <div className="name border-2 rounded-3xl border-black  px-4 absolute  mt-96 font-unbounded me-20 py-3 mb-7">
               <h1 className="text-lg text-[#171719]">Jane Cooper</h1>
               <p className="text-sm text-[#8D8B8B]">CEO & Founder of ATTS</p>
             </div>
@@ -147,7 +147,7 @@ function page() {
         </div>
 
         <div className="flex flex-wrap justify-between items-start px-4 xl:px-40 mb-16 relative mt-6">
-          <div className="bg-white text-[#0c192d] flex px-4 py-2 text-center rounded-full font-unbounded text-md mb-4">
+          <div className="bg-white text-[#0c192d] flex px-4 py-2 text-center rounded-full font-unbounded text-md mb-4 ">
             We're Special. Here’s Why?
           </div>
           <div className="w-full text-center md:text-left mb-0 md:mb-0 mt-3">
