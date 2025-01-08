@@ -192,7 +192,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          <div className="hidden lg:flex items-center ms-16">
+          <div className="hidden xl:flex items-center ms-16">
             <ul className="flex text-white gap-4 sm:gap-6 lg:gap-8 xl:gap-10 text-sm lg:text-base whitespace-nowrap overflow-x-auto">
               {navItems.map((item, index) => (
                 <li
@@ -403,7 +403,7 @@ const Navbar = () => {
         {activeMenu == "Services" && (
           <div
             ref={servicesRef}
-            className="absolute z-40 left-0 overflow-visible hidden md:block"
+            className="absolute z-40 left-0 overflow-visible hidden xl:block"
             onClick={() => setActiveMenu(false)}
           >
             <StaggeredSection>
@@ -492,7 +492,7 @@ const Navbar = () => {
         {activeMenu === "About us" && (
           <div
             ref={servicesRef}
-            className="absolute z-40  left-0 overflow-visible hidden md:block"
+            className="absolute z-40  left-0 overflow-visible hidden xl:block"
             onClick={() => setActiveMenu(false)}
           >
             <StaggeredSection>
@@ -583,7 +583,7 @@ const Navbar = () => {
         {activeMenu == "Our Products" && (
           <div
             ref={servicesRef}
-            className="absolute z-40 left-40 overflow-visible hidden md:block"
+            className="absolute z-40 left-40 overflow-visible hidden xl:block"
             onClick={() => setActiveMenu(false)}
           >
             <div className="px-7 py-7">

@@ -12,6 +12,10 @@ import Banner1 from "@/assests/images/photoBanner1.webp";
 import Banner2 from "@/assests/images/photoBanner2.webp";
 import Banner3 from "@/assests/images/photoBanner3.webp";
 import Banner4 from "@/assests/images/photoBanner4.webp";
+import photography1 from "@/assests/images/photography1.webp";
+import photography2 from "@/assests/images/photography2.webp";
+import photography3 from "@/assests/images/photography3.webp";
+import photography4 from "@/assests/images/photography4.webp";
 // import Photography1 from "@/assests/images/photography1.jpg";
 // import Photography2 from "@/assests/images/photography2.jpg";
 // import Photography3 from "@/assests/images/photography3.jpg";
@@ -171,7 +175,41 @@ function page() {
           </div>
         </div>
         <div className="h-screen  w-full z-10">
-          <LayoutGrid cards={cards} img={true} />
+        <div className="container mx-auto p-4">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+        {/* First row: Product image (spans 8 columns) and Gym image (spans 4 columns) */}
+        <div className="md:col-span-8">
+          <Image 
+            src={photography1}
+            alt="Product showcase"
+            className="w-full h-[300px] object-cover rounded-lg shadow-lg"
+          />
+        </div>
+        <div className="md:col-span-4">
+          <Image 
+            src={photography2}
+            alt="Gym interior"
+            className="w-full h-[300px] object-cover rounded-lg shadow-lg"
+          />
+        </div>
+
+        {/* Second row: Jewelry image and Family photo, each spanning 6 columns */}
+        <div className="md:col-span-6">
+          <Image 
+            src={photography3}
+            alt="Jewelry"
+            className="w-full h-[250px] object-cover rounded-lg shadow-lg"
+          />
+        </div>
+        <div className="md:col-span-6">
+          <Image 
+            src={photography4}
+            alt="Family photo"
+            className="w-full h-[250px] object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
         </div>
 
         {/* What we can help you with */}
@@ -314,28 +352,28 @@ const cards = [
     content: <SkeletonOne />,
     className: "md:col-span-2 ",
     thumbnail:
-      "http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fphotography1.bfcdc065.jpg&w=3840&q=75",
+      "https://atts-img-video.s3.eu-north-1.amazonaws.com/photography1.webp",
   },
   {
     id: 2,
     content: <SkeletonTwo />,
     className: "col-span-1",
     thumbnail:
-      "http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fphotography2.b520dbf5.jpg&w=3840&q=75",
+      "https://atts-img-video.s3.eu-north-1.amazonaws.com/photography2.webp",
   },
   {
     id: 3,
     content: <SkeletonThree />,
     className: "col-span-1",
     thumbnail:
-      "http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fphotography4.07564d57.jpg&w=3840&q=75",
+      "https://atts-img-video.s3.eu-north-1.amazonaws.com/photography3.webp",
   },
   {
     id: 4,
     content: <SkeletonFour />,
     className: "md:col-span-2",
     thumbnail:
-      "http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fphotography3.731abf4b.jpg&w=3840&q=75",
+      "https://atts-img-video.s3.eu-north-1.amazonaws.com/photography4.webp",
   },
 ];
 

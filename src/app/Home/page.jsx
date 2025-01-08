@@ -16,9 +16,6 @@ import {
 import collabImage from "../../assests/images/brandcollab.webp";
 import CountUp from "react-countup";
 import Contactus from "@/components/contactUs/contactus";
-import AnimatedSection from "@/components/animation/animationSection";
-import StaggeredSection from "@/components/animation/StaggeredSection";
-import FadeMotion from "@/components/animation/fadeMotion";
 import TitleBox from "@/components/titleBox/titleBox";
 import { InfiniteMovingCards } from "@/components/inifinityScroll/inifinityScroll";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
@@ -172,15 +169,15 @@ function page() {
       <ScrollMotion>
           <div className="main xl:px-28 ">
             <div className="title flex flex-col lg:flex-row items-center px-1 sm:px-4 pt-3 pb-3 text-black mt-8">
-              <div className="left w-full lg:w-2/3 text-center lg:text-left lg:mb-0">
-                <h2 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
-                  Your Partner in Crafting Your Digital DNA {" - "}
+              <div className="left w-full lg:w-2/3 text-start lg:mb-0">
+                <h2 className=" text-black  text-responsive" >
+                  Your Partner in Crafting Your Digital DNA {" - "} 
                   <span className="text-[#003067] ms-1">ATTS Technologies</span>
                 </h2>
               </div>
 
               <div className="w-full lg:w-1/3 text-center lg:text-left ps-0 sm:ps-6 mt-3 md:mt-0">
-                <h1 className=" text-black">
+                <h1 className=" text-black " style={{"fontFamily":"gilroy","fontSize":"18px"}}>
                   We empower your brand with the right strategy to thrive as a
                   pioneer in the industry. We develop the perfect to develop
                   your business.
@@ -261,7 +258,7 @@ function page() {
                   </div>
                 </div>
                 <div className="details xl:p-4 md:p-0 text-gray-800  mt-14">
-                  <p className="font-sans">
+                  <p className="">
                     ATTS Technologies is driven by the motive of evolving
                     companies into brands. We are equipped with a team of
                     thriving brains ready to partner and elevate your business

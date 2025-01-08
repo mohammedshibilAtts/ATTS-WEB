@@ -4,6 +4,28 @@
 @tailwind utilities;
 
 
+@font-face {
+  font-family: 'Zoho-Sans';
+  src:
+       url('/fonts/Zoho_Puvi_Regular.ttf') format('truetype');
+  /* font-weight:400 ; */
+  /* font-style: normal;
+  line-height: 70px;
+  font-display: swap; Ensures text remains visible during font load */
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src:
+       url('/fonts/Gilroy-Medium.ttf') format('truetype');
+       
+  /* font-weight:400 ; */
+  /* font-style: normal;
+  line-height: 70px;
+  font-display: swap; Ensures text remains visible during font load */
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -24,6 +46,38 @@ body {
   color: var(--foreground);
   background:white
 }
+
+.text-responsive {
+  font-family: 'Zoho Sans', sans-serif;
+  font-size: 54px; /* default size */
+  line-height: 54px;
+}
+
+@media screen and (max-width: 1200px) {
+  .text-responsive {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .text-responsive {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-responsive {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .text-responsive {
+    font-size: 36px;
+    line-height: 38px;
+  }
+}
+
 
 
 @layer utilities {
@@ -60,7 +114,14 @@ body {
   }
 }
 
+h1, h2, h3 {
+  font-family: 'Zoho Sans', sans-serif;
+}
 
+p,li{
+  font-family: 'gilroy';
+  font-size: 18px;
+}
 
 
 
