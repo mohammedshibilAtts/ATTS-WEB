@@ -31,7 +31,7 @@ function page() {
           </div>
 
           <div className="absolute top-4 sm:top-16 left-1/2 transform -translate-x-1/2 text-center">
-            <h2 className="text-[#B5D3F5] text-xl md:text-3xl font-bold  font-unbounded">
+            <h2 className="text-[#B5D3F5] text-responsive">
             We craft software solutions for business challenges
             </h2>
 
@@ -61,9 +61,9 @@ function page() {
       <div className="bg-white px-4 pt-9 xl:px-32">
         <TitleBox title={"About Us"} />
         <div className="mt-5 flex justify-center md:justify-start">
-          <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
+          <h1 className=" text-responsive text-black">
           We Craft Software Excellence to{" "}
-            <span className="font-unbounded text-2xl md:text-3xl md:block text-center md:text-start text-[#003067]">
+            <span className="text-responsive md:block text-center md:text-start text-[#003067]">
             Thrive Your Business!
             </span>
           </h1>
@@ -72,7 +72,7 @@ function page() {
         <div className="main flex flex-col lg:flex-row mt-3">
           <div className="left flex-1">
             <div className="mt-4">
-              <p className="font-sans text-lg text-[#0F1929]">
+              <p className=" text-lg text-[#0F1929]" style={{"fontFamily":"gilroy"}}>
                 We're a bright team perfectly blended with technically excellent
                 and unlimitedly creative brains experienced in crafting
                 solutions for businesses in healthcare, finance, fashion,
@@ -84,9 +84,9 @@ function page() {
               </p>
             </div>
             <div className="mt-10 hidden">
-              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
+              <h1 className=" text-responsive text-black">
               Let’s work together & turn ideas {" "}
-                <span className=" text-xl md:text-3xl font-bold  font-unbounded  md:text-start md:block  text-[#003067]">
+                <span className=" text-responsive  md:text-start md:block  text-[#003067]">
                 into something extraordinary!
                 </span>
               </h1>
@@ -107,7 +107,7 @@ function page() {
                 className="h-[400px] object-contain relative"
               />
             </FadeMotion>
-            <div className="name border-2 rounded-3xl border-black  px-4 absolute  mt-96 font-unbounded me-20 py-3 mb-7">
+            <div className="name border-2 rounded-3xl border-black  px-4 absolute  mt-96 text-responsive me-20 py-3 mb-7">
               <h1 className="text-lg text-[#171719]">Jane Cooper</h1>
               <p className="text-sm text-[#8D8B8B]">CEO & Founder of ATTS</p>
             </div>
@@ -116,7 +116,7 @@ function page() {
           <div className="content-scroll flex-1  px-4 xl:px-9 items-center justify-center mb-4">
             {aboutCompany.map((data) => (
               <div key={data.title} className="mt-5">
-                <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-[#003067]">
+                <h1 className=" text-responsive text-[#003067]">
                   {data.title}
                 </h1>
                 <p className="mt-5 text-lg break-words">{data.content}</p>
@@ -130,10 +130,10 @@ function page() {
 
       <div className="bg-[#010202] pt-16 relative rounded-3xl mt-12 w-full ">
         <div className="text-center mb-8">
-          <div className="bg-white text-[#0c192d] inline-block px-4 py-2 rounded-full font-unbounded text-sm mb-4">
+          <div className="bg-white text-[#0c192d] inline-block px-4 py-2 rounded-full  text-sm mb-4" style={{"fontFamily":"Zoho-Sans","fontSize":"20px"}}>
             Brand Collaborations
           </div>
-          <h2 className="text-white  text-xl md:text-3xl font-bold  font-unbounded">
+          <h2 className="text-white  text-responsive">
             Brands that <span className="text-blue-900">trust us</span>
           </h2>
         </div>
@@ -147,13 +147,13 @@ function page() {
         </div>
 
         <div className="flex flex-wrap justify-between items-start px-4 xl:px-40 mb-16 relative mt-6">
-          <div className="bg-white text-[#0c192d] flex px-4 py-2 text-center rounded-full font-unbounded text-md mb-4 ">
+          <div className="bg-white text-[#0c192d] flex px-4 py-2 text-center rounded-full  text-md mb-4 " style={{"fontFamily":"Zoho-Sans","fontSize":"20px"}}>
             We're Special. Here’s Why?
           </div>
           <div className="w-full text-center md:text-left mb-0 md:mb-0 mt-3">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-white">
+            <h1 className=" text-responsive text-white">
             Result-Driven Operations for{" "}
-              <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-start lg:block text-[#B5D3F5]">
+              <span className=" text-responsive  text-start lg:block text-[#B5D3F5]">
               Rock-Steady Success! 
               </span>
             </h1>
@@ -184,7 +184,7 @@ function page() {
           
         </div>
         <div className="text-center mt-4">
-        <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-[#0c192d]">
+        <h1 className=" text-responsive text-[#0c192d]">
           Snapshots of Our Agency!
         </h1>
       </div>

@@ -99,8 +99,9 @@ function page() {
       category: "Marketing",
       date: "Jan 15, 2024",
       image: "/api/placeholder/600/400",
-      excerpt: "Discover the latest trends shaping the future of digital marketing and how to stay ahead.",
-      readTime: "5 min read"
+      excerpt:
+        "Discover the latest trends shaping the future of digital marketing and how to stay ahead.",
+      readTime: "5 min read",
     },
     {
       id: 2,
@@ -108,8 +109,9 @@ function page() {
       category: "Design",
       date: "Jan 18, 2024",
       image: "/api/placeholder/600/400",
-      excerpt: "Explore the most innovative web design trends that are dominating the digital landscape.",
-      readTime: "4 min read"
+      excerpt:
+        "Explore the most innovative web design trends that are dominating the digital landscape.",
+      readTime: "4 min read",
     },
     {
       id: 3,
@@ -117,8 +119,9 @@ function page() {
       category: "SEO",
       date: "Jan 20, 2024",
       image: "/api/placeholder/600/400",
-      excerpt: "Learn the most effective SEO strategies to improve your website's visibility.",
-      readTime: "6 min read"
+      excerpt:
+        "Learn the most effective SEO strategies to improve your website's visibility.",
+      readTime: "6 min read",
     },
     {
       id: 4,
@@ -126,8 +129,9 @@ function page() {
       category: "Content",
       date: "Jan 22, 2024",
       image: "/api/placeholder/600/400",
-      excerpt: "Master the art of creating engaging content that resonates with your audience.",
-      readTime: "7 min read"
+      excerpt:
+        "Master the art of creating engaging content that resonates with your audience.",
+      readTime: "7 min read",
     },
     {
       id: 5,
@@ -135,9 +139,10 @@ function page() {
       category: "Social Media",
       date: "Jan 25, 2024",
       image: "/api/placeholder/600/400",
-      excerpt: "Maximize your social media presence with these proven marketing strategies.",
-      readTime: "5 min read"
-    }
+      excerpt:
+        "Maximize your social media presence with these proven marketing strategies.",
+      readTime: "5 min read",
+    },
   ];
 
   const scrollContainer = React.useRef(null);
@@ -146,38 +151,49 @@ function page() {
     const container = scrollContainer.current;
     const scrollAmount = 400;
     if (container) {
-      const targetScroll = container.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount);
+      const targetScroll =
+        container.scrollLeft +
+        (direction === "left" ? -scrollAmount : scrollAmount);
       container.scrollTo({
         left: targetScroll,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
   return (
     <>
-    <Head>
-      <title>Hybrid IT Solution Company in Coimbatore</title>
-      <meta name="description" content="Hybrid IT Solution Company in Coimbatore, Software Development Company in Coimbatore, App Development Company in Coimbatore, Best Web Development Company in Coimbatore, Best Web Design Company in Coimbatore, Digital Marketing Company in Coimbatore, Branding Company in Coimbatore, Advertising Company in Coimbatore"/>
-      <meta property="og:title" content="Home page of ATTS" />
-      <meta property="og:description" content="Amplify your business's online presence with the best IT and branding agency in Coimbatore. Specializing in hybrid IT solutions, software and app development, web design, branding, and advertising, we craft custom solutions to help your business thrive in the digital landscape" />
-      {/* <meta property="og:image" content="https://example.com/thumbnail.jpg" />
+      <Head>
+        <title>Hybrid IT Solution Company in Coimbatore</title>
+        <meta
+          name="description"
+          content="Hybrid IT Solution Company in Coimbatore, Software Development Company in Coimbatore, App Development Company in Coimbatore, Best Web Development Company in Coimbatore, Best Web Design Company in Coimbatore, Digital Marketing Company in Coimbatore, Branding Company in Coimbatore, Advertising Company in Coimbatore"
+        />
+        <meta property="og:title" content="Home page of ATTS" />
+        <meta
+          property="og:description"
+          content="Amplify your business's online presence with the best IT and branding agency in Coimbatore. Specializing in hybrid IT solutions, software and app development, web design, branding, and advertising, we craft custom solutions to help your business thrive in the digital landscape"
+        />
+        {/* <meta property="og:image" content="https://example.com/thumbnail.jpg" />
       <meta name="twitter:card" content="summary_large_image" /> */}
-    </Head>
+      </Head>
       {/* Hero */}
       <div className="w-full">
-      <ScrollMotion>
+        <ScrollMotion>
           <div className="main xl:px-28 ">
             <div className="title flex flex-col lg:flex-row items-center px-1 sm:px-4 pt-3 pb-3 text-black mt-8">
               <div className="left w-full lg:w-2/3 text-start lg:mb-0">
-                <h2 className=" text-black  text-responsive" >
-                  Your Partner in Crafting Your Digital DNA {" - "} 
+                <h2 className=" text-black  text-responsive">
+                  Your Partner in Crafting Your Digital DNA {" - "}
                   <span className="text-[#003067] ms-1">ATTS Technologies</span>
                 </h2>
               </div>
 
               <div className="w-full lg:w-1/3 text-center lg:text-left ps-0 sm:ps-6 mt-3 md:mt-0">
-                <h1 className=" text-black " style={{"fontFamily":"gilroy","fontSize":"18px"}}>
+                <h1
+                  className=" text-black "
+                  style={{ fontFamily: "gilroy", fontSize: "18px" }}
+                >
                   We empower your brand with the right strategy to thrive as a
                   pioneer in the industry. We develop the perfect to develop
                   your business.
@@ -224,7 +240,7 @@ function page() {
               </div>
             </div>
           </div>
-          </ScrollMotion>
+        </ScrollMotion>
 
         {/* // About us */}
 
@@ -235,9 +251,9 @@ function page() {
                 <TitleBox title={"About Us"} />
               </div>
               <div className="mt-5 ">
-                <h2 className="text-xl md:text-3xl font-bold mb-2 font-unbounded  ">
+                <h2 className="mb-2 text-responsive  ">
                   Trusted by Brands Across Industries Since 2013 -{" "}
-                  <span className="text-xl md:text-3xl  font-bold mb-4  text-[#003067] font-unbounded lg:block">
+                  <span className="mb-4  text-[#003067] text-responsive lg:block">
                     Transforming Healthcare, Jewellery, and Beyond.
                   </span>
                 </h2>
@@ -299,9 +315,9 @@ function page() {
                 <TitleBox title={"Our services"} />
               </div>
               <div className="mt-5">
-                <h2 className="text-xl md:text-3xl font-bold  font-unbounded">
+                <h2 className="text-responsive">
                   What we offer to craft{" "}
-                  <span className="text-xl md:text-3xl font-bold mb-4  font-unbounded  text-[#003067]">
+                  <span className="text-responsive  text-[#003067]">
                     your brand!
                   </span>
                 </h2>
@@ -345,7 +361,7 @@ function page() {
 
         <div
           ref={sectionRef}
-          className="bg-[#010202] pt-16 relative rounded-3xl mt-12 md:h-[765px]  h-[650px] mx-1"
+          className="bg-[#010202] pt-16 relative rounded-3xl mt-12 md:h-[785px]   h-[680px] mx-1"
         >
           <ScrollMotion
             children={
@@ -354,7 +370,7 @@ function page() {
                   <div className="bg-white text-[#0c192d] inline-block px-4 py-5 rounded-full font-semibold text-sm mb-6 ">
                     Brand Collaborations
                   </div>
-                  <h2 className="text-white text-xl md:text-3xl font-bold  font-unbounded mb-6">
+                  <h2 className="text-white text-xl md:text-3xl font- mb-6">
                     Brands that <span className="text-[#B5D3F5]">trust us</span>
                   </h2>
                 </div>
@@ -367,17 +383,17 @@ function page() {
                   />
                 </div>
 
-                <div className="flex flex-wrap justify-between items-start px-4 md:px-2 mb-16 relative mt-5">
+                <div className="flex flex-wrap justify-between items-start px-4 md:px-2 mb-16 relative mt-5 ">
                   <div className="w-full md:w-1/1 lg:w-1/2 text-center md:text-left mb-8 md:mb-0">
-                    <h1 className="text-xl md:text-4xl font-bold tracking-wider font-unbounded text-white  text-center">
+                    <h1 className=" tracking-wider text-responsive text-white  text-center">
                       Designed in{" "}
-                      <span className="text-xl md:text-4xl font-bold  tracking-wider  font-unbounded  text-center text-[#B5D3F5]">
+                      <span className="  tracking-wider  text-responsive  text-center text-[#B5D3F5]">
                         India
                       </span>
                     </h1>
-                    <h1 className="text-xl md:text-4xl font-bold mt-4 tracking-wider font-unbounded text-white text-center">
+                    <h1 className=" mt-4 tracking-wider text-responsive text-white text-center">
                       For Global{" "}
-                      <span className="text-xl md:text-4xl font-bold tracking-wider  font-unbounded  text-center text-[#B5D3F5]">
+                      <span className=" tracking-wider  text-responsive  text-center text-[#B5D3F5]">
                         Reach
                       </span>
                     </h1>
@@ -396,21 +412,17 @@ function page() {
                                 duration={3}
                               />
                             )}
-                            <span className="text-4xl md:text-5xl font-unbounded">
-                              +
-                            </span>
+                            <span className="text-4xl md:text">+</span>
                           </div>
                           <hr className="w-40  text-sm " />
 
-                          <p className="text-lg md:text-xl font-unbounded ">
-                            {stat.title}
-                          </p>
+                          <p className="text-lg md:text ">{stat.title}</p>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className=" bottom-0 right-0 absolute">
+                  <div className=" bottom-0 right-0 absolute hidden xl:block">
                     <Image
                       src={collabImage}
                       alt="Brand Collaborations"
@@ -429,10 +441,8 @@ function page() {
           <div className="main px-4 mt-9 xl:px-32">
             <TitleBox title={"Testimonials"} />
             <div className="mt-9 ">
-              <h2 className="text-xl md:text-3xl font-bold  font-unbounded mb-2">
-                Transformative Results,
-              </h2>
-              <h2 className="text-xl md:text-3xl font-bold  mb-4 text-[#003067] font-unbounded">
+              <h2 className="text-responsive mb-2">Transformative Results,</h2>
+              <h2 className="text-responsive  mb-4 text-[#">
                 Direct From Clients.
               </h2>
             </div>
@@ -528,7 +538,7 @@ function page() {
             </div>
           </div>
           <div className=" h-12 md:h-36  bg-white w-11/12 mx-auto absolute bottom-0 left-0 right-0 rounded-t-2xl">
-            <div className="title text-center mt-10 text-xl md:text-3xl font-bold  font-unbounded">
+            <div className="title text-center mt-10 text-xl md:text-3xl font-">
               <h1>The core values and </h1>
               <h1>principles that drive us</h1>
             </div>
@@ -570,9 +580,9 @@ function page() {
               <div className="mt-5 ">
                 <div className="title flex justify-between items-center">
                   <div className="start ">
-                    <h2 className="text-xl md:text-3xl font-bold  px-4 font-unbounded">
+                    <h2 className="text-xl md:text-3xl font-bold  px">
                       Read our Latest{" "}
-                      <span className="text-xl md:text-3xl font-bold  font-unbounded text-[#003067]">
+                      <span className="text-xl md:text-3xl font- text-[#003067]">
                         Blogs & article
                       </span>
                     </h2>
@@ -582,52 +592,50 @@ function page() {
                   </div>
                 </div>
                 <div className="relative max-w-full px-4 ">
-     
+                  {/* Cards Container */}
+                  <div
+                    ref={scrollContainer}
+                    className="flex gap-6 overflow-x-auto scrollbar-hide max-w-8xl mx-auto scroll-smooth py-7"
+                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                  >
+                    {blogData.map((blog, index) => (
+                      <motion.div
+                        key={index}
+                        className="flex-none w-[300px] md:w-[400px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                        whileHover={{ y: -5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <div className="relative h-48 overflow-hidden">
+                          <Image
+                            src={blog.img}
+                            alt={blog.content}
+                            className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                          />
+                        </div>
 
-     
+                        <div className="p-6">
+                          <div className="flex justify-between items-center text-sm text-gray-500 mb-3">
+                            <span>{blog.date}</span>
+                            <span>{blog.readTime}</span>
+                          </div>
 
-      {/* Cards Container */}
-      <div 
-        ref={scrollContainer}
-        className="flex gap-6 overflow-x-auto scrollbar-hide max-w-8xl mx-auto scroll-smooth py-7"
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-      >
-        {blogData.map((blog,index) => (
-          <motion.div
-            key={index}
-            className="flex-none w-[300px] md:w-[400px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.2 }}
-          >
-            <div className="relative h-48 overflow-hidden">
-              <Image 
-                src={blog.img} 
-                alt={blog.content}
-                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-              />
-              
-            </div>
-            
-            <div className="p-6">
-              <div className="flex justify-between items-center text-sm text-gray-500 mb-3">
-                <span>{blog.date}</span>
-                <span>{blog.readTime}</span>
-              </div>
-              
-              <h3 className="text- font-unbounded text-gray-900 mb-2">
-                {blog.content}
-              </h3>
-              
-              <p className="text-gray-600 mb-4 line-clamp-2">
-                {blog.excerpt}
-              </p>
-              
-              <Button title={'Read More'}/>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </div>
+                          <p
+                            className=" text-gray-900 mb-2"
+                            style={{ fontFamily: "gilroy" }}
+                          >
+                            {blog.content}
+                          </p>
+
+                          <p className="text-gray-600 mb-4 line-clamp-2">
+                            {blog.excerpt}
+                          </p>
+
+                          <Button title={"Read More"} />
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
               </div>
               <div className="hidden group">
                 <Button title={"View All Blogs"} link="/blog" />

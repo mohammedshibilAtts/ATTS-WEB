@@ -32,7 +32,7 @@ function Accordion({accordionData}) {
             className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out "
             style={{ maxHeight: openIndex === index ? `${document.getElementById(`content-${index}`).scrollHeight}px` : '0px' }}
           >
-            <div id={`content-${index}`} className="pb-5 text-sm text-[#0F1929]">
+            <div id={`content-${index}`} className="pb-5 text-sm text-[#0F1929]" style={{"fontFamily":"gilroy","fontSize":"15px"}}>
               {item.content}
             </div>
           </div>
