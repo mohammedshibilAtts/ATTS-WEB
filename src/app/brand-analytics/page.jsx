@@ -62,7 +62,7 @@ function Page() {
         <div className="bg-white px-4  xl:px-32 mt-3">
           <div className="flex flex-col lg:flex-row">
             <div className="flex-1 text-start  sm:text-left sm:h-auto sm:py-3 md:px-3 flex items-center">
-              <h1 className="text-xl md:text-3xl font-bold font-unbounded text-black ">
+              <h1 className=" text-responsive text-black ">
                 <span className="text-[#003067]">
                   Turn Your Business into a Global Brand{" "}
                 </span>
@@ -71,7 +71,7 @@ function Page() {
             </div>
 
             <div className="flex-1 mt-8 lg:mt-0 sm:ml-4 xl:p-4 text-sm sm:text-base">
-            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded xl:ps-6 lg:text-2xl ">
+            <h3 className="  text-[#003067]  text-responsive xl:ps-6 lg:text-2xl ">
               At ATTS Technologies Pvt. Ltd.
             </h3>
               <p className="text-start lg:text-left mt-4 xl:ps-6">
@@ -104,9 +104,9 @@ function Page() {
             </div>
 
             <div className="description px-4">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  md:text-center md:px-4  text-black">
+              <h1 className="  text-responsive text-start  md:text-center md:px-4  text-black">
               From Concept to Results – We Craft{" "}
-                <span className="text-xl md:text-3xl font-bold  font-unbounded   text-center text-[#003067] md:block">
+                <span className="  text-responsive   text-center text-[#003067] md:block">
                 Brands That Work!
                 </span>
               </h1>
@@ -135,7 +135,7 @@ function Page() {
         <ScrollMotion>
           <div className="title flex flex-col lg:flex-row justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6 ">
             <div className=" sm:text-left  flex-1">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded md:px-5 sm:text-3xl text-black ">
+              <h1 className="  text-responsive md:px-5 sm:text-3xl text-black ">
               A team of branding architects dedicated to elevating {" "}
                 <span className="text-[#003067]">
                 your brand to global reach. 
@@ -179,7 +179,7 @@ function Page() {
                     className="object-cover transition-transform"
                   />
                 </div>
-                <h1 className="text-darken font-unbounded  mb-3 text-xl  transition-colors duration-300 text-[#003067] ">
+                <h1 className="text-darken text-responsive  mb-3 text-xl  transition-colors duration-300 text-[#003067] ">
                   {item.title}
                 </h1>
                 <p className="px-4 text-gray-500 transition-colors duration-300 ">

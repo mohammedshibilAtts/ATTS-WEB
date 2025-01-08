@@ -128,7 +128,7 @@ const Navbar = () => {
       )}
       {isMobileMenuOpen && (
         <div
-          className="fixed lg:hidden inset-0 bg-black/30 backdrop-blur-sm z-30"
+          className="fixed xl:hidden inset-0 bg-black/30 backdrop-blur-sm z-30"
           onClick={() => setIsMobileMenuOpen(false)}
           aria-hidden="true"
         />
@@ -152,7 +152,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="lg:hidden justify-end">
+          <div className="xl:hidden justify-end">
             <button
               onClick={toggleMobileMenu}
               className="text-white focus:outline-none group"
@@ -238,7 +238,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="hidden lg:flex ml-auto cursor-pointer group">
+          <div className="hidden xl:flex ml-auto cursor-pointer group">
             <p
               className={`font-unbounded text-1xl sm:text-lg text-white hover:underline hover:decoration-[#B5D3F5] hover:underline-offset-8 hover:rounded-3xl transition-all duration-200 py-2 sm:py-3 px-4 sm:px-1 ${
                 currentPath == "/lets-talk"
@@ -256,7 +256,7 @@ const Navbar = () => {
           <motion.div
             ref={navbarRef}
             id="drawer-navigation"
-            className="fixed top-0 right-0 z-40 w-80 h-screen p-4 overflow-y-auto bg-white  block lg:hidden"
+            className="fixed top-0 right-0 z-40 w-80 h-screen p-4 overflow-y-auto bg-white  block xl:hidden"
             initial={{ x: "100%" }} // Start off-screen to the right
             animate={{ x: 0 }} // Slide in to its normal position
             exit={{ x: "100%" }} // Slide out to the right when closed

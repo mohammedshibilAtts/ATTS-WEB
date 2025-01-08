@@ -19,7 +19,7 @@ function Page() {
       <div className="bg-white px-4  xl:px-30  mt-2">
         <div className="flex flex-col lg:flex-row">
           <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 md:px-4 flex items-center ">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
+            <h1 className=" text-responsive text-black">
               We’re the website developers in Coimbatore,
               <span className="text-[#003067]">
                 {" "}
@@ -29,7 +29,7 @@ function Page() {
           </div>
 
           <div className="flex-1 mt-8 lg:mt-0 sm:ml-4  xl:mt-0 xl:p-4 text-sm sm:text-base">
-            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-0 xl:ps-6 lg:text-2xl ">
+            <h3 className=" text-[#003067]   ps-0 xl:ps-6  " style={{"fontFamily":"Zoho-Sans","fontSize":"20px"}}> 
               At ATTS Technologies Pvt. Ltd.
             </h3>
             <p className="text-start lg:text-left ps-0 xl:ps-6 mt-3">
@@ -59,9 +59,9 @@ function Page() {
           </div>
 
           <div className="description md:px-4  xl:px-32">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
+            <h1 className=" text-responsive text-black">
               A Website Designed to Match{" "}
-              <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] md:block">
+              <span className=" text-responsive  text-start md:text-center text-[#003067] md:block">
                 Your Perfect Vision.
               </span>
             </h1>
@@ -81,7 +81,7 @@ function Page() {
 
         <div className="Static-Web mt-12 px-4  xl:px-2">
           <div className="title mb-4">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-center  text-[#003067]">
+            <h1 className=" text-responsive text-center  text-[#003067]">
               Static Website
             </h1>
           </div>
@@ -114,7 +114,7 @@ function Page() {
 
         <div className="Static-Web mt-12 px-4  xl:px-2">
           <div className="title mb-4">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-center  text-[#003067]">
+            <h1 className=" text-responsive text-center  text-[#003067]">
               Dynamic Website
             </h1>
           </div>
@@ -145,7 +145,7 @@ function Page() {
         </div>
         <div className="title  flex flex-col sm:flex-row  justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6">
           <div className=" md:w-3/4 sm:py-3 md:px-4">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black ">
+            <h1 className=" text-responsive text-black ">
               We’re a team of Webbies, ready to create a website{" "}
               <span className="text-[#003067]">
                 you’ll be proud to show off.

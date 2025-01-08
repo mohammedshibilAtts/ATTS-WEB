@@ -20,9 +20,9 @@ function page() {
         <div className="bg-white px-4 sm:px-8 xl:px-16 lg:px-30 mt-8">
           <div className="Static-Web mt-12 px-4 sm:px-8 xl:px-16 lg:px-30">
             <div className="title mb-4">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start md:text-center  ">
+              <h1 className="text-responsive  text-start md:text-center  ">
                 Find Your Future with ATTS Technologies{" "}
-                <span className="text-[#003067] md:block text-xl md:text-3xl font-bold  font-unbounded">
+                <span className="text-[#003067] md:block text-responsive ">
                   Where Work Meets Fun!
                 </span>
               </h1>
@@ -47,9 +47,9 @@ function page() {
         <FadeMotion>
           <div className="bg-white   px-4 pt-9  xl:px-16 mt-5 ">
             <div className="title mb-4 px-4 xl:px-16 lg:px-30 ">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  ">
+              <h1 className="text-responsive  text-start  ">
                 Explore Careers at {""}
-                <span className="text-[#003067] font-unbounded text-2xl md:text-3xl">
+                <span className="text-[#003067] text-responsive">
                   ATTS Technologies
                 </span>
               </h1>
@@ -61,7 +61,7 @@ function page() {
         </FadeMotion>
       </div>
 
-      <div className="bg-white px-8 sm:px-8 xl:px-16 lg:px-32 pt-9 mt-5 mb-6">
+      <div className="bg-white px-4 xl:px-32  pt-9 mt-5 mb-6">
         <div className="titleBox flex justify-center md:justify-start">
           <TitleBox title={"We’re Special. Here’s Why!"} className={"w-72"} />
         </div>
@@ -72,9 +72,9 @@ function page() {
             <StaggeredSection>
               <div className="title flex flex-col sm:flex-row justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6">
                 <div className="text-start sm:text-left flex-1">
-                  <h1 className="text-xl md:text-3xl font-bold font-unbounded text-black">
+                  <h1 className="text-responsive text-black">
                     Because If You've Got The Talent,{" "}
-                    <span className="md:block">
+                    <span >
                       {" "}
                       We've Got The{" "}
                       <span className="text-[#003067]">

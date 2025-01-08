@@ -183,7 +183,7 @@ function page() {
           <div className="main xl:px-28 ">
             <div className="title flex flex-col lg:flex-row items-center px-1 sm:px-4 pt-3 pb-3 text-black mt-8">
               <div className="left w-full lg:w-2/3 text-start lg:mb-0">
-                <h2 className=" text-black  text-responsive">
+                <h2 className=" text-black  text-responsive text-center xl:text-start">
                   Your Partner in Crafting Your Digital DNA {" - "}
                   <span className="text-[#003067] ms-1">ATTS Technologies</span>
                 </h2>
@@ -202,7 +202,7 @@ function page() {
             </div>
 
             <div className="image relative mt-3 px-2">
-              <div className="button group absolute  -top-1   bg-white pt-1 rounded-br-3xl md:rounded-b-3xl left-1 px-4 md:left-8  md:px-6  block z-10">
+              <div className="button group absolute  -top-1 bg-white pt-1 rounded-br-3xl md:rounded-b-3xl left-1 px-4 md:left-8  md:px-6  block z-10">
                 <Button title={"More About Us"} link="/about" />
               </div>
 
@@ -580,9 +580,9 @@ function page() {
               <div className="mt-5 ">
                 <div className="title flex justify-between items-center">
                   <div className="start ">
-                    <h2 className="text-xl md:text-3xl font-bold  px">
+                    <h2 className="text-responsive">
                       Read our Latest{" "}
-                      <span className="text-xl md:text-3xl font- text-[#003067]">
+                      <span className="text-responsive text-[#003067]">
                         Blogs & article
                       </span>
                     </h2>

@@ -185,10 +185,10 @@ function page() {
 
               {/* Content Section for Mobile */}
               <div className="absolute inset-0 flex flex-col items-center justify-center  p-4 z-10">
-                <div className="inline-block bg-white px-4 py-1.5 rounded-full text-sm font-unbounded mb-4">
+                <div className="inline-block bg-white px-4 py-1.5 rounded-full text-sm  mb-4" style={{"fontFamily":"Zoho-Sans","fontSize":"20px"}}>
                   Our Culture
                 </div>
-                <h1 className="text-white text-xl md:text-3xl font-bold  font-unbounded items-center text-center  leading-tight lg:text-start">
+                <h1 className="text-white text-responsive items-center text-center  leading-tight xl:text-start">
                   Just a bunch of creative humans, enjoying every moment of what
                   we do!
                 </h1>
@@ -223,10 +223,10 @@ function page() {
 
             {/* Desktop Content Section */}
             <div className="relative z-10 text-center py-8 px-4 md:py-16 lg:py-32">
-              <div className="inline-block bg-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-unbounded">
+              <div className="inline-block bg-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base text-responsive">
                 Our Culture
               </div>
-              <h1 className="text-white text-xl md:text-3xl font-bold  font-unbounded max-w-[90%] sm:max-w-2xl lg:max-w-3xl mx-auto leading-tight mt-4 sm:mt-6">
+              <h1 className="text-white text-responsive max-w-[90%] sm:max-w-2xl lg:max-w-3xl mx-auto leading-tight mt-4 sm:mt-6">
                 Just a bunch of creative humans, enjoying every moment of what
                 we do!
               </h1>
@@ -270,7 +270,7 @@ function page() {
               <TitleBox title={"Life at ATTS"} />
             </div>
             
-            <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black mt-6">
+            <h1 className="text-responsive text-black mt-6">
               Learn, explore, and totally be yourself - it’s like home,
               <span className="text-[#003067]"> but way more exciting!</span>
             </h1>
@@ -304,9 +304,9 @@ function page() {
           </div>
 
           <div className="description ">
-            <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
+            <h1 className="text-responsive text-black">
               Building a Work Environment That{" "}
-              <span className="text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] ">
+              <span className="text-responsive  text-start md:text-center text-[#003067] ">
                 Inspires
               </span>
             </h1>
@@ -383,9 +383,9 @@ function page() {
           </div>
 
           <div className="description px-4 sm:px-8  xl:px-32">
-            <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
+            <h1 className="text-responsive text-black">
               Don’t just take our word for it
-              <span className="text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] md:block ">
+              <span className="text-responsive  text-start md:text-center text-[#003067] md:block ">
                 – hear it directly from them!
               </span>
             </h1>
@@ -465,20 +465,20 @@ function page() {
           <div className="text-white  sm:text-left">
             {/* Title card */}
             <div className="titleCard mb-4 flex justify-center md:justify-start">
-              <div className="inline-block bg-white text-black  px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-unbounded">
+              <div className="inline-block bg-white text-black  px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base text-responsive">
                 Work Environment
               </div>
             </div>
 
             {/* Headings */}
             <div className="sm:px-4 sm:py-3">
-              <h1 className="text-xl md:text-3xl font-bold text-center md:text-start font-unbounded mb-2">
+              <h1 className=" text-center md:text-start text-responsive mb-2">
                 Innovating Ideas..!
               </h1>
-              <h1 className="text-xl md:text-3xl font-bold text-center md:text-start font-unbounded mb-2">
+              <h1 className=" text-center md:text-start text-responsive mb-2">
                 Crafting Designs..!
               </h1>
-              <h1 className="text-xl md:text-3xl font-bold text-center md:text-start font-unbounded mb-2">
+              <h1 className=" text-center md:text-start text-responsive mb-2">
                 Building Brands..!
               </h1>
 

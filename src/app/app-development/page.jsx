@@ -18,7 +18,7 @@ function Page() {
       <div className="bg-white px-4  xl:px-30  mt-2">
         <div className="flex flex-col lg:flex-row">
           <div className="flex-1 text-start md:text-start sm:text-left sm:h-auto sm:py-3 md:px-4 flex items-center ">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
+            <h1 className=" text-responsive text-black">
               <span className="text-[#003067]">
                 Craft the perfect app for your brand, with Coimbatore's 
               </span>
@@ -27,7 +27,7 @@ function Page() {
           </div>
 
           <div className="flex-1 mt-8 lg:mt-0 sm:ml-4 xl:p-4 text-sm sm:text-base">
-            <h3 className=" text-xl md:text-3xl font-bold text-[#003067]  font-unbounded ps-0 xl:ps-6 lg:text-2xl ">
+            <h3 className="  text-[#003067]  ps-0 xl:ps-6  " style={{"fontFamily":"Zoho-Sans","fontSize":"20px"}}>
               At ATTS Technologies Pvt. Ltd.
             </h3>
             <p className="text-start lg:text-left ps-0 xl:ps-6 mt-3">
@@ -57,9 +57,9 @@ function Page() {
           </div>
 
           <div className="description px-4 xl:px-32">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black">
+            <h1 className=" text-responsive text-black">
               The Perfect Mobile App, Designed with{" "}
-              <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] xl:block">
+              <span className=" text-responsive  text-start flex lg:justify-center lg:text-center text-[#003067] xl:block">
                 Your Vision in Mind.
               </span>
             </h1>
@@ -79,7 +79,7 @@ function Page() {
 
         <div className="Static-Web mt-12 px-4 xl:px-2">
           <div className="title mb-4">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-center ">
+            <h1 className=" text-responsive text-center ">
               Crafting Excellence for <span className=" text-[#003067]">Android & iOS Devices</span>
             </h1>
           </div>
@@ -113,7 +113,7 @@ function Page() {
 
         <div className="Static-Web mt-12 px-4 xl:px-2">
           <div className="title mb-4">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded  text-center   text-[#003067]">
+            <h1 className=" text-responsive  text-center   text-[#003067]">
               User experience design
             </h1>
           </div>
@@ -141,7 +141,7 @@ function Page() {
         </div>
         <div className="title  flex flex-col sm:flex-row  justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6">
           <div className=" md:w-3/4 sm:py-3 md:px-4">
-            <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-black ">
+            <h1 className=" text-responsive text-black ">
               A dynamic team of mobile app experts committed to building an app
               that <span className="text-[#003067]">stands above the rest</span>
             </h1>

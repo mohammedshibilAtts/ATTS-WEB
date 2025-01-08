@@ -109,9 +109,9 @@ const cardVideos = [...videoCard1,...videoCard2].map((video) => (
             </div>
             
             <div className="description ">
-              <h1 className=" text-xl md:text-3xl font-bold  font-unbounded text-start  md:text-center md:px-9  text-black">
+              <h1 className="  text-responsive text-start  md:text-center md:px-9  text-black">
               Ads that shine, videos that work—let’s{" "}
-                <span className=" text-xl md:text-3xl font-bold  font-unbounded  text-center text-[#003067] md:block">
+                <span className="  text-responsive  text-center text-[#003067] md:block">
                 get your brand noticed!
                 </span>
               </h1>
@@ -163,7 +163,7 @@ const cardVideos = [...videoCard1,...videoCard2].map((video) => (
                           transition={{ duration: 0.2 }}
                           className="text-white z-20 mt-9"
                         >
-                          <h1 className="text-start font-unbounded mt-9">
+                          <h1 className="text-start text-responsive mt-9">
                             {item.title}
                           </h1>
                           <hr className="w-1/5 font-bold mb-4 mt-3" />
@@ -219,7 +219,7 @@ const cardVideos = [...videoCard1,...videoCard2].map((video) => (
                           transition={{ duration: 0.2 }}
                           className="text-white z-20 mt-9"
                         >
-                          <h1 className="text-start font-unbounded mt-9">
+                          <h1 className="text-start text-responsive mt-9">
                             {item.title}
                           </h1>
                           <hr className="w-1/5 font-bold mb-4 mt-3" />
@@ -257,9 +257,9 @@ const cardVideos = [...videoCard1,...videoCard2].map((video) => (
   
 
             <div className="description mt-5">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-start  md:px-4  text-black">
+              <h1 className=" text-responsive text-start  md:px-4  text-black">
               Unique Minds boosting your brand through {" "}
-                <span className="text-xl md:text-3xl font-bold  font-unbounded    text-[#003067] xl:block">
+                <span className=" text-responsive    text-[#003067] xl:block">
                 Ad Films & Multimedia Advertising. 
                 </span>
               </h1>
@@ -297,7 +297,7 @@ const cardVideos = [...videoCard1,...videoCard2].map((video) => (
                       className="object-cover transition-transform"
                     />
                   </div>
-                  <h1 className="text-darken font-unbounded  mb-3 text-xl  transition-colors duration-300 text-[#003067] ">
+                  <h1 className="text-darkentext-responsive  mb-3 text-xl  transition-colors duration-300 text-[#003067] ">
                     {item.title}
                   </h1>
                   <p className="px-4 text-gray-500 transition-colors duration-300 ">
