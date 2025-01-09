@@ -9,14 +9,14 @@ import {
   Bookmark,
   ChevronUp,
 } from "lucide-react";
-import banner from "../../../assests/images/backlinks2.webp";
-import BlogPng from "../../../assests/images/backlinks1.webp";
+import banner from "../../../assests/images/email_List1.webp";
+import BlogPng from "../../../assests/images/email_List1.webp";
 import Image from "next/image";
 
 const Section = ({ section }) => {
   return (
     <section id={section.id} className="mb-12">
-      <h2 className="text-2xl font-unbounded text-gray-900 mb-4">{section.title}</h2>
+      <h2 className="text-responsive  text-gray-900 mb-4">{section.title}</h2>
       <div className="text-gray-700 leading-relaxed space-y-4">
         {section.content && (
           <div className="whitespace-pre-line">{section.content}</div>
@@ -55,7 +55,7 @@ const Page = () => {
   title: "Why is Email List Building Essential for Any Business?",
   author: "SEO Expert",
   date: "February 5, 2022",
-  readTime: "1k",
+  readTime: "10 min",
   featuredImage: "/api/placeholder/1200/600", // Update with the actual image URL if needed
   secondaryImage: "/api/placeholder/800/400", // Update with the actual image URL if needed
   content: {
@@ -73,13 +73,7 @@ In order for your emails to be successful, you will need an email list or databa
 
 Most people view email as one of the most effective marketing methods in existence (although some may say that it is becoming less popular because spam filters make it more difficult). It has a number of benefits:
 
-— It's cost-effective and easy, so anyone can start using it right away
-
-— You can target specific audiences with personalized messages
-
-— It's measurable—each message you send can be tracked and analysed for success
-
-Let’s get to know why you should be building an email list and what are the benefits.`,
+`,
     
     sections: [
       {
@@ -233,7 +227,7 @@ Building an email list takes patience and a strategy to funnel your potential cu
       {/* Header */}
       <header className="w-full bg-white shadow-sm xl:sticky top-20 z-10">
         <div className="max-w-6xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl font-unbounded text-gray-900 mb-4">
+          <h1 className="text-responsive  text-gray-900 mb-4">
             {blogPost.title}
           </h1>
 
@@ -296,9 +290,14 @@ Building an email list takes patience and a strategy to funnel your potential cu
           {/* Main Content */}
           <main className="lg:col-span-9">
             <article className="prose lg:prose-lg max-w-none">
-              <p className="text-xl text-gray-700 mb-8">
+              <p className=" text-gray-700 mb-8">
                 {blogPost.content.introduction}
               </p>
+
+              <p>— It's cost-effective and easy, so anyone can start using it right away </p>
+              <p>— You can target specific audiences with personalized messages </p>
+              <p>— It's measurable—each message you send can be tracked and analysed for success</p>
+              <p className="mt-4 mb-5">Let’s get to know why you should be building an email list and what are the benefits.`,</p>
 
               {/* First Two Sections */}
               {blogPost.content.sections.slice(0, 2).map((section) => (
@@ -315,7 +314,7 @@ Building an email list takes patience and a strategy to funnel your potential cu
                   />
                   <div className="bg-gray-50 px-4 py-3">
                     <p className="text-sm text-gray-600 italic">
-                      Different types of backlinks and their impact on SEO
+                      
                     </p>
                   </div>
                 </div>

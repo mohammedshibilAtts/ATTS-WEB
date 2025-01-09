@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../lib/utils";
 
@@ -43,31 +43,75 @@ export const LayoutGrid = ({ cards, img }) => {
 };
 
 const ImageComponent = ({ card, img = true }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const imageRef = useRef(null);
+
+  // Lazy load logic using IntersectionObserver
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setIsLoaded(true);
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        rootMargin: "200px", // Trigger loading a bit before entering the viewport
+      }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.disconnect();
+      }
+    };
+  }, []);
+
   return img ? (
-    <motion.img
-      src={card.thumbnail}
-      height="500"
-      width="500"
-      className="object-cover  object-top  absolute inset-0 h-full w-full transition duration-200"
-      alt="thumbnail"
-    />
+    <motion.div
+      ref={imageRef}
+      className={`absolute inset-0 h-full w-full transition duration-200 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+    >
+      <div className={`absolute inset-0 w-full h-full bg-center bg-cover ${isLoaded ? '' : 'blur-xl'}`}
+        style={{ backgroundImage: `url(${'https://images.pexels.com/photos/1526/dark-blur-blurred-gradient.jpg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200'})` }}
+      ></div>
+      
+      {/* This is for when the image is loaded */}
+      {isLoaded && (
+        
+        <motion.img
+        
+          src={card.thumbnail}
+          className="object-cover object-top absolute inset-0 h-full w-full transition duration-200"
+          alt="thumbnail"
+        />
+      )}
+    </motion.div>
   ) : (
     <div className="relative w-full h-full">
-    <motion.video
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="object-cover object-top absolute inset-0 w-full h-full transition duration-200"
-      alt="thumbnail"
-    >
-      <source src={card.thumbnail} type="video/mp4" />
-      <source src="fallback-video.webm" type="video/webm" />
-      Your browser does not support the video tag.
-    </motion.video>
+      <motion.video
+        ref={imageRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className={`object-cover object-top absolute inset-0 w-full h-full transition duration-200 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        alt="thumbnail"
+        loading="lazy"
+      >
+        <source src={isLoaded ? card.thumbnail : ""} type="video/mp4" />
+        <source src="fallback-video.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </motion.video>
 
-    {/* Black shade overlay using Tailwind */}
-    <div className="absolute inset-0 bg-black opacity-40"></div>
-  </div>
+      {/* Black shade overlay using Tailwind */}
+      <div className="absolute inset-0 bg-black opacity-40"></div>
+    </div>
   );
 };

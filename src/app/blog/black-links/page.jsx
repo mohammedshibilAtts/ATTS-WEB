@@ -16,7 +16,7 @@ import Image from "next/image";
 const Section = ({ section }) => {
   return (
     <section id={section.id} className="mb-12">
-      <h2 className="text-2xl font-unbounded text-gray-900 mb-4">{section.title}</h2>
+      <h2 className="text-responsive  text-gray-900 mb-4">{section.title}</h2>
       <div className="text-gray-700 leading-relaxed space-y-4">
         {section.content && (
           <div className="whitespace-pre-line">{section.content}</div>
@@ -59,26 +59,31 @@ const Page = () => {
     featuredImage: "/api/placeholder/1200/600",
     secondaryImage: "/api/placeholder/800/400",
     content: {
-      introduction: `This is perhaps the most asked question; by now, almost every person in the SEO industry has given the most annoying answer. "It varies from time to time..." Well, today, we will try to answer this question!`,
+      introduction: `This is perhaps the most asked question; by now, almost every person in the SEO industry has given the most annoying answer. 
+                      "It varies from time to time..." 
+                      Well, today, we will try to answer this question! 
+                      Before we show you how many backlinks you need per month to your website, let's understand what backlinks are and why they are essential in the first place`,
       sections: [
         {
           id: "what-are-backlinks",
-          title: "What Are Backlinks?",
-          content: `This is perhaps the most asked question; by now, almost every person in the SEO industry has given the most annoying answer.
-"It varies from time to time..."
-Well, today, we will try to answer this question!
-Before we show you how many backlinks you need per month to your website, let's understand what backlinks are and why they are essential in the first place.`,
+          title: "What Are Backlinks? ",
+          content: `As many of you know that backlinks play a significant role in SEO. Backlinks will help you rank your website to increase your organic traffic. You might have seen blogs with statistics, news, examples, etc. Have you noticed hyperlinks to other websites? Maybe everyone has it. These contextual links are called backlinks, also called inbound links. It is a hyperlink from one website to another website. Contextual links are referring to another topic to the reader by anchoring relevant words.  `,
           bulletpoints: [
             {
               title:
-                "What would make someone refer to your site? There are numerous reasons to cite a link; some of the most common ones are: ",
+                "What would make someone refer to your site? There are numerous reasons to cite a link; some of the most common ones are:  ",
               points: [
-                "Depending on your niche, you are a trusted source of information. Linking to your website allows others to reap the benefits and prove their content.",
-                "Your content has a high-quality level, which makes others want to quote it. Also, in this instance, you can prove the integrity of the information with a link.",
+                "Depending on your niche, you are a trusted source of information. Linking to your website allows others to reap the benefits and prove their content. ",
+                "Your content has a high-quality level, which makes others want to quote it. Also, in this instance, you can prove the integrity of the information with a link. ",
                 "You've posted some stunning content that might interest an audience because it's niche-related. Your insights or facts may be useful to another source wishing to increase website traffic.",
               ],
             },
           ],
+        },
+        {
+          id: "backlink creation a one-time process or a c Is ontinuous process",
+          title: "backlink creation a one-time process or a c Is ontinuous process?  ",
+          content: `As discussed earlier, Link building or backlink creation is a process of creating links to a website to increase its authority. Link building can be done by adding links to the website on other websites or by asking other websites to link to the website. Link building should be done continuously, not once in a while; keep publishing high-quality content across your site. Then, your customers will notice and start sharing it.  `,
         },
         {
           id: "dofollow-nofollow",
@@ -203,7 +208,7 @@ The precise amount differs based on your niche and several variables, including 
       {/* Header */}
       <header className="w-full bg-white shadow-sm xl:sticky top-20 z-10">
         <div className="max-w-6xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl font-unbounded text-gray-900 mb-4">
+          <h1 className="text-responsive  text-gray-900 mb-4">
             {blogPost.title}
           </h1>
 
@@ -285,7 +290,7 @@ The precise amount differs based on your niche and several variables, including 
                   />
                   <div className="bg-gray-50 px-4 py-3">
                     <p className="text-sm text-gray-600 italic">
-                      Different types of backlinks and their impact on SEO
+                      
                     </p>
                   </div>
                 </div>

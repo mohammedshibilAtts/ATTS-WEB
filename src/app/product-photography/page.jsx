@@ -2,7 +2,7 @@
 import TitleBox from "@/components/titleBox/titleBox";
 import { LayoutGrid } from "@/components/ui/layoutGrid";
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { photographyServiceCard } from "@/constants/constant";
 import Contactus from "@/components/contactUs/contactus";
 import Image from "next/image";
@@ -12,10 +12,7 @@ import Banner1 from "@/assests/images/photoBanner1.webp";
 import Banner2 from "@/assests/images/photoBanner2.webp";
 import Banner3 from "@/assests/images/photoBanner3.webp";
 import Banner4 from "@/assests/images/photoBanner4.webp";
-import photography1 from "@/assests/images/photography1.webp";
-import photography2 from "@/assests/images/photography2.webp";
-import photography3 from "@/assests/images/photography3.webp";
-import photography4 from "@/assests/images/photography4.webp";
+
 // import Photography1 from "@/assests/images/photography1.jpg";
 // import Photography2 from "@/assests/images/photography2.jpg";
 // import Photography3 from "@/assests/images/photography3.jpg";
@@ -28,8 +25,9 @@ function page() {
     { src: Banner3 },
     { src: Banner4 },
   ];
+  const [isLoaded, setIsLoaded] = useState(false); // Tracks when image is loaded
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const imageRef = useRef(null)
   const handleIndicatorClick = (index) => {
     setActiveIndex(index);
   };
@@ -50,6 +48,39 @@ function page() {
     const interval = setInterval(nextSlide, 11000);
     return () => clearInterval(interval);
   }, [Images.length, activeIndex]);
+
+
+let png4=''
+  useEffect(() => {
+    png4="https://atts-img-video.s3.eu-north-1.amazonaws.com/photography4+1.webp"
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          // If the image comes into view
+          if (entry.isIntersecting) {
+            // Trigger image load
+            setIsLoaded(true);
+          }
+        });
+      },
+      {
+        rootMargin: "200px", // Trigger loading before image enters the viewport
+      }
+    );
+  
+    // Observe the image element
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+  
+    // Cleanup observer when component is unmounted or when imageRef changes
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
+
 
   return (
     <>
@@ -76,10 +107,10 @@ function page() {
                 <div className="absolute inset-0 bg-black/75 z-10" />
 
                 {/* Centered Content with Animations */}
-                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 font-unbounded">
+                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-responsive">
                   {/* Small Header Text */}
                   <motion.div
-                    className="text-white text-xs sm:text-sm md:text-base uppercase tracking-wider mb-4"
+                    className="text-white ppercase tracking-wider mb-4"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
@@ -161,9 +192,9 @@ function page() {
             </div>
 
             <div className="description px-4">
-              <h1 className="text-xl md:text-3xl font-bold  font-unbounded text-black">
+              <h1 className="  text-responsive text-black">
                 Expert{" "}
-                <span className="text-xl md:text-3xl font-bold  font-unbounded  text-start md:text-center text-[#003067] ">
+                <span className="  text-responsive  text-start md:text-center text-[#003067] ">
                   Photography{" "}
                 </span>
                 Services
@@ -175,46 +206,11 @@ function page() {
           </div>
         </div>
         <div className="h-screen  w-full z-10">
-        <div className="container mx-auto p-4">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-        {/* First row: Product image (spans 8 columns) and Gym image (spans 4 columns) */}
-        <div className="md:col-span-8">
-          <Image 
-            src={photography1}
-            alt="Product showcase"
-            className="w-full h-[300px] object-cover rounded-lg shadow-lg"
-          />
-        </div>
-        <div className="md:col-span-4">
-          <Image 
-            src={photography2}
-            alt="Gym interior"
-            className="w-full h-[300px] object-cover rounded-lg shadow-lg"
-          />
-        </div>
-
-        {/* Second row: Jewelry image and Family photo, each spanning 6 columns */}
-        <div className="md:col-span-6">
-          <Image 
-            src={photography3}
-            alt="Jewelry"
-            className="w-full h-[250px] object-cover rounded-lg shadow-lg"
-          />
-        </div>
-        <div className="md:col-span-6">
-          <Image 
-            src={photography4}
-            alt="Family photo"
-            className="w-full h-[250px] object-cover rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
-    </div>
+        <LayoutGrid cards={cards}/>
         </div>
 
         {/* What we can help you with */}
 
-        <ScrollMotion>
           <div className="bg-white px-4 xl:px-32  mt-3 ">
             <div className="titleBox flex justify-center flex-row md:justify-start">
               <TitleBox
@@ -224,7 +220,7 @@ function page() {
             </div>
             <div className="title flex flex-col lg:flex-row justify-center mt-9 space-y-4 sm:space-y-0 sm:space-x-6 ">
               <div className=" sm:text-left  flex-1">
-                <h1 className="text-xl md:text-3xl font-bold  font-unbounded md:px-5  text-black ">
+                <h1 className="  text-responsive md:px-5  text-black ">
                   Performance marketing pros committed{" "}
                   <span className="text-[#003067]">
                     to elevating your brand to a broader audience.
@@ -240,10 +236,8 @@ function page() {
               </div>
             </div>
           </div>
-        </ScrollMotion>
-
+       
         <div className="px-4">
-        <ScrollMotion>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-16 px-4">
             {photographyServiceCard.map((item, index) => (
               <motion.div
@@ -270,7 +264,7 @@ function page() {
                     className="object-cover transition-transform"
                   />
                 </div>
-                <h1 className="text-darken font-unbounded  mb-3 text-xl  transition-colors duration-300 text-[#003067] ">
+                <h1 className="text-darken   mb-3   transition-colors duration-300 text-[#003067] ">
                   {item.title}
                 </h1>
                 <p className="px-4 text-gray-500 transition-colors duration-300 ">
@@ -279,7 +273,6 @@ function page() {
               </motion.div>
             ))}
           </div>
-        </ScrollMotion>
         </div>
       </div>
 
@@ -322,12 +315,10 @@ const SkeletonTwo = () => {
 const SkeletonThree = () => {
   return (
     <div>
-      <p className="font-bold md:text-4xl text-xl text-white">Mattress</p>
+      <p className="font-bold md:text-4xl text-xl text-white">Education</p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-2 max-w-lg text-neutral-200">
-        It’s all about the shine and sparkle. Our shots focus on the perfect
-        angles, bringing out the elegance and charm of every piece, making them
-        truly unforgettable.
+      Celebrate the power of knowledge in every frame, captured to inspire and ignite aspirations.
       </p>
     </div>
   );
@@ -366,14 +357,14 @@ const cards = [
     content: <SkeletonThree />,
     className: "col-span-1",
     thumbnail:
-      "https://atts-img-video.s3.eu-north-1.amazonaws.com/photography3.webp",
+    "https://atts-img-video.s3.eu-north-1.amazonaws.com/314A3607.jpg"
   },
   {
     id: 4,
     content: <SkeletonFour />,
     className: "md:col-span-2",
     thumbnail:
-      "https://atts-img-video.s3.eu-north-1.amazonaws.com/photography4.webp",
+      "https://atts-img-video.s3.eu-north-1.amazonaws.com/photography3.webp",
   },
 ];
 
